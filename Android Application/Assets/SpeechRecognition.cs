@@ -57,8 +57,19 @@ public class SpeechRecognitionTest : MonoBehaviour
         text.text = "Sending...";
         stopButton.interactable = false;
         HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response => {
-            if (ContainsWord(response, "yes")) Debug.Log("YEZZ");
-            text.color = Color.white;
+
+            if (ContainsWord(response, "yes") || ContainsWord(response, "okay"))
+            {
+                // Do the yes...
+                Debug.Log("YEZZ");
+            }
+            else if (ContainsWord(response, "no"))
+            {
+                // Do the no...
+                Debug.Log("NOUU");
+            }
+
+                text.color = Color.white;
             text.text = response;
             startButton.interactable = true;
         }, error => {

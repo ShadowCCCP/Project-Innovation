@@ -6,37 +6,27 @@ using System.Text;
 
 public class NetworkSender : MonoBehaviour
 {
-    private const string serverAddress = "your_windows_ip_address"; // Change this to your Windows machine's IP address
     private const int port = 8888;
-
-    public string keyword = "testKey"; // Define the same keyword used in the Windows application
 
     void Start()
     {
-        ConnectToServer();
+        SendBroadcast();
     }
 
-    void ConnectToServer()
+    void SendBroadcast()
     {
-        try
-        {
-            TcpClient client = new TcpClient(serverAddress, port);
-            Debug.Log("Connected to Windows application.");
+        UdpClient udpClient = new UdpClient();
+        udpClient.EnableBroadcast = true;
 
-            // Get the output stream from the socket
-            NetworkStream stream = client.GetStream();
+        // Define the message to send for discovery
+        string discoveryMessage = "Gyroscope: DATA";
 
-            // Send the keyword to the Windows application
-            byte[] keywordBytes = Encoding.ASCII.GetBytes(keyword);
-            stream.Write(keywordBytes, 0, keywordBytes.Length);
+        // Convert message string to bytes
+        byte[] bytes = Encoding.ASCII.GetBytes(discoveryMessage);
 
-            // Close the connection
-            stream.Close();
-            client.Close();
-        }
-        catch (SocketException e)
-        {
-            Debug.Log("Error connecting to server: " + e);
-        }
+        // Broadcast the discovery message to the local network
+        IPEndPoint endPoint = new IPEndPoint(IPAddress.Broadcast, port);
+        udpClient.Send(bytes, bytes.Length, endPoint);
+        udpClient.Close();
     }
 }
