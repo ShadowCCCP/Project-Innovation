@@ -12,6 +12,8 @@ public class NetworkListener : MonoBehaviour
     private TcpListener listener;
     private bool isListening = false;
 
+    public string keyword = "testKey"; // Define a keyword for communication
+
     void Start()
     {
         StartListening();
@@ -80,10 +82,17 @@ public class NetworkListener : MonoBehaviour
 
             // Convert bytes to string
             string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-            message.Append(dataReceived);
 
-            // Do something with the received data (e.g., display in Unity)
-            Debug.Log("Received from Android: " + dataReceived);
+            if (dataReceived.Equals(keyword)) // Check if received keyword matches
+            {
+                // Do something when the keyword is received
+                Debug.Log("Received keyword from Android.");
+            }
+            else
+            {
+                // Handle other data received
+                Debug.Log("Received from Android: " + dataReceived);
+            }
         }
 
         // Clean up the client connection
