@@ -6,9 +6,10 @@ using System.Text;
 
 public class NetworkSender : MonoBehaviour
 {
-    private const string serverAddress = "192.168.178.70";
+    private const string serverAddress = "your_windows_ip_address"; // Change this to your Windows machine's IP address
     private const int port = 8888;
-    private TcpClient client;
+
+    public string keyword = "testKey"; // Define the same keyword used in the Windows application
 
     void Start()
     {
@@ -19,46 +20,23 @@ public class NetworkSender : MonoBehaviour
     {
         try
         {
-            client = new TcpClient(serverAddress, port);
+            TcpClient client = new TcpClient(serverAddress, port);
             Debug.Log("Connected to Windows application.");
+
+            // Get the output stream from the socket
+            NetworkStream stream = client.GetStream();
+
+            // Send the keyword to the Windows application
+            byte[] keywordBytes = Encoding.ASCII.GetBytes(keyword);
+            stream.Write(keywordBytes, 0, keywordBytes.Length);
+
+            // Close the connection
+            stream.Close();
+            client.Close();
         }
         catch (SocketException e)
         {
             Debug.Log("Error connecting to server: " + e);
-        }
-    }
-
-    void OnDestroy()
-    {
-        if (client != null)
-        {
-            client.Close();
-        }
-    }
-
-    void Update()
-    {
-        // Send data to Windows application (e.g., gyroscope data)
-        SendData("Gyroscope Data: x=0.5, y=0.2, z=0.8");
-    }
-
-    void SendData(string data)
-    {
-        if (client == null || !client.Connected)
-        {
-            ConnectToServer();
-            return;
-        }
-
-        try
-        {
-            NetworkStream stream = client.GetStream();
-            byte[] bytesToSend = Encoding.ASCII.GetBytes(data);
-            stream.Write(bytesToSend, 0, bytesToSend.Length);
-        }
-        catch (SocketException e)
-        {
-            Debug.Log("Error sending data: " + e);
         }
     }
 }
