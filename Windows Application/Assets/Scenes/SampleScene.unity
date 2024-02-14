@@ -485,7 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1245276651}
-  - component: {fileID: 1245276650}
+  - component: {fileID: 1245276652}
   m_Layer: 0
   m_Name: Phone Call
   m_TagString: Untagged
@@ -493,19 +493,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1245276650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245276649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e297d4a7f05154d9c71d9a656c8a0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundEvent: 
 --- !u!4 &1245276651
 Transform:
   m_ObjectHideFlags: 0
@@ -521,6 +508,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1245276652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245276649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58715d25ac3ff78419e800aab790f911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent:
+    Guid:
+      Data1: -1951320398
+      Data2: 1185240626
+      Data3: -49008705
+      Data4: -871230549
+    Path: event:/Talking
 --- !u!1 &2002295491
 GameObject:
   m_ObjectHideFlags: 0
