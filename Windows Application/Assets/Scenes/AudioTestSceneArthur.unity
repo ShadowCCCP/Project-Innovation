@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 1919164684}
   - component: {fileID: 1919164683}
   m_Layer: 0
-  m_Name: Bloblo Emitter
+  m_Name: Talking Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
