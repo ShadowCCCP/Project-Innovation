@@ -7,44 +7,76 @@ public class GyroControl : MonoBehaviour
     private bool gyroEnabled;
     float offsetZ;
     Quaternion rot;
-    bool offsetSet;
+
+
     // Start is called before the first frame update
     void Start()
     {
 
         gyroEnabled = enableGyro();
-        rot = gyro.attitude * new Quaternion(0, 0, 1, 0);
-        offsetZ = 0;
-        StartCoroutine(SetOffsetZ());
+        if (gyroEnabled)
+        {
+            StartCoroutine(setOffsetZ());
+        }
+
+
     }
 
     void Update()
     {
         if (gyroEnabled) {
             rot = gyro.attitude * new Quaternion(0, 0, 1, 0);
-            //Debug.Log(-rot.eulerAngles.z+ offsetZ);
-            // transform.rotation = Quaternion.Euler(0, Mathf.Clamp(-rot.eulerAngles.z+90 + offsetX, -90, 90)-90, 0);
-            transform.rotation = Quaternion.Euler(rot.eulerAngles.x, -rot.eulerAngles.z + offsetZ, rot.eulerAngles.y);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * 20, Color.red);
+        }
+
+        if(rot.eulerAngles.z<45 || rot.eulerAngles.z> 315)
+        {
+            transform.rotation = Quaternion.Euler(rot.eulerAngles.x * 2, -rot.eulerAngles.z * 2 + offsetZ * 2, rot.eulerAngles.y * 2);
+            //Debug.Log("South");
+        }
+        if(rot.eulerAngles.z > 45 && rot.eulerAngles.z < 135)
+        {
+            transform.rotation = Quaternion.Euler(rot.eulerAngles.y * 2, -rot.eulerAngles.z * 2 + offsetZ * 2, rot.eulerAngles.x * 2);
+            //Debug.Log("East");
+        }
+        if (rot.eulerAngles.z > 135 && rot.eulerAngles.z < 225)
+        {
+            transform.rotation = Quaternion.Euler(-rot.eulerAngles.x * 2, -rot.eulerAngles.z * 2 + offsetZ * 2, rot.eulerAngles.y * 2);
+           // Debug.Log("North");
+        }
+        if (rot.eulerAngles.z > 225 && rot.eulerAngles.z < 315)
+        {
+            transform.rotation = Quaternion.Euler(-rot.eulerAngles.y* 2, -rot.eulerAngles.z * 2 + offsetZ * 2, rot.eulerAngles.x * 2);
+            //Debug.Log("West");
         }
     }
 
     private bool enableGyro()
     {
-        if (SystemInfo.supportsGyroscope)
+        if (SystemInfo.supportsGyroscope )
         {
             gyro = Input.gyro;
             gyro.enabled = true;
             return true;
         }
+        Debug.Log("gyro missing");
         return false;
     } 
 
-    private IEnumerator SetOffsetZ()
+    private IEnumerator setOffsetZ()
     {
+        rot = gyro.attitude * new Quaternion(0, 0, 1, 0);
         yield return new WaitForSeconds(0.6f);
         offsetZ = rot.eulerAngles.z;
-        offsetSet = true;
         Debug.Log("set");
+    }
+
+    public void ReCalibrate()
+    {
+        if (!gyroEnabled)
+        {
+            gyroEnabled = enableGyro();
+        }
+        StartCoroutine(setOffsetZ());
     }
 }
