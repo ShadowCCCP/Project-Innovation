@@ -10,16 +10,16 @@ public class NetworkSender : MonoBehaviour
 
     void Start()
     {
-        SendBroadcast();
+        //SendBroadcast("test");
     }
 
-    void SendBroadcast()
+    public static void SendBroadcast(string message)
     {
         UdpClient udpClient = new UdpClient();
         udpClient.EnableBroadcast = true;
 
         // Define the message to send for discovery
-        string discoveryMessage = "Gyroscope: DATA";
+        string discoveryMessage = message;
 
         // Convert message string to bytes
         byte[] bytes = Encoding.ASCII.GetBytes(discoveryMessage);
