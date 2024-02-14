@@ -468,7 +468,7 @@ MonoBehaviour:
       Data2: 1185240626
       Data3: -49008705
       Data4: -871230549
-    Path: event:/Bloblos
+    Path: event:/Talking
   Event: 
   PlayEvent: 1
   StopEvent: 0
