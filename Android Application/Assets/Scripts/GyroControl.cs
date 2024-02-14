@@ -26,7 +26,7 @@ public class GyroControl : MonoBehaviour
     {
         if (gyroEnabled) {
             rot = gyro.attitude * new Quaternion(0, 0, 1, 0);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * 20, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.red);
         }
 
         if(rot.eulerAngles.z<45 || rot.eulerAngles.z> 315)
