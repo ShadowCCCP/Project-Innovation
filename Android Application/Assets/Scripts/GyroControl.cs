@@ -8,7 +8,6 @@ public class GyroControl : MonoBehaviour
     float offsetZ;
     Quaternion rot;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +48,7 @@ public class GyroControl : MonoBehaviour
             transform.rotation = Quaternion.Euler(-rot.eulerAngles.y* 2, -rot.eulerAngles.z * 2 + offsetZ * 2, rot.eulerAngles.x * 2);
             //Debug.Log("West");
         }
+
     }
 
     private bool enableGyro()
@@ -77,6 +77,11 @@ public class GyroControl : MonoBehaviour
         {
             gyroEnabled = enableGyro();
         }
-        StartCoroutine(setOffsetZ());
+        if (gyroEnabled)
+        {
+            StartCoroutine(setOffsetZ());
+        }
     }
+
+
 }
