@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7603578086663416928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Talking
-  m_EditorClassIdentifier: 
-  Path: event:/Talking
-  Guid:
-    Data1: -1951320398
-    Data2: 1185240626
-    Data3: -49008705
-    Data4: -871230549
-  Banks:
-  - {fileID: 730986556841053521}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 5.4
-  MaxDistance: 50
-  Length: 8555
 --- !u!114 &-6620743785690848075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,65 +15,11 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638435201896906262
+  lastModified: 638436233798288423
   FileSizes:
   - Name: Desktop
-    Value: 850
+    Value: 920
   Exists: 1
---- !u!114 &-6333938866439133274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Phone
-  m_EditorClassIdentifier: 
-  Path: event:/Phone
-  Guid:
-    Data1: 352904199
-    Data2: 1083058266
-    Data3: -220099173
-    Data4: 2051576774
-  Banks:
-  - {fileID: 730986556841053521}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2533
---- !u!114 &-4127070786819571250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tick
-  m_EditorClassIdentifier: 
-  Path: event:/Tick
-  Guid:
-    Data1: 1327133558
-    Data2: 1204877887
-    Data3: -390638914
-    Data4: 237839351
-  Banks:
-  - {fileID: 730986556841053521}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 794
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,15 +36,16 @@ MonoBehaviour:
   - {fileID: -6620743785690848075}
   - {fileID: 730986556841053521}
   EditorEvents:
-  - {fileID: -6333938866439133274}
-  - {fileID: -4127070786819571250}
-  - {fileID: -7603578086663416928}
+  - {fileID: 3634640799570506013}
+  - {fileID: 4032546226376672647}
+  - {fileID: 7861693355221701623}
+  - {fileID: 8967748365909759367}
   EditorParameters: []
   MasterBanks:
   - {fileID: 730986556841053521}
   StringsBanks:
   - {fileID: -6620743785690848075}
-  cacheTime: 638435201896906262
+  cacheTime: 638436233798288423
   cacheVersion: 131609
 --- !u!114 &730986556841053521
 MonoBehaviour:
@@ -142,8 +62,116 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638435201896857070
+  lastModified: 638436233798257897
   FileSizes:
   - Name: Desktop
-    Value: 91584
+    Value: 239072
   Exists: 1
+--- !u!114 &3634640799570506013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone
+  Guid:
+    Data1: 352904199
+    Data2: 1083058266
+    Data3: -220099173
+    Data4: 2051576774
+  Banks:
+  - {fileID: 730986556841053521}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2533
+--- !u!114 &4032546226376672647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tick
+  Guid:
+    Data1: 1327133558
+    Data2: 1204877887
+    Data3: -390638914
+    Data4: 237839351
+  Banks:
+  - {fileID: 730986556841053521}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 794
+--- !u!114 &7861693355221701623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Talking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Talking
+  Guid:
+    Data1: -1951320398
+    Data2: 1185240626
+    Data3: -49008705
+    Data4: -871230549
+  Banks:
+  - {fileID: 730986556841053521}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 5.4
+  MaxDistance: 50
+  Length: 8555
+--- !u!114 &8967748365909759367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Air Vent Loop
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Air Vent Loop
+  Guid:
+    Data1: -1350705688
+    Data2: 1144175581
+    Data3: 1540976013
+    Data4: 1076176508
+  Banks:
+  - {fileID: 730986556841053521}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 9
+  Length: 12000
