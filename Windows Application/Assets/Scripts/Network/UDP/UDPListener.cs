@@ -5,9 +5,9 @@ using System.Net.Sockets;
 using System.Text;
 using System;
 
-public class NetworkListener : MonoBehaviour
+public class UDPListener : MonoBehaviour
 {
-    private const int port = 8888;
+    private const int port = 8089;
     private UdpClient udpClient;
 
     void Start()
@@ -23,7 +23,7 @@ public class NetworkListener : MonoBehaviour
         string receivedMessage = Encoding.ASCII.GetString(receivedBytes);
 
         // Handle received message
-        Debug.Log("Received message: " + receivedMessage);
+        if (!receivedMessage.Contains("Windows")) Debug.Log(receivedMessage);
 
         // Continue listening for messages
         udpClient.BeginReceive(ReceiveData, null);
