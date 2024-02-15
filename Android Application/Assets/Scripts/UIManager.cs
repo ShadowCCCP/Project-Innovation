@@ -14,6 +14,20 @@ public class UIManager : MonoBehaviour
     GameObject callReceievedPrefab;
     [SerializeField]
     GameObject callOngoingPrefab;
+    [SerializeField]
+    GameObject newMessagePrefab;
+
+    [SerializeField]
+    CallAndMessageManager callAndMessageManager;
+
+    [SerializeField]
+    Slider flashCooldown;
+
+    [SerializeField]
+    GameObject gameOverScreen;
+
+    [SerializeField]
+    TextMeshProUGUI clock;
     // Start is called before the first frame update
     void Awake()
     {
@@ -79,7 +93,46 @@ public class UIManager : MonoBehaviour
         callEndAnim.SetTrigger("StartAnimation");
         yield return new WaitForSeconds(2);
         Destroy(newCallOngoing);
+        callAndMessageManager.EmptyState();
     }
 
+    GameObject newMessage;
+    public IEnumerator NewMessage(Contact contact, string message)
+    {
+        newMessage = Instantiate(newMessagePrefab,  transform);
+
+        var contactNameAndDetailsMessage = newMessage.transform.Find("NameAndDetails").GetComponent<TextMeshProUGUI>();
+        var contactImageMessage = newMessage.transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
+        var messageContent = newMessage.transform.Find("Message").GetComponent<TextMeshProUGUI>();
+
+        contactNameAndDetailsMessage.text = contact.ContactName + " - " + contact.Details;
+        contactImageMessage.sprite = contact.Icon;
+        messageContent.text = message;
+
+
+        Animator newMessageAnim = newMessage.GetComponent<Animator>();
+        newMessageAnim.SetTrigger("StartAnimation");
+        yield return new WaitForSeconds(7);
+        Destroy(newMessage);
+        callAndMessageManager.EmptyState();
+    }
+
+
+    public void UpdateFlashlightSlider(float value)
+    {
+        flashCooldown.value = value;
+    }
+
+    public void ShowGameOver()
+    {
+        gameOverScreen.SetActive(true);
+    }
+
+    public void UpdateClock(string hourString, string minuteString)
+    {
+        
+        clock.SetText(hourString + ":" + minuteString); 
+        
+    }
   
 }
