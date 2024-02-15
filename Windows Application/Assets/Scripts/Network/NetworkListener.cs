@@ -7,7 +7,7 @@ using System;
 
 public class NetworkListener : MonoBehaviour
 {
-    private const int port = 8888;
+    private const int port = 8089;
     private UdpClient udpClient;
 
     void Start()

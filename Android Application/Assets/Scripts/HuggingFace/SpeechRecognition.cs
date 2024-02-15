@@ -7,8 +7,12 @@ using UnityEngine.UI;
 
 public class SpeechRecognitionTest : MonoBehaviour
 {
-    [SerializeField] private Button startButton;
-    [SerializeField] private Button stopButton;
+    //[SerializeField] private Button startButton;
+    //[SerializeField] private Button stopButton;
+    [SerializeField] Button button;
+    HoldDownButton buttonScript;
+    Image buttonImage;
+
     [SerializeField] private TextMeshProUGUI text;
 
     private AudioClip clip;
@@ -17,14 +21,30 @@ public class SpeechRecognitionTest : MonoBehaviour
 
     private void Start()
     {
-        startButton.onClick.AddListener(StartRecording);
-        stopButton.onClick.AddListener(StopRecording);
-        stopButton.interactable = false;
+        buttonScript = button.GetComponent<HoldDownButton>();
+
+        //startButton.onClick.AddListener(StartRecording);
+        //stopButton.onClick.AddListener(StopRecording);
+        //stopButton.interactable = false;
     }
 
     private void Update()
     {
         if (recording && Microphone.GetPosition(null) >= clip.samples)
+        {
+            StopRecording();
+        }
+
+        CheckButtonPress();
+    }
+
+    private void CheckButtonPress()
+    {
+        if (buttonScript.IsPressed() && !recording)
+        {
+            StartRecording();
+        }
+        else if(!buttonScript.IsPressed() && recording)
         {
             StopRecording();
         }
@@ -34,8 +54,8 @@ public class SpeechRecognitionTest : MonoBehaviour
     {
         text.color = Color.white;
         text.text = "Recording...";
-        startButton.interactable = false;
-        stopButton.interactable = true;
+        //startButton.interactable = false;
+        //stopButton.interactable = true;
         clip = Microphone.Start(null, false, 10, 44100);
         recording = true;
     }
@@ -55,16 +75,17 @@ public class SpeechRecognitionTest : MonoBehaviour
     {
         text.color = Color.yellow;
         text.text = "Sending...";
-        stopButton.interactable = false;
+        //stopButton.interactable = false;
         HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response => {
             CheckForWods(response);
             text.color = Color.white;
             text.text = response;
-            startButton.interactable = true;
+            //startButton.interactable = true;
         }, error => {
             text.color = Color.red;
-            text.text = error;
-            startButton.interactable = true;
+            text.text = "Could you repeat?";
+            //text.text = error;
+            //startButton.interactable = true;
         });
     }
 
@@ -99,11 +120,8 @@ public class SpeechRecognitionTest : MonoBehaviour
 
     bool ContainsWord(string input, string word)
     {
-        // Construct the regular expression pattern to match the whole word with case-insensitivity
         string pattern = "\\b" + Regex.Escape(word) + "\\b";
-        // Create the regular expression object
         Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-        // Check if the input string matches the pattern
         return regex.IsMatch(input);
     }
 
@@ -111,12 +129,10 @@ public class SpeechRecognitionTest : MonoBehaviour
     {
         if (ContainsWord(text, "yes") || ContainsWord(text, "okay"))
         {
-            // Do the yes...
             Debug.Log("YEZZ");
         }
         else if (ContainsWord(text, "no"))
         {
-            // Do the no...
             Debug.Log("NOUU");
         }
     }
