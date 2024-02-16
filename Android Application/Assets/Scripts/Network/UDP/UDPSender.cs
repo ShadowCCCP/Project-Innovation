@@ -4,13 +4,13 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-public class NetworkSender : MonoBehaviour
+public class UDPSender : MonoBehaviour
 {
-    private const int port = 8888;
+    private const int port = 8089;
 
-    void Start()
+    void Update()
     {
-        //SendBroadcast("test");
+        SendBroadcast("Android: Huhu!");
     }
 
     public static void SendBroadcast(string message)
