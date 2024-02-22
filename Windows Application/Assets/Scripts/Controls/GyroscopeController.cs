@@ -33,10 +33,7 @@ public class GyroscopeController : MonoBehaviour
 
     void RotateObject(GyroscopeEvent gyroEvent)
     {
-        Debug.Log(gyroEvent.forward);
         forward = gyroEvent.forward;
         up = gyroEvent.up;
-        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(gyroEvent.forward, gyroEvent.up), rotationSpeed * Time.deltaTime);
-        //transform.rotation = Quaternion.LookRotation(gyroEvent.forward, gyroEvent.up);
     }
 }
