@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
-using UnityEngine.Windows;
 
 public class StringHandler : MonoBehaviour
 {

@@ -28,6 +28,7 @@ public class GyroscopeController : MonoBehaviour
 
     void Update()
     {
+        if (forward == Vector3.zero && up == Vector3.zero) return;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(forward, up), rotationSpeed * Time.deltaTime);
     }
 
