@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7210b02b-73ba-446d-91b8-ad91e043d7f8}">
+		<property name="assetPath">
+			<value>Air Vent Loop - 6 Seconds.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3e7e87ce-95d6-4d09-8d0e-a4dbd4076ca6}</destination>
+		</relationship>
+	</object>
+</objects>

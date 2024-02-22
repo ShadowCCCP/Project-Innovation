@@ -6,12 +6,7 @@ using System.Text;
 
 public class UDPSender : MonoBehaviour
 {
-    private const int port = 8888;
-
-    void Update()
-    {
-        SendBroadcast("Windows: Huhu!");
-    }
+    private const int port = 7087;
 
     public static void SendBroadcast(string message)
     {
