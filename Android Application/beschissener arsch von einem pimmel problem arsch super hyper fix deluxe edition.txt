@@ -1,0 +1,5 @@
+Unity version / Editor / Data / PlaybackEngine / Vollzugriff
+
+cd C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\cmdline-tools\6.0\bin\
+
+sdkmanager.bat --licenses

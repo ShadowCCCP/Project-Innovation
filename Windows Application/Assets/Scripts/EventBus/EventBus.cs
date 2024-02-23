@@ -1,5 +1,5 @@
 using System;
-using System.Numerics;
+using UnityEngine;
 
 public abstract class Event { }
 
@@ -15,10 +15,12 @@ public class EventBus<T> where T : Event
 
 public class GyroscopeEvent : Event
 {
-    public GyroscopeEvent(Vector3 pRotation)
+    public GyroscopeEvent(Vector3 pForward, Vector3 pUp)
     {
-        rotation = pRotation;
+        forward = pForward;
+        up = pUp;
     }
 
-    public Vector3 rotation;
+    public Vector3 forward;
+    public Vector3 up;
 }

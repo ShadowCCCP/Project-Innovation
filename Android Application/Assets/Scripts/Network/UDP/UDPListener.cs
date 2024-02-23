@@ -7,7 +7,7 @@ using System;
 
 public class UDPListener : MonoBehaviour
 {
-    private const int port = 8888;
+    private const int port = 7087;
     private UdpClient udpClient;
 
     void Start()
@@ -22,8 +22,7 @@ public class UDPListener : MonoBehaviour
         byte[] receivedBytes = udpClient.EndReceive(result, ref endPoint);
         string receivedMessage = Encoding.ASCII.GetString(receivedBytes);
 
-        // Handle received message
-        if (!receivedMessage.Contains("Android")) Debug.Log(receivedMessage);
+        // Handle message...
 
         // Continue listening for messages
         udpClient.BeginReceive(ReceiveData, null);

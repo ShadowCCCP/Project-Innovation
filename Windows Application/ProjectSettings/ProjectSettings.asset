@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 79e6fbc70e9978446b6c826680e4ec4e
+  productGUID: ca3c621d79807754bb58238733ef78d1
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -79,7 +79,7 @@ PlayerSettings:
   androidAutoRotationBehavior: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 1
+  runInBackground: 0
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -133,7 +133,7 @@ PlayerSettings:
   stadiaTargetFramerate: 0
   vulkanNumSwapchainBuffers: 3
   vulkanEnableSetSRGBWrite: 0
-  vulkanEnablePreTransform: 1
+  vulkanEnablePreTransform: 0
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
@@ -161,9 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.UnityTechnologies.com.unity.template.urpblank
-    Standalone: com.Unity-Technologies.com.unity.template.urp-blank
-    iPhone: com.Unity-Technologies.com.unity.template.urp-blank
+    Standalone: com.Unity-Technologies.com.unity.template.hdrp-blank
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -249,9 +247,9 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
-  clonedFromGUID: 3c72c65a16f0acb438eed22b8b16c24a
-  templatePackageId: com.unity.template.urp-blank@3.0.2
-  templateDefaultScene: Assets/Scenes/SampleScene.unity
+  clonedFromGUID: c71a6e77368cc6048998f34f4bbe2b86
+  templatePackageId: com.unity.template.hdrp-blank@14.0.3
+  templateDefaultScene: Assets/OutdoorsScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 0
@@ -475,53 +473,54 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
-  - m_BuildTarget: tvOS
-    m_Icons:
-    - m_Textures: []
-      m_Width: 1280
-      m_Height: 768
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 800
-      m_Height: 480
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 400
-      m_Height: 240
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 4640
-      m_Height: 1440
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 2320
-      m_Height: 720
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 3840
-      m_Height: 1440
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 1920
-      m_Height: 720
-      m_Kind: 1
-      m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: Standalone
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
-  m_BuildTargetGraphicsJobs: []
+  m_BuildTargetGraphicsJobs:
+  - m_BuildTarget: MacStandaloneSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: Switch
+    m_GraphicsJobs: 1
+  - m_BuildTarget: MetroSupport
+    m_GraphicsJobs: 1
+  - m_BuildTarget: AppleTVSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: BJMSupport
+    m_GraphicsJobs: 1
+  - m_BuildTarget: LinuxStandaloneSupport
+    m_GraphicsJobs: 1
+  - m_BuildTarget: PS4Player
+    m_GraphicsJobs: 1
+  - m_BuildTarget: iOSSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_GraphicsJobs: 1
+  - m_BuildTarget: XboxOnePlayer
+    m_GraphicsJobs: 1
+  - m_BuildTarget: LuminSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: AndroidPlayer
+    m_GraphicsJobs: 0
+  - m_BuildTarget: WebGLSupport
+    m_GraphicsJobs: 0
   m_BuildTargetGraphicsJobMode: []
   m_BuildTargetGraphicsAPIs:
+  - m_BuildTarget: LinuxStandaloneSupport
+    m_APIs: 15000000
+    m_Automatic: 0
+  - m_BuildTarget: MacStandaloneSupport
+    m_APIs: 10000000
+    m_Automatic: 0
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 02000000
+    m_Automatic: 1
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
   - m_BuildTarget: AndroidPlayer
-    m_APIs: 150000000b000000
+    m_APIs: 0b00000008000000
     m_Automatic: 0
   m_BuildTargetVRSettings: []
   m_DefaultShaderChunkSizeInMB: 16
@@ -535,19 +534,27 @@ PlayerSettings:
     iPhone: 1
     tvOS: 1
   m_BuildTargetGroupLightmapEncodingQuality:
+  - m_BuildTarget: Standalone
+    m_EncodingQuality: 2
   - m_BuildTarget: Android
-    m_EncodingQuality: 1
+    m_EncodingQuality: 2
+  - m_BuildTarget: Lumin
+    m_EncodingQuality: 2
+  - m_BuildTarget: Windows Store Apps
+    m_EncodingQuality: 2
   m_BuildTargetGroupHDRCubemapEncodingQuality:
+  - m_BuildTarget: Standalone
+    m_EncodingQuality: 2
   - m_BuildTarget: Android
+    m_EncodingQuality: 2
+  - m_BuildTarget: Lumin
     m_EncodingQuality: 1
+  - m_BuildTarget: Windows Store Apps
+    m_EncodingQuality: 2
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
-  m_BuildTargetNormalMapEncoding:
-  - m_BuildTarget: Android
-    m_Encoding: 1
-  m_BuildTargetDefaultTextureCompressionFormat:
-  - m_BuildTarget: Android
-    m_Format: 3
+  m_BuildTargetNormalMapEncoding: []
+  m_BuildTargetDefaultTextureCompressionFormat: []
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -916,10 +923,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 657cf999-a22d-415e-b90c-5e71877e35d7
+  cloudProjectId: 0da1c302-408d-41dc-86c8-0dacf20e4c9a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Windows Application
+  projectName: Windows Application 2024-02-17_18-22-53
   organizationId: andruchabum
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

@@ -8,11 +8,6 @@ public class UDPSender : MonoBehaviour
 {
     private const int port = 8089;
 
-    void Update()
-    {
-        SendBroadcast("Android: Huhu!");
-    }
-
     public static void SendBroadcast(string message)
     {
         UdpClient udpClient = new UdpClient();
