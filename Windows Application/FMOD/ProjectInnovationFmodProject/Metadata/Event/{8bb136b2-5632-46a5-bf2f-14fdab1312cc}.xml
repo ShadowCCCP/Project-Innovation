@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{2d0969f7-9647-4727-9a57-2bcb169ddfb0}</destination>
+			<destination>{acec1b25-200f-412e-bc73-7743b4bfb74b}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{ebbb7275-89e0-4579-851f-a63486a8eb7d}</destination>
@@ -53,7 +53,7 @@
 			<destination>{aad495f2-59be-4c40-889f-1b6fb4eea9e2}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{37c61870-2dea-420a-801d-cb7ac34d314e}</destination>
+			<destination>{3d8fb146-b8e8-4d83-8714-5c6962e833b1}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{5387e5b4-d06a-4626-9e36-ef4c72537842}">
@@ -153,6 +153,9 @@
 	<object class="MixerBusPanner" id="{6cf0b54d-aea7-4516-854c-0481b1536e6d}" />
 	<object class="MixerBusFader" id="{74aa32bb-0bc2-4341-aefa-7fa646fc2f22}" />
 	<object class="PluginEffect" id="{29d8e1f9-63e8-458e-98b0-402f1daa337b}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<relationship name="plugin">
 			<destination>{0f515952-57db-4e21-b79c-20b5bc248d9a}</destination>
 		</relationship>
@@ -203,7 +206,6 @@
 		<property name="name">
 			<value>SourcePos</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -212,7 +214,6 @@
 		<property name="name">
 			<value>OverallGain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
@@ -541,7 +542,6 @@
 		<property name="name">
 			<value>SimOutputs</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>0</value>
 		</property>
@@ -558,7 +558,6 @@
 		<property name="name">
 			<value>DistRange</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
