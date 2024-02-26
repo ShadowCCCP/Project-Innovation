@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{97111a77-911d-4e11-8130-2ee60335c757}">
 		<property name="name">
-			<value>Droning Sounds</value>
+			<value>Droning Sounds 01</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -76,7 +76,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{4425fc4e-d8e2-40ce-b4db-aace2308eb0e}">
 		<property name="volume">
-			<value>-8</value>
+			<value>-15.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{571dc2d5-c2a7-4e41-87ea-206369e2481c}</destination>
