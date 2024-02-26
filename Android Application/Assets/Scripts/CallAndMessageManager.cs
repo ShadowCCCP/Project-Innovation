@@ -63,6 +63,7 @@ public class CallAndMessageManager : MonoBehaviour
         if (!messageOrCallOngoing)
         {
             messageOrCallOngoing = true;
+            uICallManager.AddNewMessage(contact, message);
             StartCoroutine(UIManager.Instance.NewMessage(contact, message));
         }
         else
