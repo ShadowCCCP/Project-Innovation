@@ -33,6 +33,7 @@ public class UDPListener : MonoBehaviour
         string receivedMessage = Encoding.ASCII.GetString(receivedBytes);
 
         // Handle message...
+        Debug.Log(receivedMessage);
         handler.ProcessMessage(receivedMessage);
 
         // Continue listening for messages...
