@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7632430442829644697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone
-  Guid:
-    Data1: 352904199
-    Data2: 1083058266
-    Data3: -220099173
-    Data4: 2051576774
-  Banks:
-  - {fileID: -4598302531918706226}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2533
 --- !u!114 &-7056838800314850343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,12 +62,12 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638436315303465758
+  lastModified: 638445449662465277
   FileSizes:
   - Name: Desktop
-    Value: 621984
+    Value: 842400
   Exists: 1
---- !u!114 &-3595579352474399304
+--- !u!114 &-4495873341664362347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,9 +77,63 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Talking
+  m_Name: event:/SFX/Phone (experimenting)/Putting Down Phone OneShot
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Talking
+  Path: event:/SFX/Phone (experimenting)/Putting Down Phone OneShot
+  Guid:
+    Data1: -1781615720
+    Data2: 1165156487
+    Data3: 343697590
+    Data4: -425853277
+  Banks:
+  - {fileID: -4598302531918706226}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 425
+--- !u!114 &-3429830332111403886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flashlight Switch
+  m_EditorClassIdentifier: 
+  Path: event:/Flashlight Switch
+  Guid:
+    Data1: -1356686587
+    Data2: 1205094291
+    Data3: -1678929022
+    Data4: -682639329
+  Banks:
+  - {fileID: -4598302531918706226}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 312
+--- !u!114 &-2912197652607143915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone (experimenting)/Talking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone (experimenting)/Talking
   Guid:
     Data1: -1951320398
     Data2: 1185240626
@@ -121,6 +148,33 @@ MonoBehaviour:
   MinDistance: 5.4
   MaxDistance: 50
   Length: 8555
+--- !u!114 &-2270122100956156491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone (experimenting)/Phone Ringing Loop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone (experimenting)/Phone Ringing Loop
+  Guid:
+    Data1: 352904199
+    Data2: 1083058266
+    Data3: -220099173
+    Data4: 2051576774
+  Banks:
+  - {fileID: -4598302531918706226}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
 --- !u!114 &-1725218359150402773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,17 +218,20 @@ MonoBehaviour:
   - {fileID: 3868041859362131169}
   - {fileID: -4598302531918706226}
   EditorEvents:
-  - {fileID: -7632430442829644697}
-  - {fileID: 5999451931758131811}
   - {fileID: -7056838800314850343}
-  - {fileID: -3595579352474399304}
   - {fileID: 7201395897108460410}
+  - {fileID: -3429830332111403886}
+  - {fileID: -2270122100956156491}
+  - {fileID: 2480794730189692260}
+  - {fileID: 4828659092046088481}
+  - {fileID: -4495873341664362347}
+  - {fileID: -2912197652607143915}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4598302531918706226}
   StringsBanks:
   - {fileID: 3868041859362131169}
-  cacheTime: 638436315303535861
+  cacheTime: 638445449662495407
   cacheVersion: 131609
 --- !u!114 &465853029299051097
 MonoBehaviour:
@@ -223,6 +280,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 621984
   Exists: 1
+--- !u!114 &2480794730189692260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone (experimenting)/Pickup Up Phone OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone (experimenting)/Pickup Up Phone OneShot
+  Guid:
+    Data1: 1702138991
+    Data2: 1287968413
+    Data3: 850781333
+    Data4: -674705367
+  Banks:
+  - {fileID: -4598302531918706226}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1023
 --- !u!114 &3634640799570506013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,10 +349,10 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638436315303535861
+  lastModified: 638445449662495407
   FileSizes:
   - Name: Desktop
-    Value: 978
+    Value: 1234
   Exists: 1
 --- !u!114 &4032546226376672647
 MonoBehaviour:
@@ -297,7 +381,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 794
---- !u!114 &5999451931758131811
+--- !u!114 &4828659092046088481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,23 +391,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Tick
+  m_Name: event:/Ambience 2D/Droning Sounds
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Tick
+  Path: event:/Ambience 2D/Droning Sounds
   Guid:
-    Data1: 1327133558
-    Data2: 1204877887
-    Data3: -390638914
-    Data4: 237839351
+    Data1: -1760486793
+    Data2: 1309774109
+    Data3: -433180543
+    Data4: 1472673027
   Banks:
   - {fileID: -4598302531918706226}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 794
+  Length: 20000
 --- !u!114 &7201395897108460410
 MonoBehaviour:
   m_ObjectHideFlags: 0
