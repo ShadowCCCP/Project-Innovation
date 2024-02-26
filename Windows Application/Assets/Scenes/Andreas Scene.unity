@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 138299803}
   - component: {fileID: 138299802}
   m_Layer: 0
-  m_Name: Test
+  m_Name: Time Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f66bf122a6a6eb4fb1631f1b401b62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: []
+  eventList: []
 --- !u!4 &138299803
 Transform:
   m_ObjectHideFlags: 0
@@ -1648,6 +1648,6 @@ SceneRoots:
   - {fileID: 1667159717}
   - {fileID: 1600726418}
   - {fileID: 2013410475}
-  - {fileID: 267780210}
   - {fileID: 138299803}
   - {fileID: 62300300}
+  - {fileID: 267780210}
