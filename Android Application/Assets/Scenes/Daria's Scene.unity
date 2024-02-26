@@ -4393,7 +4393,7 @@ MonoBehaviour:
   callPrefab: {fileID: 1632850788009408205, guid: 1b6acea73dac5b146afa1e71fa109594,
     type: 3}
   contentMessages: {fileID: 1628217633}
-  messagePrefab: {fileID: 3050032422515054649, guid: fd6c7f11307f86a49b48ed5f903a088a,
+  messagePrefab: {fileID: 5714775523409465271, guid: 94a7778bf44922c4d8497da0955c15f3,
     type: 3}
 --- !u!1 &1475543664
 GameObject:
