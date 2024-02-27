@@ -6,7 +6,8 @@ using UnityEngine;
 public class CallAndMessageManager : MonoBehaviour
 {
     [SerializeField] Contact[] contacts;
-    [SerializeField] string[] messages;
+
+    [SerializeField] [Multiline(3)] string[] messages;
 
     bool messageOrCallOngoing;
     // Start is called before the first frame update
@@ -80,13 +81,5 @@ public class CallAndMessageManager : MonoBehaviour
     {
         messageOrCallOngoing = false;
         Debug.Log("state emptied");
-    }
-
-
-
-    [CustomEditor(typeof(CallAndMessageManager))]
-    public class CallAndMessageManagerEditor : Editor
-    {
-        
     }
 }
