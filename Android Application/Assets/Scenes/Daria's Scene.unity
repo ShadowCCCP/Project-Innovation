@@ -1764,7 +1764,8 @@ MonoBehaviour:
   contacts:
   - {fileID: 11400000, guid: ab6270e425249d4469d13ef641c34a87, type: 2}
   messages:
-  - Hey... uhm I m out of toilet paper in room 301.. can you uhh .... bring me some...
+  - "Hey... uhm I m out of toilet paper in room\n 301.. can you uhh .... bring me
+    some..."
   uICallManager: {fileID: 1448889797}
 --- !u!224 &696239121 stripped
 RectTransform:
