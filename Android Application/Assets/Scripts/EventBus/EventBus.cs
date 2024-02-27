@@ -15,14 +15,13 @@ public class EventBus<T> where T : Event
 
 public class MessageEvent : Event
 {
-    public MessageEvent()
-    {
-    }
+    public MessageEvent() { }
 }
-
 public class CallEvent : Event
 {
-    public CallEvent()
-    {
-    }
+    public CallEvent() { }
+}
+public class StartGameEvent : Event
+{
+    public StartGameEvent() { }
 }

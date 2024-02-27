@@ -6,13 +6,12 @@ using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
 {
-    [SerializeField]
-    EventReference eventRef;
+    [SerializeField] EventReference eventRef;
 
     EventInstance soundInstance;
 
-    PARAMETER_ID paramIdX;
-    PARAMETER_ID paramIdY;
+    [SerializeField] PARAMETER_ID paramIdX;
+    [SerializeField]PARAMETER_ID paramIdY;
 
     PLAYBACK_STATE currentState;
 

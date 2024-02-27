@@ -44,7 +44,7 @@ public class UICallManager : MonoBehaviour
         contactName.text = contact.ContactName;
         contactDetails.text = contact.Details;
         contactImage.sprite = contact.Icon;
-        contactTime.text = GameManager.Instance.GetCurrentTimeFormatted();
+        contactTime.text = TimeManager.GetCurrentTimeString();
 
         callList.Add(newCall);
 
@@ -64,6 +64,6 @@ public class UICallManager : MonoBehaviour
         contactDetails.text = contact.Details;
         contactImage.sprite = contact.Icon;
         messageContent.text = message;
-        contactTime.text = GameManager.Instance.GetCurrentTimeFormatted();
+        contactTime.text = TimeManager.GetCurrentTimeString();
     }
 }

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class CallAndMessageManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    [SerializeField] Contact[] contacts;
+    public static GameManager Instance;
 
+    [SerializeField] Contact[] contacts;
     [SerializeField] [Multiline(3)] string[] messages;
 
     bool messageOrCallOngoing;
@@ -14,9 +15,17 @@ public class CallAndMessageManager : MonoBehaviour
 
     [SerializeField]
     UICallManager uICallManager;
-    void Start()
-    {
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     void Update()
