@@ -24,3 +24,13 @@ public class GyroscopeEvent : Event
     public Vector3 forward;
     public Vector3 up;
 }
+
+public class MonsterEvent : Event
+{
+    public MonsterEvent(string pPlaceholder)
+    {
+        placeholder = pPlaceholder;
+    }
+
+    public string placeholder;
+}

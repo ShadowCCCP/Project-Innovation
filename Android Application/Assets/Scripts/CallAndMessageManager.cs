@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CallAndMessageManager : MonoBehaviour
 {
-    [SerializeField]
-    List<Contact> contacts = new List<Contact>();
-
-    [SerializeField]
-    List<string> messages = new List<string>();
+    [SerializeField] Contact[] contacts;
+    [SerializeField] string[] messages;
 
     bool messageOrCallOngoing;
     // Start is called before the first frame update
@@ -22,7 +20,6 @@ public class CallAndMessageManager : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.C))
         {
             OnCallReceived(contacts[0]);
@@ -35,8 +32,6 @@ public class CallAndMessageManager : MonoBehaviour
         {
             OnNewMessage(contacts[0], messages[0]);
         }
-
-
     }
 
     public void OnCallReceived(Contact caller)
@@ -85,5 +80,13 @@ public class CallAndMessageManager : MonoBehaviour
     {
         messageOrCallOngoing = false;
         Debug.Log("state emptied");
+    }
+
+
+
+    [CustomEditor(typeof(CallAndMessageManager))]
+    public class CallAndMessageManagerEditor : Editor
+    {
+        
     }
 }

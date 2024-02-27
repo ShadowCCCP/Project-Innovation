@@ -19,6 +19,16 @@ public struct Timeframe
     {
         return string.Format("{0:D2}:{1:D2}", hours, minutes);
     }
+
+    public bool Equal(Timeframe time)
+    {
+        if(hours == time.hours && minutes == time.minutes)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }
 
 
