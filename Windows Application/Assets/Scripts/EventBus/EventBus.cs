@@ -27,10 +27,10 @@ public class GyroscopeEvent : Event
 
 public class MonsterEvent : Event
 {
-    public MonsterEvent(string pPlaceholder)
+    public MonsterEvent(int pMonsterID)
     {
-        placeholder = pPlaceholder;
+        monsterID = pMonsterID;
     }
 
-    public string placeholder;
+    public int monsterID;
 }

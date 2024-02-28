@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -17,7 +18,9 @@ public struct EventTimer
         {
             case GameEvents.Monster:
                 {
-                    EventBus<MonsterEvent>.Publish(new MonsterEvent("placeholder"));
+                    
+                    int r = Random.Range(0, GameObject.FindGameObjectsWithTag("Monster").Count());
+                    EventBus<MonsterEvent>.Publish(new MonsterEvent(r));
                     break;
                 }
             case GameEvents.Message:
