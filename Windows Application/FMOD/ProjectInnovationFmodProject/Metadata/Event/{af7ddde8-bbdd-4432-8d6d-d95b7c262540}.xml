@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{af7ddde8-bbdd-4432-8d6d-d95b7c262540}">
 		<property name="name">
-			<value>Air Vent Loop</value>
+			<value>Air Vent One-Shots</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{2a57ea0c-12da-45a6-8869-00248bb7a133}</destination>
+			<destination>{f1382ff5-e15d-457b-be54-f3b98690ccca}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{d9901d72-38b3-4a26-902f-1c58d3c960e3}</destination>
@@ -66,17 +66,11 @@
 		<relationship name="automationTracks">
 			<destination>{999b7b5d-a24e-4365-9a69-d1d2f66598b0}</destination>
 		</relationship>
-		<relationship name="modules">
-			<destination>{391b9227-a5f2-4f6b-b08e-bf1e97cce04e}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{6fcdf1ac-ebca-4c80-8809-e171c35f10ee}</destination>
 		</relationship>
 	</object>
 	<object class="Timeline" id="{113ff7f7-5961-4418-9b09-51ff6e85bbf5}">
-		<relationship name="modules">
-			<destination>{391b9227-a5f2-4f6b-b08e-bf1e97cce04e}</destination>
-		</relationship>
 		<relationship name="markers">
 			<destination>{3d0bfd9b-74d8-4789-b149-f7019f112d6b}</destination>
 		</relationship>
@@ -101,14 +95,6 @@
 	<object class="AutomationTrack" id="{999b7b5d-a24e-4365-9a69-d1d2f66598b0}">
 		<relationship name="automator">
 			<destination>{abaa4b21-00e4-43bf-966e-7fdae580734b}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{391b9227-a5f2-4f6b-b08e-bf1e97cce04e}">
-		<property name="length">
-			<value>12</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{7210b02b-73ba-446d-91b8-ad91e043d7f8}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{6fcdf1ac-ebca-4c80-8809-e171c35f10ee}">
@@ -213,7 +199,6 @@
 		<property name="name">
 			<value>SourcePos</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -222,7 +207,6 @@
 		<property name="name">
 			<value>OverallGain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
@@ -551,7 +535,6 @@
 		<property name="name">
 			<value>SimOutputs</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>0</value>
 		</property>
@@ -568,7 +551,6 @@
 		<property name="name">
 			<value>DistRange</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>

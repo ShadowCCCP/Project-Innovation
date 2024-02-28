@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{97111a77-911d-4e11-8130-2ee60335c757}">
 		<property name="name">
-			<value>Droning Sounds</value>
+			<value>Droning Ambience</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{2a57ea0c-12da-45a6-8869-00248bb7a133}</destination>
+			<destination>{5ea49876-31ac-4152-9058-ee0dc9987c32}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{ea209a7d-72f8-4046-a5be-0c8e4d423767}</destination>
