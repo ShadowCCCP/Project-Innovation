@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
     public static GameManager Instance;
 
+    IMessageManager messageManager;
+    ICallManager callManager;
+
+    [SerializeField] UICallManager uiCallManager;
     [SerializeField] Contact[] contacts;
     [SerializeField] [Multiline(3)] string[] messages;
 
     bool messageOrCallOngoing;
-    // Start is called before the first frame update
-
-    [SerializeField]
-    UICallManager uICallManager;
 
     private void Awake()
     {
@@ -28,67 +29,59 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        messageManager = GetComponent<IMessageManager>();
+        callManager = GetComponent<ICallManager>();
+
+        if (messageManager == null) Debug.Log("GameManager: MessageManager missing...");
+        else if (callManager == null) Debug.Log("GameManager: CallManager missing...");
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            OnCallReceived(contacts[0]);
+            callManager.PickCall();
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
-            OnCallEnded();
+            callManager.ShowCallEnded();
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
-            OnNewMessage(contacts[0], messages[0]);
+            messageManager.PickMessage();
         }
-    }
-
-    public void OnCallReceived(Contact caller)
-    {
-        if (!messageOrCallOngoing)
-        {
-            messageOrCallOngoing = true;
-            UIManager.Instance.ShowNewCall(caller);
-            uICallManager.AddNewCall(caller);
-        }
-        else
-        {
-            Debug.Log("too many things happening at once");
-        }
-    }
-
-    public void OnCallEnded()
-    {
-        StartCoroutine(UIManager.Instance.CallEnded());
-    }    
-
-    public void OnNewMessage(Contact contact, string message)
-    {
-        if (!messageOrCallOngoing)
-        {
-            messageOrCallOngoing = true;
-            uICallManager.AddNewMessage(contact, message);
-            StartCoroutine(UIManager.Instance.NewMessage(contact, message));
-        }
-        else
-        {
-            Debug.Log("too many things happening at once");
-        }
-    }
-
-    public void ActivePushToTalk() { }
-
-    public void EndPushToTalk() { }
-
-    public void OnMessageReceived()
-    {
-        //do animation
     }
 
     public void EmptyState()
     {
         messageOrCallOngoing = false;
         Debug.Log("state emptied");
+    }
+
+    public string[] GetMessages()
+    {
+        return messages;
+    }
+
+    public Contact[] GetContacts()
+    {
+        return contacts;
+    }
+
+    public UICallManager GetUICallManager()
+    {
+        return uiCallManager;
+    }
+
+    public bool IsActive()
+    {
+        return messageOrCallOngoing;
+    }
+
+    public void ToggleUIState()
+    {
+        messageOrCallOngoing = !messageOrCallOngoing;
     }
 }

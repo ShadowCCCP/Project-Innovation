@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3809,9 +3809,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: 206f4658425e48e459015b8e5d8333c1, type: 3}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 8623895057794418509, guid: 498950c3473c6c841a87b4e0e05fcbd1,
+          type: 3}
+        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+        m_MethodName: InvokeStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4014,8 +4015,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110273973}
-  - component: {fileID: 1110273972}
   - component: {fileID: 1110273971}
+  - component: {fileID: 1110273974}
+  - component: {fileID: 1110273975}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4035,25 +4037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17c55cc3669bec4bb5e57279f7267d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiCallManager: {fileID: 1514274837}
   contacts:
   - {fileID: 11400000, guid: ab6270e425249d4469d13ef641c34a87, type: 2}
   messages:
   - Hey... uhm I m out of toilet paper in room 301.. can you uhh .... bring me some...
-  uICallManager: {fileID: 1514274837}
---- !u!114 &1110273972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110273970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb6dc2588a2400443a7f6dbc939a4bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameLengthTimeSeconds: 480
-  fifteenMinutesInSeconds: 1
 --- !u!4 &1110273973
 Transform:
   m_ObjectHideFlags: 0
@@ -4069,6 +4057,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110273974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110273970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f932ec0d63d5cd243a9cbf895eb54f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1110273975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110273970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268aecd02e72c6d4fabcd975b935c6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1139547561
 GameObject:
   m_ObjectHideFlags: 0
@@ -5328,37 +5340,6 @@ PrefabInstance:
       addedObject: {fileID: 534312599}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8, type: 3}
---- !u!1 &1391053388
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1391053389}
-  m_Layer: 0
-  m_Name: ButtonPrefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1391053389
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391053388}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 574.2117, y: 195.7934, z: 191.19727}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418374396
 GameObject:
   m_ObjectHideFlags: 0
@@ -8143,4 +8124,3 @@ SceneRoots:
   - {fileID: 1110273973}
   - {fileID: 1514274842}
   - {fileID: 2002295494}
-  - {fileID: 1391053389}
