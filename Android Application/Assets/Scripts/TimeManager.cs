@@ -1,19 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
 public class TimeManager : MonoBehaviour
 {
-    static float timeInSeconds=0;
 
-    [SerializeField] float gameLengthTimeSeconds = 480;
+    [SerializeField] Timeframe startTime;
+    [SerializeField] int totalGameLengthInSeconds = 480;
     [SerializeField] float fifteenMinutesInSeconds = 1;
+    [SerializeField] bool analTimeFormat;
+
+    int startMinutes;
+    int currentMinutes;
+    public static string currentTime; 
 
     void Start()
     {
         EventBus<StartGameEvent>.OnEvent += StartGame;
+
+        currentMinutes = startTime.hours * 60 + startTime.minutes;
+        startMinutes = currentMinutes;
+
+        UIManager.Instance.UpdateClock(startTime.hours.ToString(), startTime.minutes.ToString("00"));
+        currentTime = GetCurrentTimeString();
     }
 
     void OnDestroy()
@@ -21,61 +34,63 @@ public class TimeManager : MonoBehaviour
         EventBus<StartGameEvent>.OnEvent -= StartGame;
     }
 
-    public void ReloadGame()
+    void Update()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void OnGameOver()
-    {
-        UIManager.Instance.ShowGameOver();
+        //Debug.Log(currentMinutes);
     }
 
     public void StartGame(StartGameEvent startGameEvent)
     {
-        //start time
-        StartCoroutine(timeCoroutine());
+        InvokeRepeating("UpdateTime", fifteenMinutesInSeconds, fifteenMinutesInSeconds);
     }
 
-    IEnumerator timeCoroutine()
+    void UpdateTime()
     {
-        while (timeInSeconds < gameLengthTimeSeconds)
+        currentMinutes += 15;
+
+        Timeframe time = GetCurrentTime();
+
+        UIManager.Instance.UpdateClock(time.hours.ToString(), time.minutes.ToString("00"));
+        currentTime = GetCurrentTimeString();
+
+        //if (currentTime.hours > 23) currentMinutes -= 60 * 24;
+
+        // If time limit is succeeded, reset it back to the startTime....
+        if (currentMinutes >= startMinutes + totalGameLengthInSeconds)
         {
-            yield return new WaitForSeconds(fifteenMinutesInSeconds);
-            timeInSeconds += 15;
-
-            
-            UIManager.Instance.UpdateClock(formatHour(), formatMinute());
+            // Game Won?
+            currentMinutes = startMinutes;
         }
-
     }
 
-    static string formatHour()
+    string GetCurrentTimeString()
     {
-        Debug.Log("Hours: " + ((int)timeInSeconds / 60 - 2));
-        int hour = (int)timeInSeconds / 60 - 2;
-        if (hour < 0)
-        {
-            hour = 12 + hour;
-        }
-        return hour.ToString();
+        if (analTimeFormat) return AnalTimeFormat();
+        else return DigitalTimeFormat();
     }
 
-    static string formatMinute()
+    string AnalTimeFormat()
     {
-        Debug.Log("Minutes: " + (int)timeInSeconds % 60);
-        string minuteString = ((int)timeInSeconds % 60).ToString();
+        // Analogous time format...
+        Timeframe currentTime = GetCurrentTime();
+        Debug.Log(currentTime.hours);
 
-        if (minuteString == "0")
-        {
-            minuteString = "00";
-        }
-        return minuteString;
+        if (currentTime.hours == 0) currentTime.hours = 12;
+        else if (currentTime.hours > 12) currentTime.hours -= 12;
+
+        return currentTime.hours + ":" + currentTime.minutes.ToString("00");
     }
 
-    public static string GetCurrentTimeString()
+    string DigitalTimeFormat()
     {
-        return formatHour() + ":" + formatMinute();
+        // Digital time format...
+        Timeframe currentTime = GetCurrentTime();
+
+        return currentTime.hours + ":" + currentTime.minutes.ToString("00");
     }
 
+    Timeframe GetCurrentTime()
+    {
+        return new Timeframe(currentMinutes / 60, currentMinutes % 60);
+    }
 }

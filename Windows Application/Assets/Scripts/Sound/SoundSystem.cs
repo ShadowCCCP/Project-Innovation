@@ -11,7 +11,7 @@ public class SoundSystem : MonoBehaviour
     EventInstance soundInstance;
 
     [SerializeField] PARAMETER_ID paramIdX;
-    [SerializeField]PARAMETER_ID paramIdY;
+    [SerializeField] PARAMETER_ID paramIdY;
 
     PLAYBACK_STATE currentState;
 
