@@ -38,7 +38,6 @@ public class EnemyBehaviour : MonoBehaviour
         anim = GetComponent<Animator>();
         transform.LookAt(navPoints[i].position);
         anim.SetFloat("Speed", currentSpeed);
-        currentSpeed = speed;
     }
 
     int i =0;
