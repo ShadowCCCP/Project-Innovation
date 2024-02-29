@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7632430442829644697
+--- !u!114 &-7088047410779613849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,51 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone
+  m_Name: event:/SFX/Phone/Putting Down Phone OneShot
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone
+  Path: event:/SFX/Phone/Putting Down Phone OneShot
   Guid:
-    Data1: 352904199
-    Data2: 1083058266
-    Data3: -220099173
-    Data4: 2051576774
+    Data1: -1781615720
+    Data2: 1165156487
+    Data3: 343697590
+    Data4: -425853277
   Banks:
-  - {fileID: -4598302531918706226}
+  - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2533
---- !u!114 &-7056838800314850343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Storming Loop
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Storming Loop
-  Guid:
-    Data1: -1703486551
-    Data2: 1263829925
-    Data3: 510384277
-    Data4: 2101939001
-  Banks:
-  - {fileID: -4598302531918706226}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11000
---- !u!114 &-6620743785690848075
+  Length: 425
+--- !u!114 &-5764429256080300777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,12 +42,93 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638436413136271342
+  lastModified: 638447339327025357
   FileSizes:
   - Name: Desktop
-    Value: 978
+    Value: 1420
   Exists: 1
---- !u!114 &-4598302531918706226
+--- !u!114 &-5150663093806699487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience 2D/Unnatural&Scary/Growling Scare
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience 2D/Unnatural&Scary/Growling Scare
+  Guid:
+    Data1: -1359535159
+    Data2: 1168906215
+    Data3: -964292449
+    Data4: 1861211973
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4672
+--- !u!114 &-4519201132680178429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience 2D/Building&Nature/Air Vent Loop
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience 2D/Building&Nature/Air Vent Loop
+  Guid:
+    Data1: -1350705688
+    Data2: 1144175581
+    Data3: 1540976013
+    Data4: 1076176508
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0.5
+  MaxDistance: 20
+  Length: 12000
+--- !u!114 &-3298377876252215444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience 2D/Unnatural&Scary/Droning Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience 2D/Unnatural&Scary/Droning Ambience
+  Guid:
+    Data1: -1760486793
+    Data2: 1309774109
+    Data3: -433180543
+    Data4: 1472673027
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20000
+--- !u!114 &-2672751323166541553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,16 +143,12 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-<<<<<<< Updated upstream
-  lastModified: 638446327015211880
-=======
   lastModified: 638447339326945410
->>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
-    Value: 621984
+    Value: 874464
   Exists: 1
---- !u!114 &-3595579352474399304
+--- !u!114 &-731895631006577394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,16 +158,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Talking
+  m_Name: event:/SFX/Phone/Phone Ringing Loop
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Talking
+  Path: event:/SFX/Phone/Phone Ringing Loop
+  Guid:
+    Data1: 352904199
+    Data2: 1083058266
+    Data3: -220099173
+    Data4: 2051576774
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
+--- !u!114 &-125074139472218452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Talking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Talking
   Guid:
     Data1: -1951320398
     Data2: 1185240626
     Data3: -49008705
     Data4: -871230549
   Banks:
-  - {fileID: -4598302531918706226}
+  - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -125,33 +202,6 @@ MonoBehaviour:
   MinDistance: 5.4
   MaxDistance: 50
   Length: 8555
---- !u!114 &-1725218359150402773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Air Vent Loop
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Air Vent Loop
-  Guid:
-    Data1: -1350705688
-    Data2: 1144175581
-    Data3: 1540976013
-    Data4: 1076176508
-  Banks:
-  - {fileID: 730986556841053521}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0.5
-  MaxDistance: 20
-  Length: 12000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,26 +215,28 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 3868041859362131169}
-  - {fileID: -4598302531918706226}
+  - {fileID: -5764429256080300777}
+  - {fileID: -2672751323166541553}
   EditorEvents:
-  - {fileID: -7632430442829644697}
-  - {fileID: 5999451931758131811}
-  - {fileID: -7056838800314850343}
-  - {fileID: -3595579352474399304}
-  - {fileID: 7201395897108460410}
-  EditorParameters: []
+  - {fileID: -731895631006577394}
+  - {fileID: 5533286117680551917}
+  - {fileID: 5473427266957198973}
+  - {fileID: -3298377876252215444}
+  - {fileID: 5248115645130956315}
+  - {fileID: -7088047410779613849}
+  - {fileID: 210326562733807389}
+  - {fileID: -125074139472218452}
+  - {fileID: -5150663093806699487}
+  - {fileID: -4519201132680178429}
+  EditorParameters:
+  - {fileID: 274565366538701708}
   MasterBanks:
-  - {fileID: -4598302531918706226}
+  - {fileID: -2672751323166541553}
   StringsBanks:
-  - {fileID: 3868041859362131169}
-<<<<<<< Updated upstream
-  cacheTime: 638446327015221882
-=======
+  - {fileID: -5764429256080300777}
   cacheTime: 638447339327025357
->>>>>>> Stashed changes
   cacheVersion: 131609
---- !u!114 &465853029299051097
+--- !u!114 &210326562733807389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,16 +246,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Storming Loop
+  m_Name: event:/Ambience 2D/Building&Nature/Storming Loop
   m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Storming Loop
+  Path: event:/Ambience 2D/Building&Nature/Storming Loop
   Guid:
     Data1: -1703486551
     Data2: 1263829925
     Data3: 510384277
     Data4: 2101939001
   Banks:
-  - {fileID: 730986556841053521}
+  - {fileID: -2672751323166541553}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -211,7 +263,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 11000
---- !u!114 &730986556841053521
+--- !u!114 &274565366538701708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,18 +272,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Intensity
   m_EditorClassIdentifier: 
-  Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638436413136251347
-  FileSizes:
-  - Name: Desktop
-    Value: 621984
+  Name: Intensity
+  StudioPath: parameter:/Intensity
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1813553446
+    data2: 1992476535
+  Type: 1
+  IsGlobal: 1
+  Labels: []
   Exists: 1
---- !u!114 &3634640799570506013
+--- !u!114 &1768369631812058773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,49 +296,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Whispering/Intensity
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone
-  Guid:
-    Data1: 352904199
-    Data2: 1083058266
-    Data3: -220099173
-    Data4: 2051576774
-  Banks:
-  - {fileID: 730986556841053521}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2533
---- !u!114 &3868041859362131169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-<<<<<<< Updated upstream
-  lastModified: 638446327015221882
-=======
-  lastModified: 638447339327025357
->>>>>>> Stashed changes
-  FileSizes:
-  - Name: Desktop
-    Value: 978
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1813553446
+    data2: 1992476535
+  Type: 1
+  IsGlobal: 1
+  Labels: []
   Exists: 1
---- !u!114 &4032546226376672647
+--- !u!114 &5248115645130956315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,101 +321,75 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Tick
+  m_Name: event:/SFX/Phone/Phone Notification
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Tick
+  Path: event:/SFX/Phone/Phone Notification
   Guid:
-    Data1: 1327133558
-    Data2: 1204877887
-    Data3: -390638914
-    Data4: 237839351
+    Data1: -1695634310
+    Data2: 1340411299
+    Data3: -897471322
+    Data4: 213449232
   Banks:
-  - {fileID: 730986556841053521}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 794
---- !u!114 &5999451931758131811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Tick
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Tick
-  Guid:
-    Data1: 1327133558
-    Data2: 1204877887
-    Data3: -390638914
-    Data4: 237839351
-  Banks:
-  - {fileID: -4598302531918706226}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 794
---- !u!114 &7201395897108460410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Air Vent Loop
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Air Vent Loop
-  Guid:
-    Data1: -1350705688
-    Data2: 1144175581
-    Data3: 1540976013
-    Data4: 1076176508
-  Banks:
-  - {fileID: -4598302531918706226}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0.5
-  MaxDistance: 20
-  Length: 12000
---- !u!114 &7861693355221701623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Talking
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Talking
-  Guid:
-    Data1: -1951320398
-    Data2: 1185240626
-    Data3: -49008705
-    Data4: -871230549
-  Banks:
-  - {fileID: 730986556841053521}
+  - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
-  MinDistance: 5.4
-  MaxDistance: 50
-  Length: 8555
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3059
+--- !u!114 &5473427266957198973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Pickup Up Phone OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Pickup Up Phone OneShot
+  Guid:
+    Data1: 1702138991
+    Data2: 1287968413
+    Data3: 850781333
+    Data4: -674705367
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1023
+--- !u!114 &5533286117680551917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience 2D/Unnatural&Scary/Whispering
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience 2D/Unnatural&Scary/Whispering
+  Guid:
+    Data1: -1054007248
+    Data2: 1325012662
+    Data3: -1466061668
+    Data4: -74536110
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1768369631812058773}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
