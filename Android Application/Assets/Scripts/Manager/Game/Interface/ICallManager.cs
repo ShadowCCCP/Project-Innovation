@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface ICallManager
 {
-    void PickCall();
+    void PickCall(CallEvent callEvent);
     void ShowCallEnded();
 }

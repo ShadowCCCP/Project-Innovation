@@ -125,10 +125,10 @@ public class UIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
     }
 
-    public void UpdateClock(string hourString, string minuteString)
+    public void UpdateClock(string timeString)
     {
         
-        clock.SetText(hourString + ":" + minuteString); 
+        clock.SetText(timeString); 
         
     }
   

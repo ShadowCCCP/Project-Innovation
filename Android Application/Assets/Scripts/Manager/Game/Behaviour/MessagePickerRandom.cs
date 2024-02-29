@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.VersionControl;
@@ -8,16 +9,28 @@ public class MessagePickerRandom : MonoBehaviour, IMessageManager
     Contact[] contacts;
     string[] messages;
 
-    public void PickMessage()
+    void Start()
     {
-        Contact[] contacts = GameManager.Instance.GetContacts();
-        string[] messages = GameManager.Instance.GetMessages();
+        EventBus<MessageEvent>.OnEvent += PickMessage;
+    }
+
+    void OnDestroy()
+    {
+        EventBus<MessageEvent>.OnEvent -= PickMessage;
+    }
+
+    public void PickMessage(MessageEvent messageEvent)
+    {
+        contacts = GameManager.Instance.GetContacts();
+        messages = GameManager.Instance.GetMessages();
 
         if (contacts == null || contacts.Length == 0) Debug.Log("MessagePicker: GameManager doesn't hold any contacts...");
         else if (messages == null || messages.Length == 0) Debug.Log("MessagePicker: GameManager doesn't hold any messages...");
 
-        int messageRand = Random.Range(0, messages.Length);
-        int contactRand = Random.Range(0, contacts.Length);
+        System.Random random = new System.Random();
+
+        int messageRand = random.Next(0, messages.Length);
+        int contactRand = random.Next(0, contacts.Length);
 
         ShowMessage(contacts[contactRand], messages[messageRand]);
     }
@@ -26,8 +39,11 @@ public class MessagePickerRandom : MonoBehaviour, IMessageManager
     {
         if (!GameManager.Instance.IsActive())
         {
+            //Debug.Log("1");
             GameManager.Instance.ToggleUIState();
+            //Debug.Log("2");
             GameManager.Instance.GetUICallManager().AddNewMessage(contact, message);
+            //Debug.Log("3");
             StartCoroutine(UIManager.Instance.NewMessage(contact, message));
         }
         else

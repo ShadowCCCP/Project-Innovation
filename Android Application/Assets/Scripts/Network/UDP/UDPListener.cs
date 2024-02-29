@@ -7,11 +7,21 @@ using System;
 
 public class UDPListener : MonoBehaviour
 {
+    MessageHandler handler;
+
     private const int port = 7087;
     private UdpClient udpClient;
 
     void Start()
     {
+        handler = GetComponent<MessageHandler>();
+
+        if (handler == null)
+        {
+            Debug.Log("UDPListener: Missing MessageHandler...");
+            Destroy(this);
+        }
+
         udpClient = new UdpClient(port);
         udpClient.BeginReceive(ReceiveData, null);
     }
@@ -23,8 +33,9 @@ public class UDPListener : MonoBehaviour
         string receivedMessage = Encoding.ASCII.GetString(receivedBytes);
 
         // Handle message...
+        handler.ProcessMessage(receivedMessage);
 
-        // Continue listening for messages
+        // Continue listening for messages...
         udpClient.BeginReceive(ReceiveData, null);
     }
 

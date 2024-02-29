@@ -24,6 +24,15 @@ public class GyroscopeEvent : Event
     public Vector3 forward;
     public Vector3 up;
 }
+public class TimeEvent : Event
+{
+    public TimeEvent(Timeframe pTime)
+    {
+        time = pTime;
+    }
+
+    public Timeframe time;
+}
 
 public class MonsterEvent : Event
 {

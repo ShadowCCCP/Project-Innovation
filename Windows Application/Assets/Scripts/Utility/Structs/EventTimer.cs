@@ -25,6 +25,7 @@ public struct EventTimer
                 }
             case GameEvents.Message:
                 {
+                    Debug.Log("Send Message");
                     UDPSender.SendBroadcast("Message");
                     break;
                 }

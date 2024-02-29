@@ -52,18 +52,20 @@ public class UICallManager : MonoBehaviour
 
     public void AddNewMessage(Contact contact, string message) //adds a new message in the message history
     {
+        Debug.Log("0");
         GameObject newMessage = Instantiate(messagePrefab, contentMessages);
-
+        Debug.Log("1");
         var contactName = newMessage.transform.Find("Name").GetComponent<TextMeshProUGUI>();
         var contactDetails = newMessage.transform.Find("Details").GetComponent<TextMeshProUGUI>();
         var contactImage = newMessage.transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
         var messageContent = newMessage.transform.Find("Message").GetComponent<TextMeshProUGUI>();
         var contactTime = newMessage.transform.Find("Time").GetComponent<TextMeshProUGUI>();
-
+        Debug.Log("2");
         contactName.text = contact.ContactName;
         contactDetails.text = contact.Details;
         contactImage.sprite = contact.Icon;
         messageContent.text = message;
         contactTime.text = TimeManager.currentTime;
+        Debug.Log("3");
     }
 }

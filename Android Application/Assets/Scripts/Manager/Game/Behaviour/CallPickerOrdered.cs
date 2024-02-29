@@ -10,10 +10,18 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
     void Start()
     {
         currentCall = 0;
+
+        EventBus<CallEvent>.OnEvent += PickCall;
     }
 
-    public void PickCall()
+    void OnDestroy()
     {
+        EventBus<CallEvent>.OnEvent -= PickCall;
+    }
+
+    public void PickCall(CallEvent callEvent)
+    {
+        Debug.Log("pick");
         contacts = GameManager.Instance.GetContacts();
 
         if (contacts == null || contacts.Length == 0) Debug.Log("MessagePicker: GameManager doesn't hold any contacts...");
@@ -43,6 +51,8 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
 
     void IncreaseCallIndex()
     {
+        currentCall++;
+
         if(currentCall >= contacts.Length)
         {
             currentCall = 0;

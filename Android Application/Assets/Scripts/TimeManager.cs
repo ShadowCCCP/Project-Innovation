@@ -12,31 +12,33 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Timeframe startTime;
     [SerializeField] int totalGameLengthInSeconds = 480;
     [SerializeField] float fifteenMinutesInSeconds = 1;
-    [SerializeField] bool analTimeFormat;
+    [SerializeField] bool analogousTimeFormat;
 
     int startMinutes;
+    int totalMinutes;
+
     int currentMinutes;
-    public static string currentTime; 
+    public static string currentTime;
 
     void Start()
     {
         EventBus<StartGameEvent>.OnEvent += StartGame;
 
+        // CurrentMinutes to have a time variable to change things properly...
         currentMinutes = startTime.hours * 60 + startTime.minutes;
         startMinutes = currentMinutes;
 
-        UIManager.Instance.UpdateClock(startTime.hours.ToString(), startTime.minutes.ToString("00"));
+        // TotalMinutes to read the time passed untouched...
+        totalMinutes = currentMinutes;
+
         currentTime = GetCurrentTimeString();
+
+        DigitalOrAnalogous();
     }
 
     void OnDestroy()
     {
         EventBus<StartGameEvent>.OnEvent -= StartGame;
-    }
-
-    void Update()
-    {
-        //Debug.Log(currentMinutes);
     }
 
     public void StartGame(StartGameEvent startGameEvent)
@@ -47,50 +49,48 @@ public class TimeManager : MonoBehaviour
     void UpdateTime()
     {
         currentMinutes += 15;
-
-        Timeframe time = GetCurrentTime();
-
-        UIManager.Instance.UpdateClock(time.hours.ToString(), time.minutes.ToString("00"));
-        currentTime = GetCurrentTimeString();
-
-        //if (currentTime.hours > 23) currentMinutes -= 60 * 24;
+        totalMinutes += 15;
 
         // If time limit is succeeded, reset it back to the startTime....
-        if (currentMinutes >= startMinutes + totalGameLengthInSeconds)
+        if (totalMinutes >= startMinutes + totalGameLengthInSeconds)
         {
             // Game Won?
-            currentMinutes = startMinutes;
+            CancelInvoke("UpdateTime");
         }
+
+        DigitalOrAnalogous();
+        currentTime = GetCurrentTimeString();
+
+        UDPSender.SendBroadcast("Time: " + DigitalTimeFormat());
     }
+
+    void DigitalOrAnalogous()
+    {
+        if (analogousTimeFormat) UIManager.Instance.UpdateClock(AnalTimeFormat());
+        else UIManager.Instance.UpdateClock(DigitalTimeFormat());
+    }
+
 
     string GetCurrentTimeString()
     {
-        if (analTimeFormat) return AnalTimeFormat();
+        if (analogousTimeFormat) return AnalTimeFormat();
         else return DigitalTimeFormat();
     }
 
     string AnalTimeFormat()
     {
         // Analogous time format...
-        Timeframe currentTime = GetCurrentTime();
-        Debug.Log(currentTime.hours);
+        if (currentMinutes / 60 == 0) currentMinutes = 60 * 12;
+        else if (currentMinutes / 60 > 12) currentMinutes -= 60 * 12;
 
-        if (currentTime.hours == 0) currentTime.hours = 12;
-        else if (currentTime.hours > 12) currentTime.hours -= 12;
-
-        return currentTime.hours + ":" + currentTime.minutes.ToString("00");
+        return currentMinutes / 60 + ":" + (currentMinutes % 60).ToString("00");
     }
 
     string DigitalTimeFormat()
     {
         // Digital time format...
-        Timeframe currentTime = GetCurrentTime();
+        if (currentMinutes / 60 >= 24) currentMinutes -= 60 * 24;
 
-        return currentTime.hours + ":" + currentTime.minutes.ToString("00");
-    }
-
-    Timeframe GetCurrentTime()
-    {
-        return new Timeframe(currentMinutes / 60, currentMinutes % 60);
+        return currentMinutes / 60 + ":" + (currentMinutes % 60).ToString("00");
     }
 }

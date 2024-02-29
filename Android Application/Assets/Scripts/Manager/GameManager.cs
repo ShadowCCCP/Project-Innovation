@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            callManager.PickCall();
+            callManager.PickCall(new CallEvent());
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
-            messageManager.PickMessage();
+            messageManager.PickMessage(new MessageEvent());
         }
     }
 

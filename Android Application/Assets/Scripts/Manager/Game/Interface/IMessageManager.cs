@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IMessageManager
 {
-    void PickMessage();
+    void PickMessage(MessageEvent messageEvent);
 }

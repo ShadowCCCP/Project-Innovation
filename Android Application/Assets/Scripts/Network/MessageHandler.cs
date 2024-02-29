@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,22 +24,18 @@ public class MessageHandler : MonoBehaviour
         // For network testing...
         if (packageTesting) PackageTest();
 
-        if (message.Contains("Gyroscope")) GyroscopeData(message);
-        else if (message.Contains("Time")) TimeData(message);
+        if (message.Contains("Message")) PhoneMessageData();
+        else if (message.Contains("Call")) PhoneCallData();
     }
 
-    void GyroscopeData(string message)
+    void PhoneMessageData()
     {
-        Vector3 forward = StringHandler.ExtractGyroVector(message, "Forward");
-        Vector3 up = StringHandler.ExtractGyroVector(message, "Up");
-
-        EventBus<GyroscopeEvent>.Publish(new GyroscopeEvent(forward, up));
+        EventBus<MessageEvent>.Publish(new MessageEvent());
     }
 
-    void TimeData(string message)
+    void PhoneCallData()
     {
-        Timeframe time = StringHandler.ExtractTime(message);
-        EventBus<TimeEvent>.Publish(new TimeEvent(time));
+        EventBus<CallEvent>.Publish(new CallEvent());
     }
 
     void PackageTest()
