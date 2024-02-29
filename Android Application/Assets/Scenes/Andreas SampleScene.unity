@@ -6027,6 +6027,7 @@ MonoBehaviour:
   totalGameLengthInSeconds: 480
   fifteenMinutesInSeconds: 0.5
   analogousTimeFormat: 0
+  TimeStopped: 0
 --- !u!1 &1545975608
 GameObject:
   m_ObjectHideFlags: 0
