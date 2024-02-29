@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.38358, g: 325.10843, b: 430.30963, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -441,7 +441,7 @@ MonoBehaviour:
       Data2: 1185240626
       Data3: -49008705
       Data4: -871230549
-    Path: event:/SFX/Talking
+    Path: event:/SFX/Phone/Talking
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -1022,7 +1022,7 @@ MonoBehaviour:
       Data2: 1144175581
       Data3: 1540976013
       Data4: 1076176508
-    Path: event:/Ambience 2D/Air Vent Loop
+    Path: event:/Ambience 2D/Building&Nature/Air Vent Loop
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -1171,7 +1171,7 @@ MonoBehaviour:
       Data2: 1263829925
       Data3: 510384277
       Data4: 2101939001
-    Path: event:/Ambience 2D/Storming Loop
+    Path: event:/Ambience 2D/Building&Nature/Storming Loop
   Event: 
   PlayEvent: 1
   StopEvent: 0
