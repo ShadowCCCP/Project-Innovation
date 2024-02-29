@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 5.2225423, g: 5.5489507, b: 8.081178, a: 1}
+  m_IndirectSpecularColor: {r: 5.2663884, g: 5.6352544, b: 8.305009, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -330,6 +330,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventList:
+  - time:
+      hours: 12
+      minutes: 30
+    gameEvent: 2
   - time:
       hours: 13
       minutes: 30

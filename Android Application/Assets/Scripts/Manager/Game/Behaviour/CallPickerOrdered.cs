@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class CallPickerOrdered : MonoBehaviour, ICallManager
@@ -24,7 +25,7 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
         Debug.Log("pick");
         contacts = GameManager.Instance.GetContacts();
 
-        if (contacts == null || contacts.Length == 0) Debug.Log("MessagePicker: GameManager doesn't hold any contacts...");
+        if (contacts == null || contacts.Length == 0) Debug.Log("CallPicker: GameManager doesn't hold any contacts...");
 
         ShowCallReceived(contacts[currentCall]);
     }
@@ -34,8 +35,9 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
         if (!GameManager.Instance.IsActive())
         {
             GameManager.Instance.ToggleUIState();
-            UIManager.Instance.ShowNewCall(caller);
-            GameManager.Instance.GetUICallManager().AddNewCall(caller);
+            UIManager.Instance.SetDataCall(caller);
+            // UIManager.Instance.ShowNewCall(caller);
+            // GameManager.Instance.GetUICallManager().AddNewCall(caller);
         }
         else
         {
@@ -58,4 +60,5 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
             currentCall = 0;
         }
     }
+ 
 }

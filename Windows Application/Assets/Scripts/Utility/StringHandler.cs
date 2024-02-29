@@ -32,4 +32,27 @@ public class StringHandler : MonoBehaviour
 
         return new Timeframe(hours, minutes);
     }
+
+    public static string ExtractAnswer(string message)
+    {
+        string[] parts = message.Split(':');  
+
+        string answer = parts[1].Trim();
+
+        return answer;
+    }
+
+    public static string ExtractCallState(string message)
+    {
+        string inputString = "CallState: Start, Contact";
+
+        string[] parts = inputString.Split(':');
+        string callStatePart = parts[1].Trim();
+        string[] callStateParts = callStatePart.Split(',');
+
+        string state = callStateParts[0].Trim();
+        string contact = callStateParts[1].Trim();
+
+        return state;
+    }
 }

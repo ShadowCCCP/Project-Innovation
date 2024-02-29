@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Contact[] contacts;
     [SerializeField] [Multiline(3)] string[] messages;
 
+    TimeManager timeManager;
     bool messageOrCallOngoing;
 
     private void Awake()
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         messageManager = GetComponent<IMessageManager>();
         callManager = GetComponent<ICallManager>();
+        timeManager = GetComponentInChildren<TimeManager>();
 
         if (messageManager == null) Debug.Log("GameManager: MessageManager missing...");
         else if (callManager == null) Debug.Log("GameManager: CallManager missing...");
@@ -83,5 +85,10 @@ public class GameManager : MonoBehaviour
     public void ToggleUIState()
     {
         messageOrCallOngoing = !messageOrCallOngoing;
+    }
+
+    public TimeManager GetTimeManager()
+    {
+        return timeManager;
     }
 }
