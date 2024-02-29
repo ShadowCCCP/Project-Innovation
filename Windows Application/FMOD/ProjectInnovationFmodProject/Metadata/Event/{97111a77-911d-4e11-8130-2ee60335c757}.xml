@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{5ea49876-31ac-4152-9058-ee0dc9987c32}</destination>
+			<destination>{8cb45e82-7e21-4949-a114-d67b3cb4bf12}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{ea209a7d-72f8-4046-a5be-0c8e4d423767}</destination>
@@ -76,7 +76,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{4425fc4e-d8e2-40ce-b4db-aace2308eb0e}">
 		<property name="volume">
-			<value>-8</value>
+			<value>-16.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{571dc2d5-c2a7-4e41-87ea-206369e2481c}</destination>
@@ -106,6 +106,9 @@
 		<property name="name">
 			<value>Droning Sounds</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{f90f51c0-3168-4937-b22e-993232075eeb}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{8a02355a-997d-4cc1-83d8-ee9c941b29d5}</destination>
 		</relationship>
@@ -137,6 +140,29 @@
 	</object>
 	<object class="MixerBusPanner" id="{e8918bd8-cfa6-4e11-b2b2-fee5fbb7832d}" />
 	<object class="MixerBusFader" id="{e9210d44-8d4e-44e7-9408-cf29e756ae9a}" />
+	<object class="ADSRModulator" id="{f90f51c0-3168-4937-b22e-993232075eeb}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>2211.53882</value>
+		</property>
+		<property name="attackShape">
+			<value>-0.587577224</value>
+		</property>
+		<property name="releaseTime">
+			<value>3000</value>
+		</property>
+		<property name="releaseShape">
+			<value>0.403587937</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{8a02355a-997d-4cc1-83d8-ee9c941b29d5}">
 		<relationship name="effects">
 			<destination>{8b334ce2-cc1f-42a9-b8ed-afc314a29a64}</destination>
