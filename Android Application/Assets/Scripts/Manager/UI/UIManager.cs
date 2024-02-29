@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,11 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI clock;
+
+    bool newMessageBool;
+    bool newCallBool;
+     Contact ctc;
+     string msg;
     // Start is called before the first frame update
     void Awake()
     {
@@ -41,7 +47,17 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (newMessageBool)
+        {
+            newMessageBool = false;
+            StartCoroutine(NewMessage(ctc, msg));
+
+        }
+        if (newCallBool) 
+        {
+            newCallBool = false;
+            ShowNewCall(ctc);
+        }
     }
 
     public void ShowFlashlightOverlay(bool show)
@@ -52,6 +68,7 @@ public class UIManager : MonoBehaviour
     GameObject newCallOngoing;
     public void ShowNewCall(Contact contact)
     {
+        GameManager.Instance.GetUICallManager().AddNewCall(contact);
         newCallOngoing = Instantiate(callOngoingPrefab,transform);
         var contactNameAndDetailsOngoingCall = newCallOngoing.transform.Find("NameAndDetails").GetComponent<TextMeshProUGUI>();
         var contactImageOngoingCall = newCallOngoing.transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
@@ -69,7 +86,9 @@ public class UIManager : MonoBehaviour
         contactImageNewCall.sprite = contact.Icon;
 
         newCall.transform.Find("Answer").GetComponent<Button>().onClick.AddListener(AnswerCall);
-        
+
+        GameManager.Instance.GetTimeManager().TimeStopped = true;
+
     }
 
     public void AnswerCall()
@@ -91,11 +110,14 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         Destroy(newCallOngoing);
         GameManager.Instance.EmptyState();
+        GameManager.Instance.GetTimeManager().TimeStopped = false;
     }
 
     GameObject newMessage;
     public IEnumerator NewMessage(Contact contact, string message)
     {
+        GameManager.Instance.GetUICallManager().AddNewMessage(contact, message);
+        Debug.Log("new msg");
         newMessage = Instantiate(newMessagePrefab,  transform);
 
         var contactNameAndDetailsMessage = newMessage.transform.Find("NameAndDetails").GetComponent<TextMeshProUGUI>();
@@ -130,6 +152,19 @@ public class UIManager : MonoBehaviour
         
         clock.SetText(timeString); 
         
+    }
+
+    public void SetDataMessage(Contact contact, string message)
+    {
+        ctc = contact;
+        msg = message;
+        newMessageBool = true;
+    }
+
+    public void SetDataCall(Contact contact) 
+    {
+        ctc = contact;
+        newCallBool = true;
     }
   
 }

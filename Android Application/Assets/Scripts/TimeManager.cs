@@ -46,22 +46,26 @@ public class TimeManager : MonoBehaviour
         InvokeRepeating("UpdateTime", fifteenMinutesInSeconds, fifteenMinutesInSeconds);
     }
 
+    public bool TimeStopped = false;
     void UpdateTime()
     {
-        currentMinutes += 15;
-        totalMinutes += 15;
-
-        // If time limit is succeeded, reset it back to the startTime....
-        if (totalMinutes >= startMinutes + totalGameLengthInSeconds)
+        if (!TimeStopped)
         {
-            // Game Won?
-            CancelInvoke("UpdateTime");
+            currentMinutes += 15;
+            totalMinutes += 15;
+
+            // If time limit is succeeded, reset it back to the startTime....
+            if (totalMinutes >= startMinutes + totalGameLengthInSeconds)
+            {
+                // Game Won?
+                CancelInvoke("UpdateTime");
+            }
+
+            DigitalOrAnalogous();
+            currentTime = GetCurrentTimeString();
+
+            UDPSender.SendBroadcast("Time: " + DigitalTimeFormat());
         }
-
-        DigitalOrAnalogous();
-        currentTime = GetCurrentTimeString();
-
-        UDPSender.SendBroadcast("Time: " + DigitalTimeFormat());
     }
 
     void DigitalOrAnalogous()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
@@ -21,6 +22,7 @@ public class UICallManager : MonoBehaviour
     List<GameObject> callList = new List<GameObject>();
 
     List<GameObject> messageList = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,7 @@ public class UICallManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void AddNewCall(Contact contact) //adds a new call in the call history
@@ -68,4 +70,6 @@ public class UICallManager : MonoBehaviour
         contactTime.text = TimeManager.currentTime;
         Debug.Log("3");
     }
+
+
 }
