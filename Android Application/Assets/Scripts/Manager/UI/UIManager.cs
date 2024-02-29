@@ -18,9 +18,6 @@ public class UIManager : MonoBehaviour
     GameObject newMessagePrefab;
 
     [SerializeField]
-    CallAndMessageManager callAndMessageManager;
-
-    [SerializeField]
     Slider flashCooldown;
 
     [SerializeField]
@@ -93,7 +90,7 @@ public class UIManager : MonoBehaviour
         callEndAnim.SetTrigger("StartAnimation");
         yield return new WaitForSeconds(2);
         Destroy(newCallOngoing);
-        callAndMessageManager.EmptyState();
+        GameManager.Instance.EmptyState();
     }
 
     GameObject newMessage;
@@ -114,7 +111,7 @@ public class UIManager : MonoBehaviour
         newMessageAnim.SetTrigger("StartAnimation");
         yield return new WaitForSeconds(7);
         Destroy(newMessage);
-        callAndMessageManager.EmptyState();
+        GameManager.Instance.EmptyState();
     }
 
 
@@ -128,10 +125,10 @@ public class UIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
     }
 
-    public void UpdateClock(string hourString, string minuteString)
+    public void UpdateClock(string timeString)
     {
         
-        clock.SetText(hourString + ":" + minuteString); 
+        clock.SetText(timeString); 
         
     }
   

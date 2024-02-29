@@ -127,13 +127,17 @@ public class SpeechRecognitionTest : MonoBehaviour
 
     void CheckForWods(string text)
     {
-        if (ContainsWord(text, "yes") || ContainsWord(text, "okay"))
+        if (ContainsWord(text, "yes") || ContainsWord(text, "okay") || ContainsWord(text, "yeah"))
         {
             Debug.Log("YEZZ");
         }
         else if (ContainsWord(text, "no"))
         {
             Debug.Log("NOUU");
+        }
+        else
+        {
+            Debug.Log("Could you repeat that");
         }
     }
 }

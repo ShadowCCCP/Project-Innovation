@@ -22,4 +22,14 @@ public class StringHandler : MonoBehaviour
             return Vector3.zero;
         }
     }
+
+    public static Timeframe ExtractTime(string message)
+    {
+        string[] timeParts = message.Split(':');
+
+        int hours = int.Parse(timeParts[1]);
+        int minutes = int.Parse(timeParts[2]);
+
+        return new Timeframe(hours, minutes);
+    }
 }
