@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{1508e407-285a-408e-9b8d-e1f2c693487a}">
 		<property name="name">
-			<value>Phone Ringing Loop</value>
+			<value>FAKE Phone Ringing Loop</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{acec1b25-200f-412e-bc73-7743b4bfb74b}</destination>
+			<destination>{edf415d4-e898-4af8-a04b-9190fbad9a22}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{042b9f18-b7cb-477a-b4fe-7fffcfa207be}</destination>

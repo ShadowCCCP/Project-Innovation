@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{f1382ff5-e15d-457b-be54-f3b98690ccca}</destination>
+			<destination>{2a57ea0c-12da-45a6-8869-00248bb7a133}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{a7f3c0eb-81cd-4a17-8382-bae0e34f699b}</destination>
@@ -62,7 +62,6 @@
 	<object class="GroupTrack" id="{8dfe424c-5717-4646-b113-a09a61b65318}">
 		<relationship name="modules">
 			<destination>{8fcea671-bffc-45f9-9eb2-848741294996}</destination>
-			<destination>{ad941ea7-f832-48f6-a134-e24c2ad0e453}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{59a6abe0-0af6-4438-bfec-eea81d578adf}</destination>
@@ -79,7 +78,6 @@
 	<object class="Timeline" id="{ec331fc5-c5f6-4ee8-af28-060cceee60aa}">
 		<relationship name="modules">
 			<destination>{8fcea671-bffc-45f9-9eb2-848741294996}</destination>
-			<destination>{ad941ea7-f832-48f6-a134-e24c2ad0e453}</destination>
 			<destination>{e1ebe440-3c2f-4cf6-99ed-fd056d694029}</destination>
 		</relationship>
 		<relationship name="markers">
@@ -126,7 +124,7 @@
 			<value>0</value>
 		</property>
 		<property name="maximumScatterDistance">
-			<value>0.300000012</value>
+			<value>0</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{1cff8e2b-b40c-4193-8170-8a81df2a9fb9}</destination>
@@ -135,17 +133,9 @@
 			<destination>{7a4edfe3-6390-4e9b-95c0-904b291dd1ec}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{ad941ea7-f832-48f6-a134-e24c2ad0e453}">
-		<property name="length">
-			<value>11</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{7cded093-60d9-4dc7-9ca7-4c041d220d1a}</destination>
-		</relationship>
-	</object>
 	<object class="EventMixerGroup" id="{59a6abe0-0af6-4438-bfec-eea81d578adf}">
 		<property name="volume">
-			<value>-17.5</value>
+			<value>-2.5</value>
 		</property>
 		<property name="overridingInputFormat">
 			<value>1</value>
@@ -177,7 +167,7 @@
 			<value>12000</value>
 		</property>
 		<property name="spawnRate">
-			<value>30</value>
+			<value>36</value>
 		</property>
 		<property name="minimumScatterDistance">
 			<value>0</value>
