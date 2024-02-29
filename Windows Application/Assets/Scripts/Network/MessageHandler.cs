@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MessageHandler : MonoBehaviour
 {
-    bool packageTesting;
+    [SerializeField] bool packageTesting;
 
     int i = 0;
     float timer;
@@ -27,6 +27,8 @@ public class MessageHandler : MonoBehaviour
 
         if (message.Contains("Gyroscope")) GyroscopeData(message);
         else if (message.Contains("Time")) TimeData(message);
+        else if (message.Contains("Answer")) AnswerData(message);
+        else if (message.Contains("CallState")) CallStateData(message);
     }
 
     void GyroscopeData(string message)
@@ -41,6 +43,18 @@ public class MessageHandler : MonoBehaviour
     {
         Timeframe time = StringHandler.ExtractTime(message);
         EventBus<TimeEvent>.Publish(new TimeEvent(time));
+    }
+
+    void AnswerData(string message)
+    {
+        string answer = StringHandler.ExtractAnswer(message);
+        EventBus<AnswerEvent>.Publish(new AnswerEvent(answer));
+    }
+
+    void CallStateData(string message)
+    {
+        string state = StringHandler.ExtractAnswer(message);
+        EventBus<CallStateEvent>.Publish(new CallStateEvent(state));
     }
 
     void PackageTest()

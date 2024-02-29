@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
 {
+    public enum Parameters { X, Y };
+
     [SerializeField] EventReference eventRef;
 
     EventInstance soundInstance;
@@ -29,6 +31,23 @@ public class SoundSystem : MonoBehaviour
         // For global parameters...
         //RuntimeManager.StudioSystem.setParameterByName("...", 1);
 
+    }
+
+    public void SetParameter(Parameters p, int value)
+    {
+        switch (p) 
+        { 
+            case Parameters.X:
+                {
+                    soundInstance.setParameterByID(paramIdX, value);
+                    break;
+                }
+            case Parameters.Y:
+                {
+                    soundInstance.setParameterByID(paramIdY, value);
+                    break;
+                }
+        }
     }
 
     public PARAMETER_ID GetParameterID(string paramName)

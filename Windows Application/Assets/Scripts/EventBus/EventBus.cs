@@ -9,7 +9,7 @@ public class EventBus<T> where T : Event
 
     public static void Publish(T pEvent)
     {
-        OnEvent?.Invoke(pEvent);   
+        OnEvent?.Invoke(pEvent);
     }
 }
 
@@ -42,4 +42,24 @@ public class MonsterEvent : Event
     }
 
     public int monsterID;
+}
+
+public class AnswerEvent : Event
+{
+    public AnswerEvent(string pAnswer)
+    {
+        answer = pAnswer;
+    }
+
+    string answer;
+}
+
+public class CallStateEvent : Event
+{
+    public CallStateEvent(string pState)
+    {
+        state = pState;
+    }
+
+    string state;
 }

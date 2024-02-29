@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
+//using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class MessagePickerRandom : MonoBehaviour, IMessageManager
@@ -26,13 +26,26 @@ public class MessagePickerRandom : MonoBehaviour, IMessageManager
 
         if (contacts == null || contacts.Length == 0) Debug.Log("MessagePicker: GameManager doesn't hold any contacts...");
         else if (messages == null || messages.Length == 0) Debug.Log("MessagePicker: GameManager doesn't hold any messages...");
+        try
+        {
+            Debug.Log("0");
 
-        System.Random random = new System.Random();
+            int test = UnityEngine.Random.Range(0, contacts.Length);
 
-        int messageRand = random.Next(0, messages.Length);
-        int contactRand = random.Next(0, contacts.Length);
+            Debug.Log("1");
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+            throw;
+        }
 
-        ShowMessage(contacts[contactRand], messages[messageRand]);
+        //System.Random random = new System.Random();
+
+        //int contactRand = random.Next(0, contacts.Length);
+        //int messageRand = random.Next(0, messages.Length);
+
+        //ShowMessage(contacts[contactRand], messages[messageRand]);
     }
 
     void ShowMessage(Contact contact, string message)

@@ -22,10 +22,6 @@ public class SpeechRecognitionTest : MonoBehaviour
     private void Start()
     {
         buttonScript = button.GetComponent<HoldDownButton>();
-
-        //startButton.onClick.AddListener(StartRecording);
-        //stopButton.onClick.AddListener(StopRecording);
-        //stopButton.interactable = false;
     }
 
     private void Update()
@@ -54,8 +50,6 @@ public class SpeechRecognitionTest : MonoBehaviour
     {
         text.color = Color.white;
         text.text = "Recording...";
-        //startButton.interactable = false;
-        //stopButton.interactable = true;
         clip = Microphone.Start(null, false, 10, 44100);
         recording = true;
     }
@@ -80,12 +74,9 @@ public class SpeechRecognitionTest : MonoBehaviour
             CheckForWods(response);
             text.color = Color.white;
             text.text = response;
-            //startButton.interactable = true;
         }, error => {
             text.color = Color.red;
             text.text = "Could you repeat?";
-            //text.text = error;
-            //startButton.interactable = true;
         });
     }
 
@@ -130,14 +121,17 @@ public class SpeechRecognitionTest : MonoBehaviour
         if (ContainsWord(text, "yes") || ContainsWord(text, "okay") || ContainsWord(text, "yeah"))
         {
             Debug.Log("YEZZ");
+            UDPSender.SendBroadcast("Answer: Yes");
         }
         else if (ContainsWord(text, "no"))
         {
             Debug.Log("NOUU");
+            UDPSender.SendBroadcast("Answer: No");
         }
         else
         {
             Debug.Log("Could you repeat that");
+            UDPSender.SendBroadcast("Answer: Unclear");
         }
     }
 }
