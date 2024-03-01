@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundSystem : MonoBehaviour
+public class SoundTestSystem : MonoBehaviour
 {
     public enum Parameters { X, Y };
 
@@ -24,7 +24,7 @@ public class SoundSystem : MonoBehaviour
 
         paramIdX = GetParameterID("x");
         paramIdY = GetParameterID("y");
-      
+        PlaySound();
         // For local parameters...
         //soundInstance.setParameterByID(paramIdX, 1);
 

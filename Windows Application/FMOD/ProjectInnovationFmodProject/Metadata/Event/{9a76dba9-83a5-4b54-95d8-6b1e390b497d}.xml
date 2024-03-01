@@ -304,6 +304,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{bd36c1bf-4f78-41ee-98ba-a8648009fa69}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{3587b9c9-621a-4a2e-830b-21abc48364aa}</destination>
 		</relationship>
@@ -314,7 +317,7 @@
 			<value>-80</value>
 		</property>
 		<property name="lowCrossover">
-			<value>65</value>
+			<value>80</value>
 		</property>
 		<property name="highCrossover">
 			<value>700</value>

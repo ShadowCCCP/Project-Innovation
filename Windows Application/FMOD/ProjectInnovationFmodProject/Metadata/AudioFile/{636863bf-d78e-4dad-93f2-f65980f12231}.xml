@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{8bf68462-8b6f-4882-a127-e1df29ca4cf7}">
+	<object class="AudioFile" id="{636863bf-d78e-4dad-93f2-f65980f12231}">
 		<property name="assetPath">
-			<value>Cursed Phone Notification 04.wav</value>
+			<value>Cursed Notification One-Shot 02.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>3.0596874999999999</value>
+			<value>1.6607083333333332</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3e7e87ce-95d6-4d09-8d0e-a4dbd4076ca6}</destination>
