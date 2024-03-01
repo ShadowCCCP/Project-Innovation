@@ -38,12 +38,21 @@ public class EnemyBehaviour : MonoBehaviour
         anim = GetComponent<Animator>();
         transform.LookAt(navPoints[i].position);
         anim.SetFloat("Speed", currentSpeed);
-        currentSpeed = speed;
     }
 
     int i =0;
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            OnSpotted();
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            currentSpeed = speed;
+            i++;
+        }
+
         anim.SetFloat("Speed", currentSpeed);
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
         if (currentSpeed > 0)
@@ -56,7 +65,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else if(currentSpeed == 0) 
         {
-            currentSpeed = speed;
+            // currentSpeed = speed;
         }
         
     }
