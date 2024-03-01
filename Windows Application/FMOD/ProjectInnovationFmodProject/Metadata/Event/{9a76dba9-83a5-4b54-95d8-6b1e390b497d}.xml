@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{9a76dba9-83a5-4b54-95d8-6b1e390b497d}">
 		<property name="name">
-			<value>Storming Loop</value>
+			<value>Storming Loop (2D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
