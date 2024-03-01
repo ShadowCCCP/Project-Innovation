@@ -6,9 +6,16 @@ using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
 {
+    public SoundSystem(EventReference pEventRef, bool pThreeDimensional = false) 
+    {
+        eventRef = pEventRef;
+        threeDimensional = pThreeDimensional;
+    }
+
     public enum Parameters { X, Y };
 
     [SerializeField] EventReference eventRef;
+    [SerializeField] bool threeDimensional;
 
     EventInstance soundInstance;
 
@@ -20,6 +27,8 @@ public class SoundSystem : MonoBehaviour
     private void Start()
     {
         soundInstance = RuntimeManager.CreateInstance(eventRef);
+
+        if (threeDimensional)
         soundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
 
         paramIdX = GetParameterID("x");

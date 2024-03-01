@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 425
+--- !u!114 &-6179368573863073978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Storming Loop
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Storming Loop
+  Guid:
+    Data1: -1703486551
+    Data2: 1263829925
+    Data3: 510384277
+    Data4: 2101939001
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11000
 --- !u!114 &-5764429256080300777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,12 +69,42 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638448131795737689
+  lastModified: 638448888575630011
   FileSizes:
   - Name: Desktop
-    Value: 1420
+    Value: 1726
   Exists: 1
---- !u!114 &-5150663093806699487
+--- !u!114 &-3954328601314642293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Calling (sequence)/x
+  m_EditorClassIdentifier: 
+  Name: x
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1775324243
+    data2: 247497198
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Silence
+  - Call Incoming
+  - Caller 1
+  - Caller 2
+  - Caller 3
+  - Call stops
+  Exists: 1
+--- !u!114 &-3437484370998645925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,77 +114,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Unnatural&Scary/Growling Scare
+  m_Name: event:/SFX/Phone/Calling (sequence)
   m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Unnatural&Scary/Growling Scare
+  Path: event:/SFX/Phone/Calling (sequence)
   Guid:
-    Data1: -1359535159
-    Data2: 1168906215
-    Data3: -964292449
-    Data4: 1861211973
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 4672
---- !u!114 &-4519201132680178429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Building&Nature/Air Vent Loop
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Building&Nature/Air Vent Loop
-  Guid:
-    Data1: -1350705688
-    Data2: 1144175581
-    Data3: 1540976013
-    Data4: 1076176508
+    Data1: 1599495781
+    Data2: 1107220015
+    Data3: 901248132
+    Data4: 2116304494
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
-  MinDistance: 0.5
-  MaxDistance: 20
-  Length: 12000
---- !u!114 &-3298377876252215444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Unnatural&Scary/Droning Ambience
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Unnatural&Scary/Droning Ambience
-  Guid:
-    Data1: -1760486793
-    Data2: 1309774109
-    Data3: -433180543
-    Data4: 1472673027
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -3954328601314642293}
   MinDistance: 1
   MaxDistance: 20
-  Length: 20000
+  Length: 17000
 --- !u!114 &-2672751323166541553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,12 +147,36 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638448131795723858
+  lastModified: 638448888575577183
   FileSizes:
   - Name: Desktop
-    Value: 874464
+    Value: 2095776
   Exists: 1
---- !u!114 &-731895631006577394
+--- !u!114 &-1884280907453013819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Whispering One-Shots/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1813553446
+    data2: 1992476535
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1152373194967411776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,50 +186,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Phone Ringing Loop
+  m_Name: event:/SFX/Fake & Scares/Whispering One-Shots
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Phone Ringing Loop
+  Path: event:/SFX/Fake & Scares/Whispering One-Shots
   Guid:
-    Data1: 352904199
-    Data2: 1083058266
-    Data3: -220099173
-    Data4: 2051576774
+    Data1: -1054007248
+    Data2: 1325012662
+    Data3: -1466061668
+    Data4: -74536110
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1884280907453013819}
   MinDistance: 1
   MaxDistance: 20
-  Length: 3500
---- !u!114 &-125074139472218452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Talking
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Talking
-  Guid:
-    Data1: -1951320398
-    Data2: 1185240626
-    Data3: -49008705
-    Data4: -871230549
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 5.4
-  MaxDistance: 50
-  Length: 8555
+  Length: 7000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,51 +220,29 @@ MonoBehaviour:
   - {fileID: -5764429256080300777}
   - {fileID: -2672751323166541553}
   EditorEvents:
-  - {fileID: -731895631006577394}
-  - {fileID: 5533286117680551917}
   - {fileID: 5473427266957198973}
-  - {fileID: -3298377876252215444}
-  - {fileID: 5248115645130956315}
   - {fileID: -7088047410779613849}
-  - {fileID: 210326562733807389}
-  - {fileID: -125074139472218452}
-  - {fileID: -5150663093806699487}
-  - {fileID: -4519201132680178429}
+  - {fileID: 2695988543107098637}
+  - {fileID: -1152373194967411776}
+  - {fileID: -3437484370998645925}
+  - {fileID: 7099102005441768740}
+  - {fileID: 2534854846477892568}
+  - {fileID: 8684264291665385459}
+  - {fileID: 5839615414585327329}
+  - {fileID: -6179368573863073978}
+  - {fileID: 2876721398582509298}
+  - {fileID: 7302427631063543904}
+  - {fileID: 3983527279405040036}
+  - {fileID: 9156039197913203212}
+  - {fileID: 4872280638830739429}
   EditorParameters:
   - {fileID: 274565366538701708}
   MasterBanks:
   - {fileID: -2672751323166541553}
   StringsBanks:
   - {fileID: -5764429256080300777}
-  cacheTime: 638448131795737689
+  cacheTime: 638448888575630011
   cacheVersion: 131609
---- !u!114 &210326562733807389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Building&Nature/Storming Loop
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Building&Nature/Storming Loop
-  Guid:
-    Data1: -1703486551
-    Data2: 1263829925
-    Data3: 510384277
-    Data4: 2101939001
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11000
 --- !u!114 &274565366538701708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,31 +267,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &1768369631812058773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Whispering/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1813553446
-    data2: 1992476535
-  Type: 1
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &5248115645130956315
+--- !u!114 &2534854846477892568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,23 +277,131 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Phone Notification
+  m_Name: event:/Music/Droning Ambience
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Phone Notification
+  Path: event:/Music/Droning Ambience
   Guid:
-    Data1: -1695634310
-    Data2: 1340411299
-    Data3: -897471322
-    Data4: 213449232
+    Data1: -1760486793
+    Data2: 1309774109
+    Data3: -433180543
+    Data4: 1472673027
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20000
+--- !u!114 &2695988543107098637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Fake & Scares/FAKE Phone Ringing Loop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fake & Scares/FAKE Phone Ringing Loop
+  Guid:
+    Data1: 352904199
+    Data2: 1083058266
+    Data3: -220099173
+    Data4: 2051576774
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3059
+  Length: 3500
+--- !u!114 &2876721398582509298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Talking (not final)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Talking (not final)
+  Guid:
+    Data1: -1951320398
+    Data2: 1185240626
+    Data3: -49008705
+    Data4: -871230549
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 5.4
+  MaxDistance: 50
+  Length: 8555
+--- !u!114 &3983527279405040036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Scary Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Scary Wind
+  Guid:
+    Data1: 1157921496
+    Data2: 1081419449
+    Data3: 60645521
+    Data4: 317630580
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16000
+--- !u!114 &4872280638830739429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Ringtone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Ringtone
+  Guid:
+    Data1: 1178986495
+    Data2: 1101500608
+    Data3: 2031381937
+    Data4: 1723187084
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &5473427266957198973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +429,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1023
---- !u!114 &5533286117680551917
+--- !u!114 &5839615414585327329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -375,21 +439,128 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2D/Unnatural&Scary/Whispering
+  m_Name: event:/SFX/Animation/Manus Footsteps
   m_EditorClassIdentifier: 
-  Path: event:/Ambience 2D/Unnatural&Scary/Whispering
+  Path: event:/SFX/Animation/Manus Footsteps
   Guid:
-    Data1: -1054007248
-    Data2: 1325012662
-    Data3: -1466061668
-    Data4: -74536110
+    Data1: -701928312
+    Data2: 1303151990
+    Data3: 1572422301
+    Data4: 1297671326
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7099102005441768740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Ambient Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Ambient Music
+  Guid:
+    Data1: 581895782
+    Data2: 1273069823
+    Data3: -766762877
+    Data4: 423420504
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 57142
+--- !u!114 &7302427631063543904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Fake & Scares/Growling Scare One-Shot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fake & Scares/Growling Scare One-Shot
+  Guid:
+    Data1: -1359535159
+    Data2: 1168906215
+    Data3: -964292449
+    Data4: 1861211973
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 1768369631812058773}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 4672
+--- !u!114 &8684264291665385459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Notification
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Notification
+  Guid:
+    Data1: -1695634310
+    Data2: 1340411299
+    Data3: -897471322
+    Data4: 213449232
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1660
+--- !u!114 &9156039197913203212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Air Vent Loop
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Air Vent Loop
+  Guid:
+    Data1: -1350705688
+    Data2: 1144175581
+    Data3: 1540976013
+    Data4: 1076176508
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0.5
+  MaxDistance: 20
+  Length: 16000
