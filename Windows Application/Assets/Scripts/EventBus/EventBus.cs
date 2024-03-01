@@ -63,3 +63,19 @@ public class CallStateEvent : Event
 
     string state;
 }
+public class LightFlickerEvent : Event
+{
+    public LightFlickerEvent()
+    {
+
+    }
+
+}
+public class LightTurnOnOffEvent : Event
+{
+    public LightTurnOnOffEvent()
+    {
+
+    }
+
+}
