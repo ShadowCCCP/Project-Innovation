@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{c12d2030-16b6-4efa-9cac-9da852ab8efb}">
 		<property name="name">
-			<value>Whispering One-Shots</value>
+			<value>Whispering One-Shots  (3D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
