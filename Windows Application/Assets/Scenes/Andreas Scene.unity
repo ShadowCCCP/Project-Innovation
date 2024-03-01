@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 5.2663884, g: 5.6352544, b: 8.305009, a: 1}
+  m_IndirectSpecularColor: {r: 5.219048, g: 5.544411, b: 8.07631, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -125,6 +125,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &31118757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31118759}
+  - component: {fileID: 31118758}
+  m_Layer: 0
+  m_Name: TestContact
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &31118758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31118757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96634621d7b06524297e5c7a656f23bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactName: 
+  soundReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  rightAnswers: 
+--- !u!4 &31118759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31118757}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7174655, y: 2.4602165, z: 0.6843624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &62300296
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2204a3d674d4b499c49612e4880bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  packageTesting: 0
 --- !u!1 &138299801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,3 +1713,4 @@ SceneRoots:
   - {fileID: 138299803}
   - {fileID: 62300300}
   - {fileID: 267780210}
+  - {fileID: 31118759}

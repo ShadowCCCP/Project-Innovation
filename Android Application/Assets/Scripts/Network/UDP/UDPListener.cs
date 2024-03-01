@@ -4,9 +4,15 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System;
+using UnityEngine.UIElements;
+using TMPro;
 
 public class UDPListener : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI textField;
+
+    Queue messageQueue = new Queue();
+
     MessageHandler handler;
 
     private const int port = 7087;
@@ -26,6 +32,11 @@ public class UDPListener : MonoBehaviour
         udpClient.BeginReceive(ReceiveData, null);
     }
 
+    private void LateUpdate()
+    {
+        StartCoroutine(MainThreadDelegate());
+    }
+
     void ReceiveData(IAsyncResult result)
     {
         IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, port);
@@ -33,10 +44,23 @@ public class UDPListener : MonoBehaviour
         string receivedMessage = Encoding.ASCII.GetString(receivedBytes);
 
         // Handle message...
-        handler.ProcessMessage(receivedMessage);
+        Debug.Log(receivedMessage);
+        messageQueue.Enqueue(receivedMessage);
 
         // Continue listening for messages...
         udpClient.BeginReceive(ReceiveData, null);
+    }
+
+    IEnumerator MainThreadDelegate()
+    {
+        while (messageQueue != null && messageQueue.Count > 0)
+        {
+            yield return new WaitForSeconds(0);
+
+            string message = messageQueue.Dequeue().ToString();
+            textField.text = message;
+            handler.ProcessMessage(message);
+        }
     }
 
     void OnDestroy()

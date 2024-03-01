@@ -27,33 +27,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 425
---- !u!114 &-6179368573863073978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Storming Loop
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Storming Loop
-  Guid:
-    Data1: -1703486551
-    Data2: 1263829925
-    Data3: 510384277
-    Data4: 2101939001
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11000
 --- !u!114 &-5764429256080300777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +42,10 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638448888575630011
+  lastModified: 638448909863307545
   FileSizes:
   - Name: Desktop
-    Value: 1726
+    Value: 1732
   Exists: 1
 --- !u!114 &-3954328601314642293
 MonoBehaviour:
@@ -147,7 +120,7 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638448888575577183
+  lastModified: 638448909863256431
   FileSizes:
   - Name: Desktop
     Value: 2095776
@@ -229,19 +202,19 @@ MonoBehaviour:
   - {fileID: 2534854846477892568}
   - {fileID: 8684264291665385459}
   - {fileID: 5839615414585327329}
-  - {fileID: -6179368573863073978}
   - {fileID: 2876721398582509298}
   - {fileID: 7302427631063543904}
   - {fileID: 3983527279405040036}
   - {fileID: 9156039197913203212}
   - {fileID: 4872280638830739429}
+  - {fileID: 5071169109121010138}
   EditorParameters:
   - {fileID: 274565366538701708}
   MasterBanks:
   - {fileID: -2672751323166541553}
   StringsBanks:
   - {fileID: -5764429256080300777}
-  cacheTime: 638448888575630011
+  cacheTime: 638448909863307545
   cacheVersion: 131609
 --- !u!114 &274565366538701708
 MonoBehaviour:
@@ -402,6 +375,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &5071169109121010138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Storming Loop (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Storming Loop (2D)
+  Guid:
+    Data1: -1703486551
+    Data2: 1263829925
+    Data3: 510384277
+    Data4: 2101939001
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11000
 --- !u!114 &5473427266957198973
 MonoBehaviour:
   m_ObjectHideFlags: 0
