@@ -28,6 +28,8 @@ public class UDPListener : MonoBehaviour
             Destroy(this);
         }
 
+        GetComponent<MultiCastLockAcquirer>().enabled = true;
+
         udpClient = new UdpClient(port);
         udpClient.BeginReceive(ReceiveData, null);
     }

@@ -46,12 +46,12 @@ public class MonsterEvent : Event
 
 public class AnswerEvent : Event
 {
-    public AnswerEvent(string pAnswer)
+    public AnswerEvent(ContactInfo.Answers pAnswer)
     {
         answer = pAnswer;
     }
 
-    string answer;
+    ContactInfo.Answers answer;
 }
 
 public class CallStateEvent : Event

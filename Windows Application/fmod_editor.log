@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001E4EC27B298 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000023E0F9809F8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,6 +15,153 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Steam Audio Spatializer'
+[WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Steam Audio Spatializer'
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2079200
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 34656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000A3AD63F188
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDF7083F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDF7083F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDF7084050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDF7084110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000023CD0333548
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Cursed Ringtone One-Shot 01', format=5, channels=2, frequency=48000, lengthbytes=40960, lengthpcm=144000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.669960.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2079200
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 34656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000A3AD63F188
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDF7083F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDF7083F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDF7084050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDF7084110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000023CD0333548
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Old Phone Putting Down - Oneshot', format=5, channels=2, frequency=48000, lengthbytes=4928, lengthpcm=20435, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.760016.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2079200
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 34656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000A3AD63F188
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDF7083F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDF7083F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDF7084050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDF7084110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000023CD0333548
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Old Phone Grab - Oneshot', format=5, channels=2, frequency=48000, lengthbytes=8960, lengthpcm=49127, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.929414.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2079200
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 34656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000A3AD63F188
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDF7083F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDF7083F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDF7084050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDF7084110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000023CD0333548
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Speaking', format=5, channels=2, frequency=48000, lengthbytes=54880, lengthpcm=410644, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.821808.
+[WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Steam Audio Spatializer'
+[WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Steam Audio Spatializer'
+[WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Steam Audio Spatializer'
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2079200
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 34656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000A3AD63F188
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDF7083F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDF7083F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDF7084050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDF7084110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000023CD0333548
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Old Phone Ring - Oneshot 03', format=5, channels=2, frequency=48000, lengthbytes=46432, lengthpcm=220159, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.966051.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2079200
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 34656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000A3AD63F188
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDF7083F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDF7083F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDF7084050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDF7084110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000023CD0333548
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Old Phone Ring - Oneshot 01', format=5, channels=2, frequency=48000, lengthbytes=48224, lengthpcm=204000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.966051.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2079200
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 34656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000A3AD63F188
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDF7083F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDF7083F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDF7084050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDF7084110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000023CD0333548
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Old Phone Ring - Oneshot 02', format=5, channels=2, frequency=48000, lengthbytes=45280, lengthpcm=209023, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.914767.
+[LOG] SoundI::release                          :  (0000023CD35081F8)
+[LOG] SoundI::release                          :     Cursed Ringtone One-Shot 01 (0000023CC386C8A8)
+[LOG] SoundI::release                          :  (0000023CD35087B8)
+[LOG] SoundI::release                          :     Speaking (0000023A44BC27F8)
+[LOG] SoundI::release                          :  (0000023CD3508368)
+[LOG] SoundI::release                          :     Old Phone Putting Down - Oneshot (0000023CC386CA48)
+[LOG] SoundI::release                          :  (0000023CD35084D8)
+[LOG] SoundI::release                          :     Old Phone Grab - Oneshot (0000023CC3868AE8)
+[LOG] SoundI::release                          :  (0000023DA60C3598)
+[LOG] SoundI::release                          :     Old Phone Ring - Oneshot 02 (0000023D4F1327E8)
+[LOG] SoundI::release                          :  (0000023DA60C3878)
+[LOG] SoundI::release                          :     Old Phone Ring - Oneshot 01 (0000023C2178B238)
+[LOG] SoundI::release                          :  (0000023CD3508928)
+[LOG] SoundI::release                          :     Old Phone Ring - Oneshot 03 (0000023C2178B098)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'

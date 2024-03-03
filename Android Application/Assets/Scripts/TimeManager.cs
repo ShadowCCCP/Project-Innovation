@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
+    [SerializeField] EventTimer[] eventList;
 
     [SerializeField] Timeframe startTime;
     [SerializeField] int totalGameLengthInSeconds = 480;
@@ -54,6 +55,8 @@ public class TimeManager : MonoBehaviour
             currentMinutes += 15;
             totalMinutes += 15;
 
+            CheckTimings();
+
             // If time limit is succeeded, reset it back to the startTime....
             if (totalMinutes >= startMinutes + totalGameLengthInSeconds)
             {
@@ -65,6 +68,18 @@ public class TimeManager : MonoBehaviour
             currentTime = GetCurrentTimeString();
 
             UDPSender.SendBroadcast("Time: " + DigitalTimeFormat());
+        }
+    }
+
+    void CheckTimings()
+    {
+        for (int i = 0; i < eventList.Length; i++)
+        {
+            Timeframe currentTime = ExtractTime(DigitalTimeFormat());
+            if (eventList[i].time.Equal(currentTime))
+            {
+                eventList[i].TriggerEvent();
+            }
         }
     }
 
@@ -96,5 +111,15 @@ public class TimeManager : MonoBehaviour
         if (currentMinutes / 60 >= 24) currentMinutes -= 60 * 24;
 
         return currentMinutes / 60 + ":" + (currentMinutes % 60).ToString("00");
+    }
+
+    public Timeframe ExtractTime(string message)
+    {
+        string[] timeParts = message.Split(':');
+
+        int hours = int.Parse(timeParts[0]);
+        int minutes = int.Parse(timeParts[1]);
+
+        return new Timeframe(hours, minutes);
     }
 }

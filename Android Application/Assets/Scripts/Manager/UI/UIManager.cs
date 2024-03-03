@@ -149,9 +149,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateClock(string timeString)
     {
-        
         clock.SetText(timeString); 
-        
     }
 
     public void SetDataMessage(Contact contact, string message)

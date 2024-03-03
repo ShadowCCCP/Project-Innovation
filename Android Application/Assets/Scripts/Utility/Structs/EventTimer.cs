@@ -18,34 +18,27 @@ public struct EventTimer
         {
             case GameEvents.Monster:
                 {
-                    int amountOfMonsters = GameObject.FindGameObjectsWithTag("Monster").Count();
-                    if (amountOfMonsters > 0)
-                    {
-                        int r = Random.Range(0, amountOfMonsters);
-                        EventBus<MonsterEvent>.Publish(new MonsterEvent(r));
-                    }
-                    else Debug.Log("EventTimer: No monsters in scene...");
-
+                    UDPSender.SendBroadcast("Monster");
                     break;
                 }
             case GameEvents.Message:
                 {
-                    UDPSender.SendBroadcast("Message");
+                    EventBus<MessageEvent>.Publish(new MessageEvent());
                     break;
                 }
             case GameEvents.Call:
                 {
-                    UDPSender.SendBroadcast("Call");
+                    EventBus<CallEvent>.Publish(new CallEvent());
                     break;
                 }
             case GameEvents.LightFlicker: 
                 {
-                    EventBus<LightFlickerEvent>.Publish(new LightFlickerEvent());
+                    UDPSender.SendBroadcast("LightFlicker");
                     break;
                 }
             case GameEvents.LightOnOff:
                 {
-                    EventBus<LightTurnOnOffEvent>.Publish(new LightTurnOnOffEvent());
+                    UDPSender.SendBroadcast("LightOnOff");
                     break;
                 }
         }

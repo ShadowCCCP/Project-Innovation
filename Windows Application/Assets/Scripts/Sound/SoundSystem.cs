@@ -6,12 +6,6 @@ using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
 {
-    public SoundSystem(EventReference pEventRef, bool pThreeDimensional = false) 
-    {
-        eventRef = pEventRef;
-        threeDimensional = pThreeDimensional;
-    }
-
     public enum Parameters { X, Y };
 
     [SerializeField] EventReference eventRef;
@@ -19,12 +13,32 @@ public class SoundSystem : MonoBehaviour
 
     EventInstance soundInstance;
 
-    [SerializeField] PARAMETER_ID paramIdX;
-    [SerializeField] PARAMETER_ID paramIdY;
+    PARAMETER_ID paramIdX;
+    PARAMETER_ID paramIdY;
 
     PLAYBACK_STATE currentState;
 
     private void Start()
+    {
+        SetupSound();
+      
+        // For local parameters...
+        //soundInstance.setParameterByID(paramIdX, 1);
+
+        // For global parameters...
+        //RuntimeManager.StudioSystem.setParameterByName("...", 1);
+
+    }
+
+    public void SetSoundValues(EventReference pEventRef, bool pThreeDimensional = false)
+    {
+        eventRef = pEventRef;
+        threeDimensional = pThreeDimensional;
+
+        SetupSound();
+    }
+
+    void SetupSound()
     {
         soundInstance = RuntimeManager.CreateInstance(eventRef);
 
@@ -33,13 +47,6 @@ public class SoundSystem : MonoBehaviour
 
         paramIdX = GetParameterID("x");
         paramIdY = GetParameterID("y");
-      
-        // For local parameters...
-        //soundInstance.setParameterByID(paramIdX, 1);
-
-        // For global parameters...
-        //RuntimeManager.StudioSystem.setParameterByName("...", 1);
-
     }
 
     public void SetParameter(Parameters p, int value)
@@ -59,7 +66,7 @@ public class SoundSystem : MonoBehaviour
         }
     }
 
-    public PARAMETER_ID GetParameterID(string paramName)
+    PARAMETER_ID GetParameterID(string paramName)
     {
         EventDescription eventDescription;
         soundInstance.getDescription(out eventDescription);
