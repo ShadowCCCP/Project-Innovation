@@ -30,12 +30,13 @@ public class MessageHandler : MonoBehaviour
 
         if (message.Contains("Gyroscope")) GyroscopeData(message);
         else if (message.Contains("Time")) TimeData(message);
-        else if (message.Contains("Answer")) AnswerData(message);
+        else if (message.Contains("Contact")) AnswerData(message);
         else if (message.Contains("CallState")) CallStateData(message);
         else if (message.Contains("LightFlicker")) LightFlickerData();
         else if (message.Contains("LightOnOff")) LightOnOffData();
         else if (message.Contains("Restart")) RestartGame();
         else if (message.Contains("Over")) GameOver();
+        else if (message.Contains("Won")) GameWon();
     }
 
     void GyroscopeData(string message)
@@ -91,7 +92,12 @@ public class MessageHandler : MonoBehaviour
 
     void GameOver()
     {
-        EventBus<GameOverEvent>.Publish(new GameOverEvent());
+        EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.DeadResident));
+    }
+
+    void GameWon()
+    {
+        EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.Won));
     }
 
     void PackageTest()
