@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{45047ad8-26b9-4075-9160-9d0374a8ee12}">
 		<property name="name">
-			<value>Scary Wind (3D)</value>
+			<value>Scary Wind  Loop (3D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{2a57ea0c-12da-45a6-8869-00248bb7a133}</destination>
+			<destination>{e0a1227b-456f-47c4-b522-520929df7f8b}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{1c4e2e3d-ddb1-48b9-bf23-580724b46958}</destination>

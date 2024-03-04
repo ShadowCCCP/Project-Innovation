@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{5f565e65-d62f-41fe-84f4-b7356e3e247e}">
 		<property name="name">
-			<value>Calling (sequence) 3D</value>
+			<value>Calling Sequence (3D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -68,6 +68,7 @@
 	<object class="GroupTrack" id="{a717755e-395c-470c-b1ba-2b9af366f26d}">
 		<relationship name="modules">
 			<destination>{0b47750f-6736-4c13-b0dd-a1de884245fd}</destination>
+			<destination>{cbeea12c-8522-4cbe-873c-3551e6a8d0e5}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a831676d-22ff-4d13-9e85-5abaf953a7cf}</destination>
@@ -96,6 +97,7 @@
 			<destination>{0b47750f-6736-4c13-b0dd-a1de884245fd}</destination>
 			<destination>{002d88ad-2f81-445a-9a33-c8ae14ac950d}</destination>
 			<destination>{0f38f170-d3ad-4f79-a140-bf204216a8d6}</destination>
+			<destination>{cbeea12c-8522-4cbe-873c-3551e6a8d0e5}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{ec458b8b-2d98-4cdd-af5c-e9b1a4064e5d}</destination>
@@ -137,6 +139,14 @@
 		<relationship name="event">
 			<destination>{4645e7ff-90c0-41a7-b16d-14798cbfb566}</destination>
 		</relationship>
+	</object>
+	<object class="SingleSound" id="{cbeea12c-8522-4cbe-873c-3551e6a8d0e5}">
+		<property name="start">
+			<value>12</value>
+		</property>
+		<property name="length">
+			<value>2</value>
+		</property>
 	</object>
 	<object class="EventMixerGroup" id="{a831676d-22ff-4d13-9e85-5abaf953a7cf}">
 		<property name="volume">
