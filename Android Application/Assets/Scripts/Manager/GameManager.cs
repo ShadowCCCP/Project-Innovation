@@ -28,6 +28,13 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        EventBus<GameRestartEvent>.OnEvent += RestartGame;
+    }
+
+    private void OnDestroy()
+    {
+
+        EventBus<GameRestartEvent>.OnEvent += RestartGame;
     }
 
     void Start()
@@ -90,5 +97,15 @@ public class GameManager : MonoBehaviour
     public TimeManager GetTimeManager()
     {
         return timeManager;
+    }
+
+    private void RestartGame(GameRestartEvent gameRestartEvent)
+    {
+        UDPSender.SendBroadcast("Restart");
+    }
+
+    private void GameOver(GameOverEvent gameOverEvent)
+    {
+
     }
 }
