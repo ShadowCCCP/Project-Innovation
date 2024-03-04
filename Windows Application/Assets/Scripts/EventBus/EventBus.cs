@@ -91,9 +91,9 @@ public class GameRestartedEvent : Event
 
 public class GameOverEvent : Event
 {
-    public GameOverEvent()
+    public GameOverEvent(GameManager.GameOverType pGameOverType)
     {
-
+        gameOverType = pGameOverType;
     }
-
+    public GameManager.GameOverType gameOverType;
 }

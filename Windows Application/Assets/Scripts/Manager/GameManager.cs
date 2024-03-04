@@ -42,8 +42,10 @@ public class GameManager : MonoBehaviour
         anim.SetTrigger("Fade");
     }
 
+
+    public  enum GameOverType { DeadResident, DeadthByMonster, Won  }
     void GameOver(GameOverEvent gameOverEvent)
     {
-        uIManager.ShowGameOverUI();
+        uIManager.ShowGameOverUI(gameOverEvent.gameOverType);
     }
 }
