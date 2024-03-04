@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using static ContactInfo;
 
 public class MessageHandler : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class MessageHandler : MonoBehaviour
         else if (message.Contains("CallState")) CallStateData(message);
         else if (message.Contains("LightFlicker")) LightFlickerData();
         else if (message.Contains("LightOnOff")) LightOnOffData();
+        else if (message.Contains("Restart")) RestartGame();
+        else if (message.Contains("Over")) GameOver();
     }
 
     void GyroscopeData(string message)
@@ -79,6 +82,16 @@ public class MessageHandler : MonoBehaviour
     void LightOnOffData()
     {
         EventBus<LightTurnOnOffEvent>.Publish(new LightTurnOnOffEvent());
+    }
+
+    void RestartGame()
+    {
+        EventBus<GameRestartedEvent>.Publish(new GameRestartedEvent());
+    }
+
+    void GameOver()
+    {
+        EventBus<GameOverEvent>.Publish(new GameOverEvent());
     }
 
     void PackageTest()

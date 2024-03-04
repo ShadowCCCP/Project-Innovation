@@ -79,3 +79,21 @@ public class LightTurnOnOffEvent : Event
     }
 
 }
+
+public class GameRestartedEvent : Event
+{
+    public GameRestartedEvent()
+    {
+
+    }
+
+}
+
+public class GameOverEvent : Event
+{
+    public GameOverEvent()
+    {
+
+    }
+
+}

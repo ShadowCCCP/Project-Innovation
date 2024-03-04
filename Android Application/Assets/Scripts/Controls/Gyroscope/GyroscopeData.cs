@@ -25,10 +25,6 @@ public class GyroscopeData : MonoBehaviour
     {
         if (gyro == null) return;
         Input.simulateMouseWithTouches = true;
-        if (Input.GetMouseButtonDown(0))
-        {
-            ResetOrientation();
-        }
 
         Quaternion raw = gyro.attitude;
 
@@ -45,7 +41,7 @@ public class GyroscopeData : MonoBehaviour
         UDPSender.SendBroadcast("Gyroscope: Forward" + forward + " Up" + up);
     }
 
-    void ResetOrientation()
+    public void ResetOrientation()
     {
         startRotation = Quaternion.Euler(90, 0, 0) * Quaternion.Inverse(gyro.attitude);
 

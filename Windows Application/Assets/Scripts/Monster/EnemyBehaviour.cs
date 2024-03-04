@@ -87,6 +87,7 @@ public class EnemyBehaviour : MonoBehaviour
             //gameover
             currentSpeed = 0; 
             anim.SetFloat("Speed", currentSpeed);
+            EventBus<GameOverEvent>.Publish(new GameOverEvent());
         }
     }
 
