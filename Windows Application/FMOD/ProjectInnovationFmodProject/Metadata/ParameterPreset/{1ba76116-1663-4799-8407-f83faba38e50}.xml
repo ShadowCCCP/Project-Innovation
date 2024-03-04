@@ -16,21 +16,33 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>6</value>
+			<value>10</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>Silence</value>
 			<value>Call Incoming</value>
-			<value>Caller 1</value>
-			<value>Caller 2</value>
-			<value>Caller 3</value>
-			<value>Call stops</value>
+			<value>Call Accepted (1.1)</value>
+			<value>1.2</value>
+			<value>1.3</value>
+			<value>1.4</value>
+			<value>1.5</value>
+			<value>1.6</value>
+			<value>1.7</value>
+			<value>1.8</value>
+			<value>1.9</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
 		</property>
 		<property name="isExposedRecursively">
 			<value>false</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{bdc6a817-bd10-4ff9-a080-45728cbbd80c}</destination>
+		</relationship>
+	</object>
+	<object class="RandomizerModulator" id="{bdc6a817-bd10-4ff9-a080-45728cbbd80c}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cursorPosition</value>
 		</property>
 	</object>
 </objects>
