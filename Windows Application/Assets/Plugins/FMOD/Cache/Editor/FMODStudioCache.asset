@@ -24,36 +24,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-7270262390349343624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Calling (sequence) 3D/x
-  m_EditorClassIdentifier: 
-  Name: x
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 1775324243
-    data2: 247497198
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Silence
-  - Call Incoming
-  - Caller 1
-  - Caller 2
-  - Caller 3
-  - Call stops
-  Exists: 1
 --- !u!114 &-7225196892652038516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,10 +94,10 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638449222288332813
+  lastModified: 638451482120538784
   FileSizes:
   - Name: Desktop
-    Value: 1874
+    Value: 1952
   Exists: 1
 --- !u!114 &-5280430854710753155
 MonoBehaviour:
@@ -156,7 +126,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3500
---- !u!114 &-5005141338272522589
+--- !u!114 &-4106757081839446148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,23 +136,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Scary Wind (3D)
+  m_Name: event:/Ambience/Loops/Air Vent Loop (3D)
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/Scary Wind (3D)
+  Path: event:/Ambience/Loops/Air Vent Loop (3D)
   Guid:
-    Data1: 1157921496
-    Data2: 1081419449
-    Data3: 60645521
-    Data4: 317630580
+    Data1: -1350705688
+    Data2: 1144175581
+    Data3: 1540976013
+    Data4: 1076176508
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0.5
   MaxDistance: 20
   Length: 16000
+--- !u!114 &-3723980971227900836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Loops/Storming Loop (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Loops/Storming Loop (2D)
+  Guid:
+    Data1: -1703486551
+    Data2: 1263829925
+    Data3: 510384277
+    Data4: 2101939001
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11000
 --- !u!114 &-3480337754631031379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,10 +222,10 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638449222288317728
+  lastModified: 638451482120467836
   FileSizes:
   - Name: Desktop
-    Value: 2113856
+    Value: 2024512
   Exists: 1
 --- !u!114 &-2671610663827257469
 MonoBehaviour:
@@ -257,6 +254,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1274
+--- !u!114 &-755234112262545540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Fake & Scares/Growling Scare One-Shot  (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fake & Scares/Growling Scare One-Shot  (2D)
+  Guid:
+    Data1: -1359535159
+    Data2: 1168906215
+    Data3: -964292449
+    Data4: 1861211973
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4672
 --- !u!114 &-146641213210709570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,10 +324,8 @@ MonoBehaviour:
   - {fileID: -5764429256080300777}
   - {fileID: -2672751323166541553}
   EditorEvents:
-  - {fileID: 5071169109121010138}
   - {fileID: -5280430854710753155}
   - {fileID: -7225196892652038516}
-  - {fileID: 3674019528358529111}
   - {fileID: 4070572267484364028}
   - {fileID: -6202526694566690889}
   - {fileID: -3480337754631031379}
@@ -312,17 +334,20 @@ MonoBehaviour:
   - {fileID: 7401436787007658259}
   - {fileID: 7860602043480332689}
   - {fileID: -2671610663827257469}
-  - {fileID: 6117689397852099405}
-  - {fileID: -5005141338272522589}
-  - {fileID: 2349569868621973881}
   - {fileID: 3767874318253754049}
+  - {fileID: 6208563679707095940}
+  - {fileID: -3723980971227900836}
+  - {fileID: 1780728107731997138}
+  - {fileID: -755234112262545540}
+  - {fileID: 4724978821294736039}
+  - {fileID: -4106757081839446148}
   EditorParameters:
   - {fileID: 274565366538701708}
   MasterBanks:
   - {fileID: -2672751323166541553}
   StringsBanks:
   - {fileID: -5764429256080300777}
-  cacheTime: 638449222288332813
+  cacheTime: 638451482120538784
   cacheVersion: 131609
 --- !u!114 &274565366538701708
 MonoBehaviour:
@@ -348,7 +373,37 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &2349569868621973881
+--- !u!114 &1207490295754583557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Calling Sequence (3D)/x
+  m_EditorClassIdentifier: 
+  Name: x
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1775324243
+    data2: 247497198
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Silence
+  - Call Incoming
+  - Caller 1
+  - Caller 2
+  - Caller 3
+  - Call stops
+  Exists: 1
+--- !u!114 &1780728107731997138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -358,51 +413,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Air Vent Loop (3D)
+  m_Name: event:/Ambience/One-Shots/Thunder (2D)
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/Air Vent Loop (3D)
+  Path: event:/Ambience/One-Shots/Thunder (2D)
   Guid:
-    Data1: -1350705688
-    Data2: 1144175581
-    Data3: 1540976013
-    Data4: 1076176508
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0.5
-  MaxDistance: 20
-  Length: 16000
---- !u!114 &3674019528358529111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Calling (sequence) 3D
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Calling (sequence) 3D
-  Guid:
-    Data1: 1599495781
-    Data2: 1107220015
-    Data3: 901248132
-    Data4: 2116304494
+    Data1: 2032867780
+    Data2: 1080503573
+    Data3: 353727903
+    Data4: -332306826
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -7270262390349343624}
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 17000
+  Length: 6679
 --- !u!114 &3767874318253754049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +484,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 57142
---- !u!114 &5071169109121010138
+--- !u!114 &4724978821294736039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -467,24 +494,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Storming Loop (2D)
+  m_Name: event:/Ambience/Loops/Scary Wind  Loop (3D)
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/Storming Loop (2D)
+  Path: event:/Ambience/Loops/Scary Wind  Loop (3D)
   Guid:
-    Data1: -1703486551
-    Data2: 1263829925
-    Data3: 510384277
-    Data4: 2101939001
+    Data1: 1157921496
+    Data2: 1081419449
+    Data3: 60645521
+    Data4: 317630580
   Banks:
   - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 0
+  IsStream: 1
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 11000
---- !u!114 &6117689397852099405
+  Length: 16000
+--- !u!114 &6208563679707095940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,23 +521,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Fake & Scares/Growling Scare One-Shot  (3D)
+  m_Name: event:/SFX/Phone/Calling Sequence (3D)
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Fake & Scares/Growling Scare One-Shot  (3D)
+  Path: event:/SFX/Phone/Calling Sequence (3D)
   Guid:
-    Data1: -1359535159
-    Data2: 1168906215
-    Data3: -964292449
-    Data4: 1861211973
+    Data1: 1599495781
+    Data2: 1107220015
+    Data3: 901248132
+    Data4: 2116304494
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1207490295754583557}
   MinDistance: 1
   MaxDistance: 20
-  Length: 4672
+  Length: 17000
 --- !u!114 &6800525295424582616
 MonoBehaviour:
   m_ObjectHideFlags: 0
