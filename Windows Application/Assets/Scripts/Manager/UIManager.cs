@@ -5,21 +5,10 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField]
-    GameObject gameOverUI;
-    [SerializeField]
-    TextMeshProUGUI gameOverCause;
+    [SerializeField] GameObject gameOverUI;
+    [SerializeField] TextMeshProUGUI gameOverCause;
 
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
+    [SerializeField] GameObject mainMenu;
 
     public void ShowGameOverUI(GameManager.GameOverType gameOverType)
     {
@@ -38,4 +27,11 @@ public class UIManager : MonoBehaviour
                 break;
         }
     }
+
+    public void ToggleMainMenu()
+    {
+        mainMenu.SetActive(!mainMenu.activeSelf);
+    }
+
+
 }

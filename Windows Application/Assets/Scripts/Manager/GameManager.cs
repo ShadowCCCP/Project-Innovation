@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public enum GameOverType { DeadResident, DeadthByMonster, Won }
+
     public static GameManager Instance;
     UIManager uIManager;
     Animator anim;
@@ -42,8 +44,6 @@ public class GameManager : MonoBehaviour
         anim.SetTrigger("Fade");
     }
 
-
-    public  enum GameOverType { DeadResident, DeadthByMonster, Won  }
     void GameOver(GameOverEvent gameOverEvent)
     {
         uIManager.ShowGameOverUI(gameOverEvent.gameOverType);

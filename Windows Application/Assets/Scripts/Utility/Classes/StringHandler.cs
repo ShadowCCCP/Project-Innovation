@@ -44,9 +44,7 @@ public class StringHandler : MonoBehaviour
 
     public static string ExtractCallState(string message)
     {
-        string inputString = "CallState: Start, Contact";
-
-        string[] parts = inputString.Split(':');
+        string[] parts = message.Split(':');
         string callStatePart = parts[1].Trim();
         string[] callStateParts = callStatePart.Split(',');
 
