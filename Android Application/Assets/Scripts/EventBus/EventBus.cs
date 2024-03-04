@@ -25,3 +25,11 @@ public class StartGameEvent : Event
 {
     public StartGameEvent() { }
 }
+public class GameRestartEvent : Event
+{
+    public GameRestartEvent() { }
+}
+public class GameOverEvent : Event
+{
+    public GameOverEvent() { }
+}

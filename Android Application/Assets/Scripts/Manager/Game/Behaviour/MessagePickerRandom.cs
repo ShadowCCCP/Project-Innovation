@@ -43,8 +43,8 @@ public class MessagePickerRandom : MonoBehaviour, IMessageManager
             GameManager.Instance.ToggleUIState();
             Debug.Log("2");
             UIManager.Instance.SetDataMessage(contact, message);
-           //GameManager.Instance.GetUICallManager().SetData(contact, message);
-           // GameManager.Instance.GetUICallManager().AddNewMessage(contact, message);
+            //GameManager.Instance.GetUICallManager().SetData(contact, message);
+            //GameManager.Instance.GetUICallManager().AddNewMessage(contact, message);
             //Debug.Log("3");
             //StartCoroutine(UIManager.Instance.NewMessage(contact, message));
         }

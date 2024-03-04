@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2.6277206, g: 3.3227134, b: 4.5288024, a: 1}
+  m_IndirectSpecularColor: {r: 2.6347353, g: 3.3323865, b: 4.541985, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2052,6 +2052,11 @@ PrefabInstance:
     - target: {fileID: 57868550622125665, guid: 0e87bc8d55af96044a7e2696b16e02d8,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57868550622125665, guid: 0e87bc8d55af96044a7e2696b16e02d8,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6833557691168429692, guid: 0e87bc8d55af96044a7e2696b16e02d8,

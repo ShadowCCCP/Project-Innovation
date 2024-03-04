@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using static ContactInfo;
 
 public class MessageHandler : MonoBehaviour
 {
@@ -27,8 +30,13 @@ public class MessageHandler : MonoBehaviour
 
         if (message.Contains("Gyroscope")) GyroscopeData(message);
         else if (message.Contains("Time")) TimeData(message);
-        else if (message.Contains("Answer")) AnswerData(message);
+        else if (message.Contains("Contact")) AnswerData(message);
         else if (message.Contains("CallState")) CallStateData(message);
+        else if (message.Contains("LightFlicker")) LightFlickerData();
+        else if (message.Contains("LightOnOff")) LightOnOffData();
+        else if (message.Contains("Restart")) RestartGame();
+        else if (message.Contains("Over")) GameOver();
+        else if (message.Contains("Won")) GameWon();
     }
 
     void GyroscopeData(string message)
@@ -47,7 +55,17 @@ public class MessageHandler : MonoBehaviour
 
     void AnswerData(string message)
     {
-        string answer = StringHandler.ExtractAnswer(message);
+        ContactInfo.Answers answer = ContactInfo.Answers.Yes;
+        string answerStr = StringHandler.ExtractAnswer(message);
+        switch (answerStr)
+        {
+            case "Yes":
+                answer = ContactInfo.Answers.Yes;
+                break;
+            case "No":
+                answer = ContactInfo.Answers.No;
+                break;
+        }
         EventBus<AnswerEvent>.Publish(new AnswerEvent(answer));
     }
 
@@ -55,6 +73,31 @@ public class MessageHandler : MonoBehaviour
     {
         string state = StringHandler.ExtractAnswer(message);
         EventBus<CallStateEvent>.Publish(new CallStateEvent(state));
+    }
+
+    void LightFlickerData()
+    {
+        EventBus<LightFlickerEvent>.Publish(new LightFlickerEvent());
+    }
+
+    void LightOnOffData()
+    {
+        EventBus<LightTurnOnOffEvent>.Publish(new LightTurnOnOffEvent());
+    }
+
+    void RestartGame()
+    {
+        EventBus<GameRestartedEvent>.Publish(new GameRestartedEvent());
+    }
+
+    void GameOver()
+    {
+        EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.DeadResident));
+    }
+
+    void GameWon()
+    {
+        EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.Won));
     }
 
     void PackageTest()

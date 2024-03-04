@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{1508e407-285a-408e-9b8d-e1f2c693487a}">
 		<property name="name">
-			<value>FAKE Phone Ringing Loop</value>
+			<value>FAKE Phone Ringing Loop (3D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -54,7 +54,7 @@
 			<destination>{c707dce1-e80f-4930-a4e7-471bc9bfab59}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{3d8fb146-b8e8-4d83-8714-5c6962e833b1}</destination>
+			<destination>{37c61870-2dea-420a-801d-cb7ac34d314e}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{af249159-e7ce-44dd-b4a4-2b818766969a}" />

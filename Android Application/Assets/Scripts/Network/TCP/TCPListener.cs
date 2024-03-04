@@ -5,9 +5,13 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.IO;
+using TMPro;
 
 public class TCPListener : MonoBehaviour
 {
+    public TextMeshProUGUI textField;
+    Queue messageQueue = new Queue();
+
     private const int port = 8089;
     private TcpListener listener;
     private bool isListening = false;
@@ -15,6 +19,11 @@ public class TCPListener : MonoBehaviour
     void Start()
     {
         StartListening();
+    }
+
+    private void LateUpdate()
+    {
+        StartCoroutine(MainThreadDelegate());
     }
 
     void StartListening()
@@ -83,12 +92,29 @@ public class TCPListener : MonoBehaviour
             message.Append(dataReceived);
 
             // Do something with the received data (e.g., display in Unity)
-            if(!dataReceived.Contains("Android")) Debug.Log(dataReceived);
+            messageQueue.Enqueue(dataReceived);
+            Debug.Log(dataReceived);
         }
 
         // Clean up the client connection
         stream.Close();
         client.Close();
+    }
+
+    IEnumerator MainThreadDelegate()
+    {
+        while (messageQueue != null && messageQueue.Count > 0)
+        {
+            yield return new WaitForSeconds(0);
+            try
+            {
+                string message = messageQueue.Dequeue().ToString();
+                textField.text = message;
+            }
+            catch (System.Exception)
+            {
+            }
+        }
     }
 
     void OnDestroy()

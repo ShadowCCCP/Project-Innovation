@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{aef723c9-17e7-45ac-9f10-86c645d7ef6e}">
 		<property name="name">
-			<value>Growling Scare One-Shot</value>
+			<value>Growling Scare One-Shot  (2D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

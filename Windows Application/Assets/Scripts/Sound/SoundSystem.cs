@@ -9,28 +9,44 @@ public class SoundSystem : MonoBehaviour
     public enum Parameters { X, Y };
 
     [SerializeField] EventReference eventRef;
+    [SerializeField] bool threeDimensional;
 
     EventInstance soundInstance;
 
-    [SerializeField] PARAMETER_ID paramIdX;
-    [SerializeField] PARAMETER_ID paramIdY;
+    PARAMETER_ID paramIdX;
+    PARAMETER_ID paramIdY;
 
     PLAYBACK_STATE currentState;
 
     private void Start()
     {
-        soundInstance = RuntimeManager.CreateInstance(eventRef);
-        soundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
-
-        paramIdX = GetParameterID("x");
-        paramIdY = GetParameterID("y");
-
+        SetupSound();
+      
         // For local parameters...
         //soundInstance.setParameterByID(paramIdX, 1);
 
         // For global parameters...
         //RuntimeManager.StudioSystem.setParameterByName("...", 1);
 
+    }
+
+    public void SetSoundValues(EventReference pEventRef, bool pThreeDimensional = false)
+    {
+        eventRef = pEventRef;
+        threeDimensional = pThreeDimensional;
+
+        SetupSound();
+    }
+
+    void SetupSound()
+    {
+        soundInstance = RuntimeManager.CreateInstance(eventRef);
+
+        if (threeDimensional)
+        soundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+
+        paramIdX = GetParameterID("x");
+        paramIdY = GetParameterID("y");
     }
 
     public void SetParameter(Parameters p, int value)
@@ -50,7 +66,7 @@ public class SoundSystem : MonoBehaviour
         }
     }
 
-    public PARAMETER_ID GetParameterID(string paramName)
+    PARAMETER_ID GetParameterID(string paramName)
     {
         EventDescription eventDescription;
         soundInstance.getDescription(out eventDescription);

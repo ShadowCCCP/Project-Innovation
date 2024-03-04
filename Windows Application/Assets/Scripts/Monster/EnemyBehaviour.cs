@@ -38,6 +38,7 @@ public class EnemyBehaviour : MonoBehaviour
         anim = GetComponent<Animator>();
         transform.LookAt(navPoints[i].position);
         anim.SetFloat("Speed", currentSpeed);
+        currentSpeed = speed;
     }
 
     int i =0;
@@ -86,6 +87,7 @@ public class EnemyBehaviour : MonoBehaviour
             //gameover
             currentSpeed = 0; 
             anim.SetFloat("Speed", currentSpeed);
+            EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.DeadthByMonster));
         }
     }
 

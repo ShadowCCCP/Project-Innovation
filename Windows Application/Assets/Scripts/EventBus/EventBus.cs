@@ -46,12 +46,12 @@ public class MonsterEvent : Event
 
 public class AnswerEvent : Event
 {
-    public AnswerEvent(string pAnswer)
+    public AnswerEvent(ContactInfo.Answers pAnswer)
     {
         answer = pAnswer;
     }
 
-    string answer;
+    ContactInfo.Answers answer;
 }
 
 public class CallStateEvent : Event
@@ -62,4 +62,38 @@ public class CallStateEvent : Event
     }
 
     string state;
+}
+public class LightFlickerEvent : Event
+{
+    public LightFlickerEvent()
+    {
+
+    }
+
+}
+public class LightTurnOnOffEvent : Event
+{
+    public LightTurnOnOffEvent()
+    {
+
+    }
+
+}
+
+public class GameRestartedEvent : Event
+{
+    public GameRestartedEvent()
+    {
+
+    }
+
+}
+
+public class GameOverEvent : Event
+{
+    public GameOverEvent(GameManager.GameOverType pGameOverType)
+    {
+        gameOverType = pGameOverType;
+    }
+    public GameManager.GameOverType gameOverType;
 }

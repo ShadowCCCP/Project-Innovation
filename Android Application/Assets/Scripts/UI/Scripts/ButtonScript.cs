@@ -8,4 +8,9 @@ public class ButtonScript : MonoBehaviour
     {
         EventBus<StartGameEvent>.Publish(new StartGameEvent());
     }
+
+    public void InvokeRestartGame()
+    {
+        EventBus<GameRestartEvent>.Publish(new GameRestartEvent());
+    }
 }
