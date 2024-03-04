@@ -20,13 +20,13 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        EventBus<GameRestartedEvent>.OnEvent += TriggerFade;
+        EventBus<GameRestartedEvent>.OnEvent += RestartGame;
         EventBus<GameOverEvent>.OnEvent += GameOver;
     }
 
     void OnDestroy()
     {
-        EventBus<GameRestartedEvent>.OnEvent -= TriggerFade;
+        EventBus<GameRestartedEvent>.OnEvent -= RestartGame;
         EventBus<GameOverEvent>.OnEvent -= GameOver;
     }
     void Start()
@@ -35,12 +35,8 @@ public class GameManager : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void TriggerFade(GameRestartedEvent gameRestartedEvent)
-    {
-        anim.SetTrigger("Fade");
-    }
 
-    public void RestartGame()
+    public void RestartGame(GameRestartedEvent gameRestartedEvent)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         anim.SetTrigger("Fade");
@@ -48,7 +44,6 @@ public class GameManager : MonoBehaviour
 
     void GameOver(GameOverEvent gameOverEvent)
     {
-        //show ui
         uIManager.ShowGameOverUI();
     }
 }

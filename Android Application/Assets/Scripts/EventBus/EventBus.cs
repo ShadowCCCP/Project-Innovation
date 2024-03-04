@@ -29,7 +29,7 @@ public class GameRestartEvent : Event
 {
     public GameRestartEvent() { }
 }
-public class GameOver : Event
+public class GameOverEvent : Event
 {
-    public GameOver() { }
+    public GameOverEvent() { }
 }

@@ -29,12 +29,14 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         EventBus<GameRestartEvent>.OnEvent += RestartGame;
+        EventBus<GameOverEvent>.OnEvent += GameOver;
     }
 
     private void OnDestroy()
     {
 
-        EventBus<GameRestartEvent>.OnEvent += RestartGame;
+        EventBus<GameRestartEvent>.OnEvent -= RestartGame;
+        EventBus<GameOverEvent>.OnEvent -= GameOver;
     }
 
     void Start()
@@ -106,6 +108,6 @@ public class GameManager : MonoBehaviour
 
     private void GameOver(GameOverEvent gameOverEvent)
     {
-
+        UDPSender.SendBroadcast("Game Over");
     }
 }
