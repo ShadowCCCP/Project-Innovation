@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{56d563c2-32f6-4f36-96e4-0b939887d14b}">
+	<object class="AudioFile" id="{1b135822-7c30-40d2-8f78-94771bb183bd}">
 		<property name="assetPath">
-			<value>Rainy Wind One-Shot - 02.wav</value>
+			<value>Manus Scraping Loop - 04.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>2.1820416666666667</value>
+			<value>1.875</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3e7e87ce-95d6-4d09-8d0e-a4dbd4076ca6}</destination>
