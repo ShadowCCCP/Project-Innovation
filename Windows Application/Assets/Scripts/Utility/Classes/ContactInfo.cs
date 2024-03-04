@@ -1,10 +1,13 @@
 using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ContactInfo : MonoBehaviour
 {
+    // This script needs to be attached to a gameObject that has a SoundSystem script component...
+
     public enum Answers { Yes, No }
 
     [SerializeField] string contactName;
@@ -20,7 +23,13 @@ public class ContactInfo : MonoBehaviour
 
     private void Start()
     {
-        soundSystem = new SoundSystem(soundReference, true);
+        soundSystem = GetComponent<SoundSystem>();
+        if (soundSystem == null)
+        {
+            soundSystem = gameObject.AddComponent<SoundSystem>();
+        }
+        soundSystem.SetSoundValues(soundReference, true);
+
         questionAmount = rightAnswers.Length;
     }
 
