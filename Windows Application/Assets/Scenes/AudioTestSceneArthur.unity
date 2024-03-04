@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 203844588}
   - component: {fileID: 203844587}
   - component: {fileID: 203844590}
+  - component: {fileID: 203844592}
+  - component: {fileID: 203844591}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -353,6 +355,42 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
+--- !u!114 &203844591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203844586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals: []
+    m_Events: []
+--- !u!95 &203844592
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203844586}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &412933824
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +453,7 @@ GameObject:
   - component: {fileID: 451561073}
   - component: {fileID: 451561072}
   - component: {fileID: 451561071}
+  - component: {fileID: 451561076}
   m_Layer: 0
   m_Name: Talking
   m_TagString: Untagged
@@ -441,7 +480,7 @@ MonoBehaviour:
       Data2: 1185240626
       Data3: -49008705
       Data4: -871230549
-    Path: event:/SFX/Phone/Talking
+    Path: event:/SFX/Phone/Sequence Events/Talking (not final)
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -534,6 +573,86 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &451561076
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451561070}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 4f77e80c1a2869a45b9abb102486ff31, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
+--- !u!1 &777383216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777383218}
+  - component: {fileID: 777383217}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &777383217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777383216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
+--- !u!4 &777383218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777383216}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1022,7 +1141,7 @@ MonoBehaviour:
       Data2: 1144175581
       Data3: 1540976013
       Data4: 1076176508
-    Path: event:/Ambience 2D/Building&Nature/Air Vent Loop
+    Path: event:/Ambience/Air Vent Loop (3D)
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -1171,7 +1290,7 @@ MonoBehaviour:
       Data2: 1263829925
       Data3: 510384277
       Data4: 2101939001
-    Path: event:/Ambience 2D/Building&Nature/Storming Loop
+    Path: event:/Ambience/Storming Loop (2D)
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -1218,7 +1337,8 @@ MonoBehaviour:
       Data2: 1144175581
       Data3: 1540976013
       Data4: 1076176508
-    Path: event:/Ambience 3D/Air Vent Loop
+    Path: event:/Ambience/Air Vent Loop (3D)
+  threeDimensional: 0
 --- !u!4 &2117488362
 Transform:
   m_ObjectHideFlags: 0
@@ -1247,3 +1367,4 @@ SceneRoots:
   - {fileID: 412933826}
   - {fileID: 925144614}
   - {fileID: 2117488362}
+  - {fileID: 777383218}
