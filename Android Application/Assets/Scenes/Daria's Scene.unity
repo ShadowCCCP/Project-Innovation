@@ -523,9 +523,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 619311658}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 8623895057794418509, guid: 498950c3473c6c841a87b4e0e05fcbd1,
+          type: 3}
+        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+        m_MethodName: InvokeStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -710,7 +711,6 @@ RectTransform:
   - {fileID: 818380177}
   - {fileID: 238894022}
   - {fileID: 1811393679}
-  - {fileID: 2101501803}
   m_Father: {fileID: 1859152034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -932,13 +932,13 @@ PrefabInstance:
     - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1726921904}
+      objectReference: {fileID: 455907885}
     - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -947,17 +947,17 @@ PrefabInstance:
     - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: ReCalibrate
       objectReference: {fileID: 0}
     - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: GyroControl, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
@@ -967,14 +967,12 @@ PrefabInstance:
     - target: {fileID: 3884709242694598521, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_Name
-      value: Settings
+      value: Reaclibrate Flashlight
       objectReference: {fileID: 0}
     - target: {fileID: 5844722574382160713, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_text
-      value: 'Settings
-
-'
+      value: Recalibrate Flashlight
       objectReference: {fileID: 0}
     - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
@@ -2088,8 +2086,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 619311659}
-  - component: {fileID: 619311658}
   - component: {fileID: 619311660}
+  - component: {fileID: 619311661}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2097,20 +2095,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &619311658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619311657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb6dc2588a2400443a7f6dbc939a4bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameLengthTimeSeconds: 480
-  fifteenMinutesInSeconds: 1
 --- !u!4 &619311659
 Transform:
   m_ObjectHideFlags: 0
@@ -2138,12 +2122,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17c55cc3669bec4bb5e57279f7267d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiCallManager: {fileID: 1448889797}
   contacts:
   - {fileID: 11400000, guid: ab6270e425249d4469d13ef641c34a87, type: 2}
   messages:
   - "Hey... uhm I m out of toilet paper in room\n 301.. can you uhh .... bring me
     some..."
-  uICallManager: {fileID: 1448889797}
+--- !u!114 &619311661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619311657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4645eb85fdd36f408f8e3c4151e9c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventList:
+  - time:
+      hours: 0
+      minutes: 0
+    gameEvent: 0
+  startTime:
+    hours: 0
+    minutes: 0
+  totalGameLengthInSeconds: 480
+  fifteenMinutesInSeconds: 1
+  analogousTimeFormat: 0
+  TimeStopped: 0
 --- !u!1 &655152010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,9 +2559,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Recalibrate
+  m_text: 'Restart Game
 
-    Flashlight'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5112,7 +5120,6 @@ MonoBehaviour:
     type: 3}
   newMessagePrefab: {fileID: 5714775523409465271, guid: eccd2740a57173c4e94026d7a827cba8,
     type: 3}
-  callAndMessageManager: {fileID: 619311660}
   flashCooldown: {fileID: 145820531}
   gameOverScreen: {fileID: 1815597078}
   clock: {fileID: 1608072303}
@@ -5852,7 +5859,7 @@ GameObject:
   - component: {fileID: 1616910930}
   - component: {fileID: 1616910929}
   m_Layer: 5
-  m_Name: Calibrate buttons
+  m_Name: restart button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5922,9 +5929,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 455907885}
-        m_TargetAssemblyTypeName: GyroControl, Assembly-CSharp
-        m_MethodName: ReCalibrate
+      - m_Target: {fileID: 8623895057794418509, guid: 498950c3473c6c841a87b4e0e05fcbd1,
+          type: 3}
+        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+        m_MethodName: InvokeRestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6378,7 +6386,7 @@ GameObject:
   - component: {fileID: 1726921906}
   - component: {fileID: 1726921905}
   m_Layer: 5
-  m_Name: SettingsMenu
+  m_Name: RestartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6584,17 +6592,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 156535134}
     m_Modifications:
+    - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1726921904}
+    - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947115283194376157, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3884709242694598521, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_Name
-      value: Manager App
+      value: Restart App
       objectReference: {fileID: 0}
     - target: {fileID: 5844722574382160713, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
       propertyPath: m_text
-      value: 'Manager
+      value: 'Restart Phone
 
-        App'
+'
       objectReference: {fileID: 0}
     - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
         type: 3}
@@ -7583,135 +7631,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995285356}
   m_CullTransparentMesh: 1
---- !u!1001 &2101501802
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 156535134}
-    m_Modifications:
-    - target: {fileID: 3884709242694598521, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_Name
-      value: Game
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844722574382160713, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_text
-      value: Game
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8, type: 3}
---- !u!224 &2101501803 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7397056213362137717, guid: 3f62403ea9b4a0c45bc82fe927d5bbb8,
-    type: 3}
-  m_PrefabInstance: {fileID: 2101501802}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2144234063
 PrefabInstance:
   m_ObjectHideFlags: 0

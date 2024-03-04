@@ -7,7 +7,7 @@ using UnityEngine;
 [System.Serializable]
 public struct EventTimer
 {
-    public enum GameEvents { Monster, Message, Call , LightFlicker, LightOnOff}
+    public enum GameEvents { Monster, Message, Call , LightFlicker, LightOnOff, GameRestarted, GameOver}
 
     public Timeframe time;
     public GameEvents gameEvent;
