@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{5f565e65-d62f-41fe-84f4-b7356e3e247e}">
 		<property name="name">
-			<value>Calling Sequence (3D)</value>
+			<value>Boss Calling Sequence</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
