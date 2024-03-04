@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ae3cf275-9cd8-4df6-b95a-ada7fd81d1d8}">
+		<property name="name">
+			<value>ManusSpeed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6405901c-f9ff-4e8c-b394-60855a7032b5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{54552594-42c5-4117-ac18-f7373305e216}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{54552594-42c5-4117-ac18-f7373305e216}">
+		<property name="minimum">
+			<value>-3</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>4.8499999046325684</value>
+		</property>
+	</object>
+</objects>
