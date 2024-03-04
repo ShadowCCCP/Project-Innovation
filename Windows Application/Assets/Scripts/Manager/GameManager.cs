@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     UIManager uIManager;
     Animator anim;
 
+    StickyNoteManager stickyNoteManager;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -24,6 +26,8 @@ public class GameManager : MonoBehaviour
 
         EventBus<GameRestartedEvent>.OnEvent += RestartGame;
         EventBus<GameOverEvent>.OnEvent += GameOver;
+
+        stickyNoteManager = GetComponent<StickyNoteManager>();
     }
 
     void OnDestroy()
@@ -47,5 +51,10 @@ public class GameManager : MonoBehaviour
     void GameOver(GameOverEvent gameOverEvent)
     {
         uIManager.ShowGameOverUI(gameOverEvent.gameOverType);
+    }
+
+    public StickyNoteManager GetNoteManager()
+    {
+        return stickyNoteManager;
     }
 }

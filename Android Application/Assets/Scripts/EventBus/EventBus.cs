@@ -33,3 +33,7 @@ public class GameOverEvent : Event
 {
     public GameOverEvent() { }
 }
+public class GameWonEvent : Event
+{
+    public GameWonEvent() { }
+}
