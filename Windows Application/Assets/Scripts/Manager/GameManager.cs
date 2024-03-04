@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     UIManager uIManager;
+    Animator anim;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -18,35 +20,35 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        EventBus<GameRestartedEvent>.OnEvent += RestartGame;
+        EventBus<GameRestartedEvent>.OnEvent += TriggerFade;
         EventBus<GameOverEvent>.OnEvent += GameOver;
     }
 
     void OnDestroy()
     {
-        EventBus<GameRestartedEvent>.OnEvent -= RestartGame;
+        EventBus<GameRestartedEvent>.OnEvent -= TriggerFade;
         EventBus<GameOverEvent>.OnEvent -= GameOver;
     }
     void Start()
     {
         uIManager = GetComponentInChildren<UIManager>();
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void TriggerFade(GameRestartedEvent gameRestartedEvent)
     {
-        
+        anim.SetTrigger("Fade");
     }
 
-    void RestartGame(GameRestartedEvent gameRestartedEvent)
+    public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        anim.SetTrigger("Fade");
     }
 
     void GameOver(GameOverEvent gameOverEvent)
     {
         //show ui
         uIManager.ShowGameOverUI();
-
     }
 }
