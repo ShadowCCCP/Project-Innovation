@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{c12d2030-16b6-4efa-9cac-9da852ab8efb}">
 		<property name="name">
-			<value>Whispering One-Shots  (3D)</value>
+			<value>Whispering One-Shots  (2D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -194,6 +194,7 @@
 	<object class="MixerBusPanner" id="{7c5be4cb-a483-4522-88eb-65af16113abc}">
 		<relationship name="modulators">
 			<destination>{4a120b75-a708-428f-9bf3-cebe96fec604}</destination>
+			<destination>{69cca39a-cac9-4e04-8a1e-eda7ab37d93c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{d759dd62-d1c4-4161-9ee6-f684a6ca9cbb}" />
@@ -269,6 +270,14 @@
 		</property>
 		<property name="amount">
 			<value>70.5</value>
+		</property>
+	</object>
+	<object class="LFOModulator" id="{69cca39a-cac9-4e04-8a1e-eda7ab37d93c}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>stereoPan</value>
+		</property>
+		<property name="depth">
+			<value>71.5</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{a0ff3674-d243-4012-83a5-7d85c0f2d5de}">

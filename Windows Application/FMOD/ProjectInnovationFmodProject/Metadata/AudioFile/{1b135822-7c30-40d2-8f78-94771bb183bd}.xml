@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{1b135822-7c30-40d2-8f78-94771bb183bd}">
 		<property name="assetPath">
-			<value>Manus Scraping Loop - 04.wav</value>
+			<value>Manus/Manus Scraping Loop - 04.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

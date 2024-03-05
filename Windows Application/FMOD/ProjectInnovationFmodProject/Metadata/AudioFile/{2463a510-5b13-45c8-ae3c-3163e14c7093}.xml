@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{2463a510-5b13-45c8-ae3c-3163e14c7093}">
 		<property name="assetPath">
-			<value>Manus Footstep One-Shot - 03.wav</value>
+			<value>Manus/Manus Footstep One-Shot - 03.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
