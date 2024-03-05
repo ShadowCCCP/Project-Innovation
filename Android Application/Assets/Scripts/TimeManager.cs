@@ -61,7 +61,8 @@ public class TimeManager : MonoBehaviour
             if (totalMinutes >= startMinutes + totalGameLengthInSeconds)
             {
                 // Game Won?
-                EventBus<GameOverEvent>.Publish(new GameOverEvent());
+                //EventBus<GameOverEvent>.Publish(new GameOverEvent());
+                EventBus<GameWonEvent>.Publish(new GameWonEvent());
                 CancelInvoke("UpdateTime");
             }
 

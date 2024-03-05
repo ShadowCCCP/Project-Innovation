@@ -24,6 +24,34 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-8901043737717494817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Boss Calling Sequence
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Boss Calling Sequence
+  Guid:
+    Data1: 1599495781
+    Data2: 1107220015
+    Data3: 901248132
+    Data4: 2116304494
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5218879717922574039}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11425
 --- !u!114 &-7225196892652038516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +107,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1023
+--- !u!114 &-5906209006505719525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Loops/Scary Wind  Loop (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Loops/Scary Wind  Loop (2D)
+  Guid:
+    Data1: 1157921496
+    Data2: 1081419449
+    Data3: 60645521
+    Data4: 317630580
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16000
 --- !u!114 &-5764429256080300777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,10 +149,10 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638451482120538784
+  lastModified: 638451804449729245
   FileSizes:
   - Name: Desktop
-    Value: 1952
+    Value: 2228
   Exists: 1
 --- !u!114 &-5280430854710753155
 MonoBehaviour:
@@ -222,10 +277,10 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638451482120467836
+  lastModified: 638451804449719241
   FileSizes:
   - Name: Desktop
-    Value: 2024512
+    Value: 2852768
   Exists: 1
 --- !u!114 &-2671610663827257469
 MonoBehaviour:
@@ -254,6 +309,40 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1274
+--- !u!114 &-1191587707577191796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Caller 1 Sequence/x
+  m_EditorClassIdentifier: 
+  Name: x
+  StudioPath: 
+  Min: 0
+  Max: 9
+  Default: 0
+  ID:
+    data1: 1775324243
+    data2: 247497198
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Call Incoming
+  - Call Accepted (1.1)
+  - 1.2
+  - 1.3
+  - 1.4
+  - 1.5
+  - 1.6
+  - 1.7
+  - 1.8
+  - 1.9
+  Exists: 1
 --- !u!114 &-755234112262545540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +370,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4672
+--- !u!114 &-254352544041953156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Lights/Lights Flickering (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Lights/Lights Flickering (2D)
+  Guid:
+    Data1: 664367338
+    Data2: 1183819267
+    Data3: 772922292
+    Data4: -1355915865
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4277
 --- !u!114 &-146641213210709570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,24 +446,28 @@ MonoBehaviour:
   - {fileID: -6202526694566690889}
   - {fileID: -3480337754631031379}
   - {fileID: -146641213210709570}
-  - {fileID: 6800525295424582616}
   - {fileID: 7401436787007658259}
   - {fileID: 7860602043480332689}
   - {fileID: -2671610663827257469}
   - {fileID: 3767874318253754049}
-  - {fileID: 6208563679707095940}
   - {fileID: -3723980971227900836}
   - {fileID: 1780728107731997138}
   - {fileID: -755234112262545540}
-  - {fileID: 4724978821294736039}
   - {fileID: -4106757081839446148}
+  - {fileID: 3210261829734506247}
+  - {fileID: -8901043737717494817}
+  - {fileID: 6098901704313070901}
+  - {fileID: 2912448877713147054}
+  - {fileID: -5906209006505719525}
+  - {fileID: -254352544041953156}
+  - {fileID: 2492324089517403591}
   EditorParameters:
   - {fileID: 274565366538701708}
   MasterBanks:
   - {fileID: -2672751323166541553}
   StringsBanks:
   - {fileID: -5764429256080300777}
-  cacheTime: 638451482120538784
+  cacheTime: 638451804449729245
   cacheVersion: 131609
 --- !u!114 &274565366538701708
 MonoBehaviour:
@@ -372,36 +492,6 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 1
   Labels: []
-  Exists: 1
---- !u!114 &1207490295754583557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Calling Sequence (3D)/x
-  m_EditorClassIdentifier: 
-  Name: x
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 1775324243
-    data2: 247497198
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Silence
-  - Call Incoming
-  - Caller 1
-  - Caller 2
-  - Caller 3
-  - Call stops
   Exists: 1
 --- !u!114 &1780728107731997138
 MonoBehaviour:
@@ -430,6 +520,113 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6679
+--- !u!114 &2492324089517403591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience Sequence
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience Sequence
+  Guid:
+    Data1: 193031670
+    Data2: 1146427183
+    Data3: 1532408969
+    Data4: -303013128
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2493041511172940307}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &2493041511172940307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience Sequence/Amb Progression
+  m_EditorClassIdentifier: 
+  Name: Amb Progression
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1814320532
+    data2: 2843242005
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2912448877713147054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Lights/Lights On (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Lights/Lights On (2D)
+  Guid:
+    Data1: -1730425401
+    Data2: 1189571952
+    Data3: 1898976642
+    Data4: 251138880
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2150
+--- !u!114 &3210261829734506247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Caller 1 Sequence
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Caller 1 Sequence
+  Guid:
+    Data1: 2036869953
+    Data2: 1074810975
+    Data3: 1003382157
+    Data4: -1268869251
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1191587707577191796}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 101000
 --- !u!114 &3767874318253754049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +681,41 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 57142
---- !u!114 &4724978821294736039
+--- !u!114 &5218879717922574039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boss Calling Sequence/x
+  m_EditorClassIdentifier: 
+  Name: x
+  StudioPath: 
+  Min: 0
+  Max: 9
+  Default: 0
+  ID:
+    data1: 1775324243
+    data2: 247497198
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Call Incoming
+  - Call Accepted (1.1)
+  - 1.2
+  - 1.3
+  - 1.4
+  - 1.5
+  - 1.6
+  - 1.7
+  - 1.8
+  - 1.9
+  Exists: 1
+--- !u!114 &6098901704313070901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,64 +725,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Loops/Scary Wind  Loop (3D)
+  m_Name: event:/SFX/Animation/Manus Footsteps
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/Loops/Scary Wind  Loop (3D)
-  Guid:
-    Data1: 1157921496
-    Data2: 1081419449
-    Data3: 60645521
-    Data4: 317630580
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 16000
---- !u!114 &6208563679707095940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Calling Sequence (3D)
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Calling Sequence (3D)
-  Guid:
-    Data1: 1599495781
-    Data2: 1107220015
-    Data3: 901248132
-    Data4: 2116304494
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 1207490295754583557}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 17000
---- !u!114 &6800525295424582616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Animation/Manus Footsteps (unfinished)
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Animation/Manus Footsteps (unfinished)
+  Path: event:/SFX/Animation/Manus Footsteps
   Guid:
     Data1: -701928312
     Data2: 1303151990
@@ -561,8 +737,9 @@ MonoBehaviour:
   - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 9014583401930911176}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -620,3 +797,27 @@ MonoBehaviour:
   MinDistance: 5.4
   MaxDistance: 50
   Length: 8555
+--- !u!114 &9014583401930911176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Manus Footsteps/ManusSpeed
+  m_EditorClassIdentifier: 
+  Name: ManusSpeed
+  StudioPath: 
+  Min: -3
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1062487413
+    data2: 1003851950
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         }
         EventBus<GameRestartEvent>.OnEvent += RestartGame;
         EventBus<GameOverEvent>.OnEvent += GameOver;
+        EventBus<GameWonEvent>.OnEvent += GameWon;
     }
 
     private void OnDestroy()
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
 
         EventBus<GameRestartEvent>.OnEvent -= RestartGame;
         EventBus<GameOverEvent>.OnEvent -= GameOver;
+        EventBus<GameWonEvent>.OnEvent -= GameWon;
     }
 
     void Start()
@@ -63,6 +65,19 @@ public class GameManager : MonoBehaviour
         {
             messageManager.PickMessage(new MessageEvent());
         }
+    }
+
+    public bool AllResidentsAlive()
+    {
+        for (int i = 0; i < contacts.Length; i++)
+        {
+            if (contacts[i].IsDead())
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public void EmptyState()
@@ -109,5 +124,10 @@ public class GameManager : MonoBehaviour
     private void GameOver(GameOverEvent gameOverEvent)
     {
         UDPSender.SendBroadcast("Game Over");
+    }
+
+    private void GameWon(GameWonEvent gameWonEvent)
+    {
+        UDPSender.SendBroadcast("Game Won");
     }
 }
