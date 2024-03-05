@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{22af0666-80ff-4be1-8320-4cd258e23c19}">
 		<property name="name">
-			<value>Ambient Music (2D)</value>
+			<value>Ambient Music Stage 1 (2D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -264,12 +264,12 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.763986111</value>
+			<value>-0.519575238</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{70aa0be9-e65a-499c-8715-1cef364efa07}">
 		<property name="position">
-			<value>14.285714285714286</value>
+			<value>12</value>
 		</property>
 		<property name="value">
 			<value>1</value>
