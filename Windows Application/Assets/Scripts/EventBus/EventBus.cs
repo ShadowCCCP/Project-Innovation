@@ -44,16 +44,24 @@ public class MonsterEvent : Event
     public int monsterID;
 }
 
-public class CallStageEvent : Event
+public class AnswerEvent : Event
 {
-    public CallStageEvent(string pContactName, int pStage)
+    public AnswerEvent(ContactInfo.Answers pAnswer)
     {
-        contactName = pContactName;
-        stage = pStage;
+        answer = pAnswer;
     }
 
-    public string contactName;
-    public int stage;
+    ContactInfo.Answers answer;
+}
+
+public class CallStateEvent : Event
+{
+    public CallStateEvent(string pState)
+    {
+        state = pState;
+    }
+
+    string state;
 }
 public class LightFlickerEvent : Event
 {
@@ -89,9 +97,3 @@ public class GameOverEvent : Event
     }
     public GameManager.GameOverType gameOverType;
 }
-
-public class GameStartEvent : Event
-{
-    public GameStartEvent() { }
-}
-

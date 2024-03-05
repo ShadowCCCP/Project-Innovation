@@ -4,12 +4,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System;
-using UnityEngine.UIElements;
 
 public class UDPListener : MonoBehaviour
 {
-    Queue messageQueue = new Queue();
-
     MessageHandler handler;
 
     private const int port = 8089;
@@ -29,11 +26,6 @@ public class UDPListener : MonoBehaviour
         udpClient.BeginReceive(ReceiveData, null);
     }
 
-    private void LateUpdate()
-    {
-        StartCoroutine(MainThreadDelegate());
-    }
-
     void ReceiveData(IAsyncResult result)
     {
         IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, port);
@@ -41,25 +33,10 @@ public class UDPListener : MonoBehaviour
         string receivedMessage = Encoding.ASCII.GetString(receivedBytes);
 
         // Handle message...
-        messageQueue.Enqueue(receivedMessage);
+        handler.ProcessMessage(receivedMessage);
 
         // Continue listening for messages...
         udpClient.BeginReceive(ReceiveData, null);
-    }
-
-    IEnumerator MainThreadDelegate()
-    {
-        while (messageQueue != null && messageQueue.Count > 0)
-        {
-            yield return new WaitForSeconds(0);
-
-            try
-            {
-                string message = messageQueue.Dequeue().ToString();
-                handler.ProcessMessage(message);
-            }
-            catch (Exception) { }
-        }
     }
 
     void OnDestroy()

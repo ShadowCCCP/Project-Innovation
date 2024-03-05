@@ -42,16 +42,15 @@ public class StringHandler : MonoBehaviour
         return answer;
     }
 
-    public static string ExtractCallStage(string message, bool getState)
+    public static string ExtractCallState(string message)
     {
         string[] parts = message.Split(':');
         string callStatePart = parts[1].Trim();
         string[] callStateParts = callStatePart.Split(',');
 
-        string contactName = callStateParts[0].Trim();
-        string stage = callStateParts[1].Trim();
+        string state = callStateParts[0].Trim();
+        string contact = callStateParts[1].Trim();
 
-        if (getState) return stage;
-        else return contactName;
+        return state;
     }
 }

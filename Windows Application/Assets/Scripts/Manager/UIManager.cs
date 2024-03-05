@@ -30,8 +30,7 @@ public class UIManager : MonoBehaviour
 
     public void ToggleMainMenu()
     {
-        if (mainMenu.activeSelf) mainMenu.SetActive(false);
-        else mainMenu.SetActive(true);
+        mainMenu.SetActive(!mainMenu.activeSelf);
     }
 
 

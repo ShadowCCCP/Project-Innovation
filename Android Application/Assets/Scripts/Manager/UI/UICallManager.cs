@@ -28,9 +28,9 @@ public class UICallManager : MonoBehaviour
         var contactTime = newCall.transform.Find("Time").GetComponent<TextMeshProUGUI>();
         var contactImage = newCall.transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
 
-        contactName.text = contact.contactName;
-        contactDetails.text = contact.details;
-        contactImage.sprite = contact.icon;
+        contactName.text = contact.ContactName;
+        contactDetails.text = contact.Details;
+        contactImage.sprite = contact.Icon;
         contactTime.text = TimeManager.currentTime;
 
         callList.Add(newCall);
@@ -45,9 +45,9 @@ public class UICallManager : MonoBehaviour
         var contactImage = newMessage.transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
         var messageContent = newMessage.transform.Find("Message").GetComponent<TextMeshProUGUI>();
         var contactTime = newMessage.transform.Find("Time").GetComponent<TextMeshProUGUI>();
-        contactName.text = contact.contactName;
-        contactDetails.text = contact.details;
-        contactImage.sprite = contact.icon;
+        contactName.text = contact.ContactName;
+        contactDetails.text = contact.Details;
+        contactImage.sprite = contact.Icon;
         messageContent.text = message;
         contactTime.text = TimeManager.currentTime;
     }

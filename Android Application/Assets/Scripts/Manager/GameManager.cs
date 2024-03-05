@@ -67,19 +67,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool AllResidentsAlive()
-    {
-        for (int i = 0; i < contacts.Length; i++)
-        {
-            if (contacts[i].IsDead())
-            {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
     public void EmptyState()
     {
         messageOrCallOngoing = false;

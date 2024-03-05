@@ -3,7 +3,7 @@ using UnityEngine;
 public class CallPickerOrdered : MonoBehaviour, ICallManager
 {
     Contact[] contacts;
-    static int currentCall;
+    int currentCall;
 
     void Start()
     {
@@ -56,11 +56,6 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
         {
             currentCall = 0;
         }
-    }
-
-    public static int GetCurrentCaller()
-    {
-        return currentCall;
     }
  
 }
