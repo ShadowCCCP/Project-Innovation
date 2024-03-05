@@ -25,6 +25,7 @@ public class EnemyBehaviour : MonoBehaviour
     List<Transform> navPoints = new List<Transform>();
 
     [SerializeField] EventReference soundReference;
+    [SerializeField] string parameterName;
     SoundSystem soundSystem;
 
     int currentParamValue;
@@ -57,13 +58,12 @@ public class EnemyBehaviour : MonoBehaviour
         }
         soundSystem.SetSoundValues(soundReference, false);
         soundSystem.PlaySound();
-        soundSystem.SetParameterLocal("ManusSpeed", 0);
     }
 
     void Update()
     {
         currentParamValue = (int)Mathf.Clamp(currentSpeed, -3, 4);
-        Debug.Log(currentParamValue);
+        soundSystem.SetParameterLocal(parameterName, currentParamValue);
 
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
         if (currentSpeed > 0)

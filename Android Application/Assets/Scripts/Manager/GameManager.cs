@@ -49,6 +49,13 @@ public class GameManager : MonoBehaviour
 
         if (messageManager == null) Debug.Log("GameManager: MessageManager missing...");
         else if (callManager == null) Debug.Log("GameManager: CallManager missing...");
+
+        InvokeRepeating("SendResidentsState", 5, 5);
+    }
+
+    void SendResidentsState()
+    {
+        UDPSender.SendBroadcast("Alive: " + AllResidentsAlive());
     }
 
     public bool AllResidentsAlive()
