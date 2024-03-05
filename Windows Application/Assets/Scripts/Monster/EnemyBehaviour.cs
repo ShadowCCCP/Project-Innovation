@@ -17,7 +17,9 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     float rotiatonSpeed = 2f;
     [SerializeField]
-    float backwardsSpeed = -5f;
+    float backwardsSpeed = -5f; 
+    [SerializeField]
+    float killingSpeed = 20f;
     [SerializeField]
     List<Transform> navPoints = new List<Transform>();
 
@@ -73,7 +75,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void moveForward()
     {
-        if (i < navPoints.Count)
+        if (i < navPoints.Count-1)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(navPoints[i].position - transform.position, Vector3.up), rotiatonSpeed * Time.deltaTime *currentSpeed);
             if (Vector3.Distance(transform.position, navPoints[i].position) < 0.1f)
@@ -84,10 +86,14 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else
         {
-            //gameover
-            currentSpeed = 0; 
-            anim.SetFloat("Speed", currentSpeed);
-            EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.DeadthByMonster));
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(navPoints[i].position - transform.position, Vector3.up), rotiatonSpeed * Time.deltaTime * currentSpeed);
+           
+            StartCoroutine(killingCoroutine());
+            if (Vector3.Distance(transform.position, navPoints[i].position) < 1f)
+            {
+                currentSpeed = 0;
+                anim.SetFloat("Speed", currentSpeed);
+            }
         }
     }
 
@@ -116,9 +122,17 @@ public class EnemyBehaviour : MonoBehaviour
 
     void startMovement(MonsterEvent monsterEvent)
     {
-        if (monsterEvent.monsterID == monsterID)
+        if (monsterEvent.monsterID == monsterID && currentSpeed ==0)
         {
             currentSpeed = speed;
         }
+    }
+
+    IEnumerator killingCoroutine()
+    {
+        currentSpeed = killingSpeed; 
+        anim.SetFloat("Speed", currentSpeed);
+        yield return new WaitForSeconds(5);
+        EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.DeadthByMonster));
     }
 }

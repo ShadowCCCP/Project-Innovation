@@ -13,6 +13,8 @@ public class MessageHandler : MonoBehaviour
     int i = 0;
     float timer;
 
+    int monstersCount;
+
     void Update()
     {
         if (packageTesting)
@@ -36,7 +38,8 @@ public class MessageHandler : MonoBehaviour
         else if (message.Contains("LightOnOff")) LightOnOffData();
         else if (message.Contains("Restart")) RestartGame();
         else if (message.Contains("Over")) GameOver();
-        else if (message.Contains("Won")) GameWon();
+        else if (message.Contains("Won")) GameWon(); 
+        if (message.Contains("Monster")) SpawnMonster();
     }
 
     void GyroscopeData(string message)
@@ -98,6 +101,13 @@ public class MessageHandler : MonoBehaviour
     void GameWon()
     {
         EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.Won));
+    }
+
+    void SpawnMonster()
+    {
+        monstersCount = FindObjectsOfType<EnemyBehaviour>().Length;
+        int r = UnityEngine.Random.Range(0, monstersCount);
+        EventBus<MonsterEvent>.Publish(new MonsterEvent(r));
     }
 
     void PackageTest()
