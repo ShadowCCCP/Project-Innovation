@@ -8,9 +8,12 @@ public class GameManager : MonoBehaviour
     public enum GameOverType { DeadResident, DeadthByMonster, Won }
 
     public static GameManager Instance;
-    UIManager uIManager;
+
+    [SerializeField] ContactInfo[] contactInfo;
+
     Animator anim;
 
+    UIManager uIManager;
     StickyNoteManager stickyNoteManager;
 
     void Awake()
@@ -26,6 +29,7 @@ public class GameManager : MonoBehaviour
 
         EventBus<GameRestartedEvent>.OnEvent += RestartGame;
         EventBus<GameOverEvent>.OnEvent += GameOver;
+        EventBus<GameStartEvent>.OnEvent += StartGame;
 
         stickyNoteManager = GetComponent<StickyNoteManager>();
     }
@@ -34,7 +38,9 @@ public class GameManager : MonoBehaviour
     {
         EventBus<GameRestartedEvent>.OnEvent -= RestartGame;
         EventBus<GameOverEvent>.OnEvent -= GameOver;
+        EventBus<GameStartEvent>.OnEvent -= StartGame;
     }
+
     void Start()
     {
         uIManager = GetComponentInChildren<UIManager>();
@@ -44,13 +50,25 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame(GameRestartedEvent gameRestartedEvent)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        anim.SetTrigger("Fade");
+        anim.SetTrigger("FadeOut");
+        StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(1);
+        anim.SetTrigger("FadeOut");
     }
 
     void GameOver(GameOverEvent gameOverEvent)
     {
         uIManager.ShowGameOverUI(gameOverEvent.gameOverType);
+    }
+
+    void StartGame(GameStartEvent gameStartEvent)
+    {
+        uIManager.ToggleMainMenu();
+        anim.SetTrigger("FadeIn");
     }
 
     public StickyNoteManager GetNoteManager()

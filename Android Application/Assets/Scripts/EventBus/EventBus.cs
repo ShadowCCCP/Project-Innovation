@@ -23,7 +23,10 @@ public class CallEvent : Event
 }
 public class StartGameEvent : Event
 {
-    public StartGameEvent() { }
+    public StartGameEvent() 
+    {
+        UDPSender.SendBroadcast("StartGame");
+    }
 }
 public class GameRestartEvent : Event
 {

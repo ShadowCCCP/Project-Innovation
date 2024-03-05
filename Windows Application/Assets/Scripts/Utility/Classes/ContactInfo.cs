@@ -6,23 +6,14 @@ using UnityEngine;
 
 public class ContactInfo : MonoBehaviour
 {
-    // This script needs to be attached to a gameObject that has a SoundSystem script component...
-
-    public enum Answers { Yes, No }
-
     [SerializeField] string contactName;
-    [SerializeField] EventReference soundReference;
-    [SerializeField] Answers[] rightAnswers = new Answers[3];
 
-    List<Answers> givenAnswers = new List<Answers>();
+    [SerializeField] EventReference soundReference;
     SoundSystem soundSystem;
 
-    int questionAmount;
-    int currentStage;
-    bool isDead;
-
-    private void Start()
+    void Start()
     {
+        // Get or create soundSystem component and set soundReference inside...
         soundSystem = GetComponent<SoundSystem>();
         if (soundSystem == null)
         {
@@ -30,35 +21,31 @@ public class ContactInfo : MonoBehaviour
         }
         soundSystem.SetSoundValues(soundReference, true);
 
-        questionAmount = rightAnswers.Length;
+        EventBus<CallStageEvent>.OnEvent += StageCall;
     }
 
-    public void AddAnswer(Answers answer)
+    void OnDestroy()
     {
-        givenAnswers.Add(answer);
-        CheckAnswers();
+        EventBus<CallStageEvent>.OnEvent -= StageCall;
     }
 
-    void CheckAnswers()
+    void StageCall(CallStageEvent callStageEvent)
     {
-        if (givenAnswers.Count == questionAmount)
+        if (CompareName(callStageEvent.contactName))
         {
-            for (int i = 0; i < questionAmount; i++) 
-            { 
-                if (givenAnswers[i] != rightAnswers[i])
-                {
-                    isDead = true;
-                }
-            }
+            PlayCall(callStageEvent.stage);
         }
-
-        IncreaseStage();
     }
 
-    void IncreaseStage()
+    bool CompareName(string name)
     {
-        currentStage++;
-        if (isDead) currentStage++;
-        soundSystem.SetParameter(SoundSystem.Parameters.X, currentStage);
+        if (name == contactName) return true;
+        return false;
+    }
+
+    void PlayCall(int stage)
+    {
+        soundSystem.SetParameter(SoundSystem.Parameters.X, stage);
+        soundSystem.PlaySound();
     }
 }
