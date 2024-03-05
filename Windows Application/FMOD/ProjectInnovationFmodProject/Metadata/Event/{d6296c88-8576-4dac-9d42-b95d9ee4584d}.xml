@@ -287,8 +287,11 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{7df80fde-c703-4e61-adf9-b5db6672b13f}">
+		<property name="start">
+			<value>-2.3000000000000003</value>
+		</property>
 		<property name="length">
-			<value>3.0000000000000009</value>
+			<value>5.2999999999999989</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
@@ -654,7 +657,7 @@
 	<object class="MixerBusFader" id="{b9bef609-0ccd-4d9c-ad0b-3113a97367c4}" />
 	<object class="AutomationPoint" id="{9094ef33-9970-4ab3-951e-10d23f38c0fd}">
 		<property name="position">
-			<value>0</value>
+			<value>-2.3000000000000003</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -665,7 +668,7 @@
 	</object>
 	<object class="AutomationPoint" id="{893222e4-7e19-43ae-8d2a-9bc11183ba1f}">
 		<property name="position">
-			<value>2.2000000000000002</value>
+			<value>-0.10000000000000098</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -673,7 +676,7 @@
 	</object>
 	<object class="AutomationPoint" id="{f15f3a87-f13a-43aa-9349-a96c674ae5bb}">
 		<property name="position">
-			<value>2.4000000000000004</value>
+			<value>2.3999999999999972</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -684,7 +687,7 @@
 	</object>
 	<object class="AutomationPoint" id="{043c3889-07da-4710-9721-581a6dc7f028}">
 		<property name="position">
-			<value>3.0000000000000018</value>
+			<value>2.9999999999999987</value>
 		</property>
 		<property name="value">
 			<value>0</value>

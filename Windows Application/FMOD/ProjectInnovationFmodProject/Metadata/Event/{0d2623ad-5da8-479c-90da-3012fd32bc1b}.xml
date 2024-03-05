@@ -125,8 +125,11 @@
 		</relationship>
 	</object>
 	<object class="TransitionDestinationSound" id="{44405815-f999-4ada-afb2-806a7b1c5aeb}">
+		<property name="start">
+			<value>1</value>
+		</property>
 		<property name="length">
-			<value>5.7142857142857144</value>
+			<value>4.7142857142857144</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{7292ec5c-9cf0-4464-a45f-7175de46753a}</destination>
@@ -176,7 +179,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>41</value>
+			<value>40</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{2bcf3981-7f69-4f07-918a-440d59f1077f}</destination>
@@ -245,7 +248,7 @@
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.25471893</value>
+			<value>0.79814893</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{d4b70557-8dc5-42db-b293-94aafa10ab33}">
@@ -258,13 +261,16 @@
 	</object>
 	<object class="AutomationPoint" id="{ffb0649f-26e8-4236-ae34-16d4ddeb6205}">
 		<property name="position">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.2547189</value>
+			<value>1</value>
+		</property>
+		<property name="isSCurve">
+			<value>true</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{563a1008-9525-4c35-8968-cf7ba2d68ba1}">
