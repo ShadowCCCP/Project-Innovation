@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     UIManager uIManager;
     StickyNoteManager stickyNoteManager;
 
+    public bool residentDead;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
