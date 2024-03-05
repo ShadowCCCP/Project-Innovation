@@ -88,6 +88,17 @@ public class MessageHandler : MonoBehaviour
         EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.Won));
     }
 
+    void StartGameData()
+    {
+        EventBus<GameStartEvent>.Publish(new GameStartEvent());
+    }
+
+    void SpawnMonster()
+    {
+        int monster = FindObjectsOfType<EnemyBehaviour>().Length;
+        EventBus<MonsterEvent>.Publish(new MonsterEvent(monster));
+    }
+
     void PackageTest()
     {
         Debug.Log("Second " + i + " huhu");

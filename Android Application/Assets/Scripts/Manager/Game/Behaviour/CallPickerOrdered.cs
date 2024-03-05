@@ -33,8 +33,6 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
         {
             GameManager.Instance.ToggleUIState();
             UIManager.Instance.SetDataCall(caller);
-            // UIManager.Instance.ShowNewCall(caller);
-            // GameManager.Instance.GetUICallManager().AddNewCall(caller);
         }
         else
         {

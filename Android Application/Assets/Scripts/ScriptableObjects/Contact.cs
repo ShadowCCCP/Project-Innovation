@@ -17,6 +17,11 @@ public class Contact : ScriptableObject
     int currentStage;
     bool isDead;
 
+    public void StartCall()
+    {
+        UDPSender.SendBroadcast("Contact: " + contactName + ", " + currentStage);
+    }
+
     public void AddAnswer(Answers answer)
     {
         givenAnswers.Add(answer);

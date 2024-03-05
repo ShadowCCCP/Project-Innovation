@@ -51,22 +51,6 @@ public class GameManager : MonoBehaviour
         else if (callManager == null) Debug.Log("GameManager: CallManager missing...");
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            callManager.PickCall(new CallEvent());
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            callManager.ShowCallEnded();
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            messageManager.PickMessage(new MessageEvent());
-        }
-    }
-
     public bool AllResidentsAlive()
     {
         for (int i = 0; i < contacts.Length; i++)

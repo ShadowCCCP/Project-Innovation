@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -23,6 +24,12 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     List<Transform> navPoints = new List<Transform>();
 
+    [SerializeField] EventReference soundReference;
+    SoundSystem soundSystem;
+
+    int currentParamValue;
+    int i;
+
     Animator anim;
     void Awake()
     {
@@ -41,22 +48,23 @@ public class EnemyBehaviour : MonoBehaviour
         transform.LookAt(navPoints[i].position);
         anim.SetFloat("Speed", currentSpeed);
         currentSpeed = speed;
+
+        // Get or create soundSystem component and set soundReference inside...
+        soundSystem = GetComponent<SoundSystem>();
+        if (soundSystem == null)
+        {
+            soundSystem = gameObject.AddComponent<SoundSystem>();
+        }
+        soundSystem.SetSoundValues(soundReference, false);
+        soundSystem.PlaySound();
+        soundSystem.SetParameterLocal("ManusSpeed", 0);
     }
 
-    int i =0;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            OnSpotted();
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            currentSpeed = speed;
-            i++;
-        }
+        currentParamValue = (int)Mathf.Clamp(currentSpeed, -3, 4);
+        Debug.Log(currentParamValue);
 
-        anim.SetFloat("Speed", currentSpeed);
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
         if (currentSpeed > 0)
         {
