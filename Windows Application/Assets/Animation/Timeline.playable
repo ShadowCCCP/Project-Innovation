@@ -40,15 +40,15 @@ MonoBehaviour:
       Slot13: 0
       Slot14: 0
       Slot15: 0
-  EventLength: Infinity
+  EventLength: 6.679
   eventName: 
   EventReference:
     Guid:
-      Data1: -1054007248
-      Data2: 1325012662
-      Data3: -1466061668
-      Data4: -74536110
-    Path: event:/Ambience 2D/Unnatural&Scary/Whispering
+      Data1: 2032867780
+      Data2: 1080503573
+      Data3: 353727903
+      Data4: -332306826
+    Path: event:/Ambience/One-Shots/Thunder (2D)
   StopType: 0
   Parameters: []
 --- !u!114 &-1708067739636109962
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 8.516666666666659
+    m_Start: 4.299999999999997
     m_ClipIn: 0
     m_Asset: {fileID: 1548447179133760827}
     m_Duration: 0.75
@@ -139,7 +139,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 8.516666666666659
+    m_PreExtrapolationTime: 4.299999999999997
     m_DisplayName: Lightning strike lighting up room
   m_Markers:
     m_Objects: []
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 5.333333333333333
+    m_Start: 2.533333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 5950771063133885125}
     m_Duration: 1.3333333333333333
@@ -273,7 +273,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 5.333333333333333
+    m_PreExtrapolationTime: 2.533333333333333
     m_DisplayName: Light Flicker
   m_Markers:
     m_Objects: []
@@ -333,10 +333,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 5.016666666666667
+    m_Start: 3.8666666666666663
     m_ClipIn: 0
     m_Asset: {fileID: -2619873867413272106}
-    m_Duration: 5
+    m_Duration: 3.3500000000000094
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1473140074165907888}
     m_EaseInDuration: 0
@@ -400,7 +400,76 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Whispering
+    m_DisplayName: Thunder (2D)
+  - m_Version: 1
+    m_Start: 2.533333333333333
+    m_ClipIn: 0
+    m_Asset: {fileID: 2087038291492053280}
+    m_Duration: 0.8333333333333339
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 1473140074165907888}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Lights Flickering (2D)
   m_Markers:
     m_Objects: []
   template:
@@ -427,6 +496,57 @@ MonoBehaviour:
   m_Loop: 2
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &2087038291492053280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987a467495df9d942b56b1b51381d095, type: 3}
+  m_Name: FMODEventPlayable(Clone)
+  m_EditorClassIdentifier: 
+  Template:
+    EventReference:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    StopType: 0
+    Parameters: []
+    ParameterLinks: []
+    ParameterAutomation:
+      Slot00: 0
+      Slot01: 0
+      Slot02: 0
+      Slot03: 0
+      Slot04: 0
+      Slot05: 0
+      Slot06: 0
+      Slot07: 0
+      Slot08: 0
+      Slot09: 0
+      Slot10: 0
+      Slot11: 0
+      Slot12: 0
+      Slot13: 0
+      Slot14: 0
+      Slot15: 0
+  EventLength: Infinity
+  eventName: 
+  EventReference:
+    Guid:
+      Data1: 664367338
+      Data2: 1183819267
+      Data3: 772922292
+      Data4: -1355915865
+    Path: event:/SFX/Lights/Lights Flickering (2D)
+  StopType: 0
+  Parameters: []
 --- !u!114 &2954744916174814594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -439,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 8.416666666666666
+  m_Time: 4.200000000000003
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 9b3908df28140dc40a96ef5299edf654, type: 2}
