@@ -94,8 +94,9 @@ public class UIManager : MonoBehaviour
     public void AnswerCall()
     {
         //callReceieved.SetActive(false);
-
         Destroy(newCall);
+        Contact[] contacts = GameManager.Instance.GetContacts();
+        contacts[CallPickerOrdered.GetCurrentCaller()].IncreaseStage();
     }
 
     public IEnumerator CallEnded()

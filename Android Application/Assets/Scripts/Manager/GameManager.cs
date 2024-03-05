@@ -71,6 +71,11 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
+    public void StopCall()
+    {
+        callManager.ShowCallEnded();
+    }
+
     public void EmptyState()
     {
         messageOrCallOngoing = false;

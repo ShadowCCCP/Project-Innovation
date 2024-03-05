@@ -7,9 +7,6 @@ public class GyroscopeData : MonoBehaviour
     Quaternion startRotation;
     Gyroscope gyro;
 
-    [Range(5.0f, 25.0f)]
-    [SerializeField] float rotationSpeed = 50.0f;
-
     bool pointingUp;
 
     private void Start()

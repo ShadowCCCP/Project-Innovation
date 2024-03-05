@@ -40,3 +40,13 @@ public class GameWonEvent : Event
 {
     public GameWonEvent() { }
 }
+
+public class CallStageEvent : Event
+{
+    public CallStageEvent(int pStage) 
+    {
+        stage = pStage;
+    }
+
+    public int stage;
+}

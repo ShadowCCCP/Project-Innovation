@@ -19,6 +19,7 @@ public class Contact : ScriptableObject
 
     public void StartCall()
     {
+        ResetValues();
         UDPSender.SendBroadcast("Contact: " + contactName + ", " + currentStage);
     }
 
@@ -44,15 +45,24 @@ public class Contact : ScriptableObject
         IncreaseStage();
     }
 
-    void IncreaseStage()
+    public void IncreaseStage()
     {
         currentStage++;
         if (isDead) currentStage++;
         UDPSender.SendBroadcast("Contact: " + contactName + ", " + currentStage);
+        EventBus<CallStageEvent>.Publish(new CallStageEvent(currentStage));
+        Debug.Log(currentStage);
     }
 
     public bool IsDead()
     {
         return isDead;
+    }
+
+    void ResetValues()
+    {
+        currentStage = 0;
+        isDead = false;
+        givenAnswers = new List<Answers>();
     }
 }

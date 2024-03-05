@@ -13,15 +13,18 @@ public class SpeechRecognitionTest : MonoBehaviour
     HoldDownButton buttonScript;
     Image buttonImage;
 
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] TextMeshProUGUI text;
 
     private AudioClip clip;
     private byte[] bytes;
     private bool recording;
 
+    Contact[] contacts;
+
     private void Start()
     {
         buttonScript = button.GetComponent<HoldDownButton>();
+        contacts = GameManager.Instance.GetContacts();
     }
 
     private void Update()
@@ -48,8 +51,8 @@ public class SpeechRecognitionTest : MonoBehaviour
 
     private void StartRecording()
     {
-        text.color = Color.white;
-        text.text = "Recording...";
+        text.color = Color.black;
+        text.text = "Speak...";
         clip = Microphone.Start(null, false, 10, 44100);
         recording = true;
     }
@@ -67,16 +70,13 @@ public class SpeechRecognitionTest : MonoBehaviour
 
     private void SendRecording()
     {
-        text.color = Color.yellow;
-        text.text = "Sending...";
+        text.color = Color.black;
+        text.text = "Wait...";
         //stopButton.interactable = false;
         HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response => {
-            CheckForWods(response);
-            text.color = Color.white;
-            text.text = response;
+            CheckForWords(response);
         }, error => {
-            text.color = Color.red;
-            text.text = "Could you repeat?";
+            CheckForWords(error);
         });
     }
 
@@ -116,22 +116,26 @@ public class SpeechRecognitionTest : MonoBehaviour
         return regex.IsMatch(input);
     }
 
-    void CheckForWods(string text)
+    void CheckForWords(string text)
     {
         if (ContainsWord(text, "yes") || ContainsWord(text, "okay") || ContainsWord(text, "yeah"))
         {
-            Debug.Log("YEZZ");
+            contacts[CallPickerOrdered.GetCurrentCaller()].AddAnswer(Contact.Answers.Yes);
             UDPSender.SendBroadcast("Answer: Yes");
+            button.gameObject.SetActive(false);
+
         }
         else if (ContainsWord(text, "no"))
         {
-            Debug.Log("NOUU");
+            contacts[CallPickerOrdered.GetCurrentCaller()].AddAnswer(Contact.Answers.No);
             UDPSender.SendBroadcast("Answer: No");
+            button.gameObject.SetActive(false);
         }
         else
         {
-            Debug.Log("Could you repeat that");
             UDPSender.SendBroadcast("Answer: Unclear");
         }
+
+        this.text.text = "Push to talk";
     }
 }

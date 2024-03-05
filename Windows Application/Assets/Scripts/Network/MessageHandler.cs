@@ -103,9 +103,8 @@ public class MessageHandler : MonoBehaviour
     void ResidentsStateData(string message)
     {
         string answer = StringHandler.ExtractAnswer(message);
-        if (answer == "true") GameManager.Instance.residentDead = false;
+        if (answer == "True") GameManager.Instance.residentDead = false;
         else GameManager.Instance.residentDead = true;
-        Debug.Log(GameManager.Instance.residentDead);
     }
 
     void PackageTest()
