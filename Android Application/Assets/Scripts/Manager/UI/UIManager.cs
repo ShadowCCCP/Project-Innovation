@@ -73,17 +73,17 @@ public class UIManager : MonoBehaviour
         var contactNameAndDetailsOngoingCall = newCallOngoing.transform.Find("NameAndDetails").GetComponent<TextMeshProUGUI>();
         var contactImageOngoingCall = newCallOngoing.transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
 
-        contactNameAndDetailsOngoingCall.text = contact.ContactName + " - "+ contact.Details;
-        contactImageOngoingCall.sprite = contact.Icon;
+        contactNameAndDetailsOngoingCall.text = contact.contactName + " - "+ contact.details;
+        contactImageOngoingCall.sprite = contact.icon;
 
         newCall = Instantiate(callReceievedPrefab, transform);
         var contactNameNewCall = newCall.transform.Find("Name").GetComponent<TextMeshProUGUI>();
         var contactDetailsNewCall = newCall.transform.Find("Details").GetComponent<TextMeshProUGUI>();
         var contactImageNewCall = newCall.transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
 
-        contactNameNewCall.text = contact.ContactName;
-        contactDetailsNewCall.text = contact.Details;
-        contactImageNewCall.sprite = contact.Icon;
+        contactNameNewCall.text = contact.contactName;
+        contactDetailsNewCall.text = contact.details;
+        contactImageNewCall.sprite = contact.icon;
 
         newCall.transform.Find("Answer").GetComponent<Button>().onClick.AddListener(AnswerCall);
 
@@ -124,8 +124,8 @@ public class UIManager : MonoBehaviour
         var contactImageMessage = newMessage.transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
         var messageContent = newMessage.transform.Find("Message").GetComponent<TextMeshProUGUI>();
 
-        contactNameAndDetailsMessage.text = contact.ContactName + " - " + contact.Details;
-        contactImageMessage.sprite = contact.Icon;
+        contactNameAndDetailsMessage.text = contact.contactName + " - " + contact.details;
+        contactImageMessage.sprite = contact.icon;
         messageContent.text = message;
 
 

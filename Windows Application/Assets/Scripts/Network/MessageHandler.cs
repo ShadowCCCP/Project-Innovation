@@ -32,14 +32,14 @@ public class MessageHandler : MonoBehaviour
 
         if (message.Contains("Gyroscope")) GyroscopeData(message);
         else if (message.Contains("Time")) TimeData(message);
-        else if (message.Contains("Contact")) AnswerData(message);
-        else if (message.Contains("CallState")) CallStateData(message);
+        else if (message.Contains("Contact")) CallStateData(message);
         else if (message.Contains("LightFlicker")) LightFlickerData();
         else if (message.Contains("LightOnOff")) LightOnOffData();
         else if (message.Contains("Restart")) RestartGame();
         else if (message.Contains("Over")) GameOver();
-        else if (message.Contains("Won")) GameWon(); 
-        if (message.Contains("Monster")) SpawnMonster();
+        else if (message.Contains("Won")) GameWon();
+        else if (message.Contains("StartGame")) StartGameData();
+        else if (message.Contains("Monster")) SpawnMonster();
     }
 
     void GyroscopeData(string message)
@@ -56,26 +56,11 @@ public class MessageHandler : MonoBehaviour
         EventBus<TimeEvent>.Publish(new TimeEvent(time));
     }
 
-    void AnswerData(string message)
-    {
-        ContactInfo.Answers answer = ContactInfo.Answers.Yes;
-        string answerStr = StringHandler.ExtractAnswer(message);
-        switch (answerStr)
-        {
-            case "Yes":
-                answer = ContactInfo.Answers.Yes;
-                break;
-            case "No":
-                answer = ContactInfo.Answers.No;
-                break;
-        }
-        EventBus<AnswerEvent>.Publish(new AnswerEvent(answer));
-    }
-
     void CallStateData(string message)
     {
-        string state = StringHandler.ExtractAnswer(message);
-        EventBus<CallStateEvent>.Publish(new CallStateEvent(state));
+        string contactName = StringHandler.ExtractCallStage(message, false);
+        int stage = int.Parse(StringHandler.ExtractCallStage(message, true));
+        EventBus<CallStageEvent>.Publish(new CallStageEvent(contactName, stage));
     }
 
     void LightFlickerData()
@@ -101,13 +86,6 @@ public class MessageHandler : MonoBehaviour
     void GameWon()
     {
         EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.Won));
-    }
-
-    void SpawnMonster()
-    {
-        monstersCount = FindObjectsOfType<EnemyBehaviour>().Length;
-        int r = UnityEngine.Random.Range(0, monstersCount);
-        EventBus<MonsterEvent>.Publish(new MonsterEvent(r));
     }
 
     void PackageTest()

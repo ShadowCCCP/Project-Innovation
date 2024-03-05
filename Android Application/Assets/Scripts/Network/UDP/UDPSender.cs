@@ -18,7 +18,6 @@ public class UDPSender : MonoBehaviour
 
         // Convert message string to bytes
         byte[] bytes = Encoding.ASCII.GetBytes(discoveryMessage);
-
         // Broadcast the discovery message to the local network
         IPEndPoint endPoint = new IPEndPoint(IPAddress.Broadcast, port);
         udpClient.Send(bytes, bytes.Length, endPoint);
