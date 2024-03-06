@@ -12,13 +12,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] ContactInfo[] contactInfo;
 
-    [SerializeField] EventReference ambientSound;
-    SoundSystem ambientSystem;
-
-    [SerializeField] EventReference bossCall;
-    SoundSystem bossSystem;
-
-
     Animator anim;
 
     UIManager uIManager;
@@ -53,12 +46,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        ambientSystem = gameObject.AddComponent<SoundSystem>();
-        ambientSystem.SetSoundValues(ambientSound);
-
-        bossSystem = gameObject.AddComponent<SoundSystem>();
-        bossSystem.SetSoundValues(bossCall);
-
         uIManager = GetComponentInChildren<UIManager>();
         anim = GetComponent<Animator>();
     }
@@ -85,7 +72,6 @@ public class GameManager : MonoBehaviour
     {
         uIManager.ToggleMainMenu();
         anim.SetTrigger("FadeIn");
-        bossSystem.PlaySound();
     }
 
     public bool GetResidentDead()
@@ -101,10 +87,5 @@ public class GameManager : MonoBehaviour
     public StickyNoteManager GetNoteManager()
     {
         return stickyNoteManager;
-    }
-
-    public void SetAmbientStage(int stage)
-    {
-        ambientSystem.SetParameterLocal("Amb Progression", stage);
     }
 }
