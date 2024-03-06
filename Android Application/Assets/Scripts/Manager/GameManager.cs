@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -114,6 +115,7 @@ public class GameManager : MonoBehaviour
 
     private void RestartGame(GameRestartEvent gameRestartEvent)
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         UDPSender.SendBroadcast("Restart");
     }
 
@@ -124,6 +126,14 @@ public class GameManager : MonoBehaviour
 
     private void GameWon(GameWonEvent gameWonEvent)
     {
-        UDPSender.SendBroadcast("Game Won");
+        if (AllResidentsAlive())
+        {
+            EventBus<GameOverEvent>.Publish(new GameOverEvent());
+        }
+        else 
+        { 
+            UDPSender.SendBroadcast("Game Won"); 
+        }
+
     }
 }

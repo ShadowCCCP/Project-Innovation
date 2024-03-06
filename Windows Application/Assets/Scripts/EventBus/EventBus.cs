@@ -95,3 +95,12 @@ public class GameStartEvent : Event
     public GameStartEvent() { }
 }
 
+public class FlashlightOnOffEvent : Event
+{
+    public FlashlightOnOffEvent()
+    {
+
+    }
+
+}
+

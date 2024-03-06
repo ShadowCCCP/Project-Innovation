@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class Flashlight : MonoBehaviour
 {
@@ -9,14 +10,29 @@ public class Flashlight : MonoBehaviour
     [SerializeField] LayerMask layerMask;
     [SerializeField] Color color;
     StickyNoteManager noteManager;
-
+    [SerializeField]
+    GameObject spotLight;
+    [SerializeField]
+    bool lightON = false;
     string targetTag = "Monster";
     string infoTag = "Note";
+    void Awake()
+    {
+        EventBus<FlashlightOnOffEvent>.OnEvent += turnOnOffFlashlight;
+    }
+    void OnDestroy()
+    {
+        EventBus<FlashlightOnOffEvent>.OnEvent -= turnOnOffFlashlight;
+    }
 
     private void Start()
     {
+        spotLight.SetActive(lightON);
+
         noteManager = GameManager.Instance.GetNoteManager();
     }
+
+
 
     void Update()
     {
@@ -37,9 +53,22 @@ public class Flashlight : MonoBehaviour
             if (hit.collider.CompareTag(infoTag))
             {
                 Debug.Log("sticky note");
-                //hit.collider.gameObject.GetComponent<StickyNote>().OnFlashLightHover();
                 noteManager.OnFlashLightHover(hit.collider.gameObject.GetComponent<StickyNote>());
             }
+        }
+    }
+
+    public void turnOnOffFlashlight(FlashlightOnOffEvent flashlightOnOffEvent)
+    {
+        if (!lightON)
+        {
+            spotLight.SetActive(true);
+            lightON = true;
+        }
+        else
+        {
+            spotLight.SetActive(false);
+            lightON = false;
         }
     }
 }

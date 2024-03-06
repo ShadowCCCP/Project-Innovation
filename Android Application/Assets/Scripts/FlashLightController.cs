@@ -6,8 +6,6 @@ public class FlashLightController : MonoBehaviour
 {
 
     bool flashlightActive = false;
-    [SerializeField]
-    GameObject spotLight;
     float battery = 1;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +25,6 @@ public class FlashLightController : MonoBehaviour
             powerCooldown(true);
         }
 
-
     }
 
     public void OnOffFlashlight()
@@ -41,7 +38,7 @@ public class FlashLightController : MonoBehaviour
             flashlightActive = true;
         }
 
-        spotLight.SetActive(flashlightActive);
+        UDPSender.SendBroadcast("Flashlight");
         UIManager.Instance.ShowFlashlightOverlay(flashlightActive);
     }
 
@@ -51,7 +48,7 @@ public class FlashLightController : MonoBehaviour
         {
             if (battery > 0)
             {
-                battery -= 0.0001f;
+                battery -= 0.0001f; //Debug.Log(battery);
             }
             else
             {
@@ -62,9 +59,10 @@ public class FlashLightController : MonoBehaviour
         {
             if (battery < 1)
             {
-                battery += 0.00005f;
+                   battery += 0.00005f;
             }
         }
+
         UIManager.Instance.UpdateFlashlightSlider(battery);
     }
 }

@@ -61,7 +61,7 @@ public class SoundSystem : MonoBehaviour
     public bool IsPlaying()
     {
         soundInstance.getPlaybackState(out currentState);
-        if(currentState == PLAYBACK_STATE.SUSTAINING) return false;
+        if(currentState == PLAYBACK_STATE.STOPPED) return false;
 
         return true;
     }

@@ -117,6 +117,7 @@ public class UIManager : MonoBehaviour
     GameObject newMessage;
     public IEnumerator NewMessage(Contact contact, string message)
     {
+        GameManager.Instance.GetTimeManager().TimeStopped = true;
         GameManager.Instance.GetUICallManager().AddNewMessage(contact, message);
         Debug.Log("new msg");
         newMessage = Instantiate(newMessagePrefab,  transform);
@@ -133,7 +134,8 @@ public class UIManager : MonoBehaviour
         Animator newMessageAnim = newMessage.GetComponent<Animator>();
         newMessageAnim.SetTrigger("StartAnimation");
         yield return new WaitForSeconds(7);
-        Destroy(newMessage);
+        Destroy(newMessage); 
+        GameManager.Instance.GetTimeManager().TimeStopped = false;
         GameManager.Instance.EmptyState();
     }
 

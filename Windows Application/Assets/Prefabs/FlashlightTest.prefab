@@ -139,6 +139,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   color: {r: 0, g: 0, b: 0, a: 0}
+  spotLight: {fileID: 2138148948190515600}
+  lightON: 1
 --- !u!1 &2138148948190515600
 GameObject:
   m_ObjectHideFlags: 0

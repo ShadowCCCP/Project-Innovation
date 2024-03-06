@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static ContactInfo;
@@ -40,7 +41,8 @@ public class MessageHandler : MonoBehaviour
         else if (message.Contains("Won")) GameWon();
         else if (message.Contains("StartGame")) StartGameData();
         else if (message.Contains("Monster")) SpawnMonster();
-        else if (message.Contains("Alive")) ResidentsStateData(message);
+        else if (message.Contains("Alive")) ResidentsStateData(message); 
+        else if (message.Contains("Flashlight")) TurnFlashlightOnOff();
     }
 
     void GyroscopeData(string message)
@@ -103,8 +105,13 @@ public class MessageHandler : MonoBehaviour
     void ResidentsStateData(string message)
     {
         string answer = StringHandler.ExtractAnswer(message);
-        if (answer == "True") GameManager.Instance.residentDead = false;
-        else GameManager.Instance.residentDead = true;
+        if (answer == "True") GameManager.Instance.SetResidentDead(false);
+        else GameManager.Instance.SetResidentDead(true);
+    }
+
+    void TurnFlashlightOnOff()
+    {
+        EventBus<FlashlightOnOffEvent>.Publish(new FlashlightOnOffEvent());
     }
 
     void PackageTest()
