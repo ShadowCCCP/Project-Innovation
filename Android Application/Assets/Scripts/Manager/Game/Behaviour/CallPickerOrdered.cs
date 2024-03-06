@@ -19,12 +19,12 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
 
     public void PickCall(CallEvent callEvent)
     {
-        Debug.Log("pick");
         contacts = GameManager.Instance.GetContacts();
-
+        
         if (contacts == null || contacts.Length == 0) Debug.Log("CallPicker: GameManager doesn't hold any contacts...");
 
         ShowCallReceived(contacts[currentCall]);
+        contacts[currentCall].StartCall();
     }
 
     void ShowCallReceived(Contact caller)
@@ -33,8 +33,6 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
         {
             GameManager.Instance.ToggleUIState();
             UIManager.Instance.SetDataCall(caller);
-            // UIManager.Instance.ShowNewCall(caller);
-            // GameManager.Instance.GetUICallManager().AddNewCall(caller);
         }
         else
         {

@@ -644,7 +644,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1533.818}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &131856079
 MonoBehaviour:
@@ -5402,7 +5402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160b36e350d6a11488417e676651b721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 8
 --- !u!65 &1430055050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5894,16 +5893,12 @@ MonoBehaviour:
   - time:
       hours: 11
       minutes: 30
-    gameEvent: 0
-  - time:
-      hours: 13
-      minutes: 30
     gameEvent: 2
   startTime:
     hours: 10
     minutes: 0
   totalGameLengthInSeconds: 480
-  fifteenMinutesInSeconds: 1
+  fifteenMinutesInSeconds: 0.5
   analogousTimeFormat: 0
   TimeStopped: 0
 --- !u!1 &1545975608

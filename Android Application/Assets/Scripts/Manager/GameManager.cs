@@ -49,22 +49,13 @@ public class GameManager : MonoBehaviour
 
         if (messageManager == null) Debug.Log("GameManager: MessageManager missing...");
         else if (callManager == null) Debug.Log("GameManager: CallManager missing...");
+
+        InvokeRepeating("SendResidentsState", 5, 5);
     }
 
-    void Update()
+    void SendResidentsState()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            callManager.PickCall(new CallEvent());
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            callManager.ShowCallEnded();
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            messageManager.PickMessage(new MessageEvent());
-        }
+        UDPSender.SendBroadcast("Alive: " + AllResidentsAlive());
     }
 
     public bool AllResidentsAlive()
@@ -78,6 +69,11 @@ public class GameManager : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void StopCall()
+    {
+        callManager.ShowCallEnded();
     }
 
     public void EmptyState()

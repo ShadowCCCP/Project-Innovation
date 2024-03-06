@@ -6,22 +6,16 @@ using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
 {
-    public enum Parameters { X, Y };
-
     [SerializeField] EventReference eventRef;
     [SerializeField] bool threeDimensional;
 
     EventInstance soundInstance;
 
-    PARAMETER_ID paramIdX;
-    PARAMETER_ID paramIdY;
-
     PLAYBACK_STATE currentState;
 
     private void Start()
     {
-        SetupSound();
-      
+
         // For local parameters...
         //soundInstance.setParameterByID(paramIdX, 1);
 
@@ -42,39 +36,18 @@ public class SoundSystem : MonoBehaviour
     {
         soundInstance = RuntimeManager.CreateInstance(eventRef);
 
-        if (threeDimensional)
+        //if (threeDimensional)
         soundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
-
-        paramIdX = GetParameterID("x");
-        paramIdY = GetParameterID("y");
     }
 
-    public void SetParameter(Parameters p, int value)
+    public void SetParameterLocal(string parameterName, int value)
     {
-        switch (p) 
-        { 
-            case Parameters.X:
-                {
-                    soundInstance.setParameterByID(paramIdX, value);
-                    break;
-                }
-            case Parameters.Y:
-                {
-                    soundInstance.setParameterByID(paramIdY, value);
-                    break;
-                }
-        }
+        soundInstance.setParameterByName(parameterName, value);
     }
 
-    PARAMETER_ID GetParameterID(string paramName)
+    public void SetParameterGlobal(string parameterName, int value)
     {
-        EventDescription eventDescription;
-        soundInstance.getDescription(out eventDescription);
-
-        PARAMETER_DESCRIPTION paramDescription;
-        eventDescription.getParameterDescriptionByName(paramName, out paramDescription);
-
-        return paramDescription.id;
+        RuntimeManager.StudioSystem.setParameterByName(parameterName, value);
     }
 
     public void PlaySound()

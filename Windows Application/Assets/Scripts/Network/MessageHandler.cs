@@ -40,6 +40,7 @@ public class MessageHandler : MonoBehaviour
         else if (message.Contains("Won")) GameWon();
         else if (message.Contains("StartGame")) StartGameData();
         else if (message.Contains("Monster")) SpawnMonster();
+        else if (message.Contains("Alive")) ResidentsStateData(message);
     }
 
     void GyroscopeData(string message)
@@ -86,6 +87,24 @@ public class MessageHandler : MonoBehaviour
     void GameWon()
     {
         EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.Won));
+    }
+
+    void StartGameData()
+    {
+        EventBus<GameStartEvent>.Publish(new GameStartEvent());
+    }
+
+    void SpawnMonster()
+    {
+        int monster = FindObjectsOfType<EnemyBehaviour>().Length;
+        EventBus<MonsterEvent>.Publish(new MonsterEvent(monster));
+    }
+
+    void ResidentsStateData(string message)
+    {
+        string answer = StringHandler.ExtractAnswer(message);
+        if (answer == "True") GameManager.Instance.residentDead = false;
+        else GameManager.Instance.residentDead = true;
     }
 
     void PackageTest()

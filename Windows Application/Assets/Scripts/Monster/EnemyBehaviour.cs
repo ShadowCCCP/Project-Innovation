@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -23,6 +24,16 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     List<Transform> navPoints = new List<Transform>();
 
+    [SerializeField] EventReference soundReference;
+    [SerializeField] string parameterName;
+    SoundSystem soundSystem;
+
+    int currentParamValue;
+    int i;
+
+    [SerializeField]
+    bool startMovementOnStart = false;
+
     Animator anim;
     void Awake()
     {
@@ -39,24 +50,28 @@ public class EnemyBehaviour : MonoBehaviour
         transform.position = navPoints[i].position;
         anim = GetComponent<Animator>();
         transform.LookAt(navPoints[i].position);
+
+        if (startMovementOnStart) 
+        { 
+
+            currentSpeed = speed;
+        }
         anim.SetFloat("Speed", currentSpeed);
-        currentSpeed = speed;
+        // Get or create soundSystem component and set soundReference inside...
+        soundSystem = GetComponent<SoundSystem>();
+        if (soundSystem == null)
+        {
+            soundSystem = gameObject.AddComponent<SoundSystem>();
+        }
+        soundSystem.SetSoundValues(soundReference, false);
+        soundSystem.PlaySound();
     }
 
-    int i =0;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            OnSpotted();
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            currentSpeed = speed;
-            i++;
-        }
+        currentParamValue = (int)Mathf.Clamp(currentSpeed, -3, 4);
+        soundSystem.SetParameterLocal(parameterName, currentParamValue);
 
-        anim.SetFloat("Speed", currentSpeed);
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
         if (currentSpeed > 0)
         {
@@ -65,10 +80,6 @@ public class EnemyBehaviour : MonoBehaviour
         else if (currentSpeed <0)
         {
             moveBackwards();
-        }
-        else if(currentSpeed == 0) 
-        {
-            // currentSpeed = speed;
         }
         
     }
@@ -130,6 +141,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     IEnumerator killingCoroutine()
     {
+        anim.SetTrigger("AttackAnimation");
         currentSpeed = killingSpeed; 
         anim.SetFloat("Speed", currentSpeed);
         yield return new WaitForSeconds(5);

@@ -45,7 +45,7 @@ public class ContactInfo : MonoBehaviour
 
     void PlayCall(int stage)
     {
-        soundSystem.SetParameter(SoundSystem.Parameters.X, stage);
+        soundSystem.SetParameterGlobal("Calling", stage);
         soundSystem.PlaySound();
     }
 }
