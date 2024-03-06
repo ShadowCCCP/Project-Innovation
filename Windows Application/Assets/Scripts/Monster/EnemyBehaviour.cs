@@ -81,10 +81,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             moveBackwards();
         }
-        else if(currentSpeed == 0) 
-        {
-            // currentSpeed = speed;
-        }
         
     }
 
@@ -145,6 +141,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     IEnumerator killingCoroutine()
     {
+        anim.SetTrigger("AttackAnimation");
         currentSpeed = killingSpeed; 
         anim.SetFloat("Speed", currentSpeed);
         yield return new WaitForSeconds(5);
