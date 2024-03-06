@@ -35,7 +35,6 @@ public class RandomLighting : MonoBehaviour
         {
             onGoingLightning = true;
             StartCoroutine(waitAmountOfTime(Random.Range(0, timeSpan)));
-
         }
     }
 
