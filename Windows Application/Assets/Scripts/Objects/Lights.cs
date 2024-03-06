@@ -6,8 +6,9 @@ using UnityEngine.Timeline;
 
 public class Lights : MonoBehaviour
 {
-
+    [SerializeField]
     Animator lightsFlickering;
+    [SerializeField]
     PlayableDirector timeLineLightsOnOff;
 
     void Awake()
