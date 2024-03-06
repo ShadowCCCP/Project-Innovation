@@ -58,6 +58,14 @@ public class SoundSystem : MonoBehaviour
         }
     }
 
+    public void StopSound()
+    {
+        if (soundInstance.isValid())
+        {
+            soundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+    }
+
     public bool IsPlaying()
     {
         soundInstance.getPlaybackState(out currentState);

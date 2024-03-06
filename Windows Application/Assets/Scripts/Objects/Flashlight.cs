@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,11 @@ public class Flashlight : MonoBehaviour
     bool lightON = false;
     string targetTag = "Monster";
     string infoTag = "Note";
+
+    [SerializeField] EventReference onSound;
+    [SerializeField] EventReference offSound;
+    SoundSystem soundSystem;
+
     void Awake()
     {
         EventBus<FlashlightOnOffEvent>.OnEvent += turnOnOffFlashlight;
@@ -27,6 +33,13 @@ public class Flashlight : MonoBehaviour
 
     private void Start()
     {
+        // Get or create soundSystem component and set soundReference inside...
+        soundSystem = GetComponent<SoundSystem>();
+        if (soundSystem == null)
+        {
+            soundSystem = gameObject.AddComponent<SoundSystem>();
+        }
+
         spotLight.SetActive(lightON);
 
         noteManager = GameManager.Instance.GetNoteManager();
@@ -62,11 +75,15 @@ public class Flashlight : MonoBehaviour
     {
         if (!lightON)
         {
+            soundSystem.StopSound();
+            soundSystem.SetSoundValues(onSound, true);
             spotLight.SetActive(true);
             lightON = true;
         }
         else
         {
+            soundSystem.StopSound();
+            soundSystem.SetSoundValues(offSound, true);
             spotLight.SetActive(false);
             lightON = false;
         }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 918113251544125400}
   - component: {fileID: 781222768007197072}
   - component: {fileID: 793226515453224679}
+  - component: {fileID: 7751717365627201035}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -83,6 +84,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7751717365627201035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213654204601300184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51468be13ec0c2747a44ee55c67e9c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuSound:
+    Guid:
+      Data1: -772378571
+      Data2: 1160399727
+      Data3: 1482795943
+      Data4: 706378417
+    Path: event:/Music/Menu Music (2D)
+  ambientSound:
+    Guid:
+      Data1: 193031670
+      Data2: 1146427183
+      Data3: 1532408969
+      Data4: -303013128
+    Path: event:/Ambience/Ambience Sequence
+  bossCall:
+    Guid:
+      Data1: 1599495781
+      Data2: 1107220015
+      Data3: 901248132
+      Data4: 2116304494
+    Path: event:/SFX/Calls/Boss Calling Sequence
+  lightTimeLines:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &984217836357425149
 GameObject:
   m_ObjectHideFlags: 0

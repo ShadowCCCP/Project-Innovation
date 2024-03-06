@@ -141,6 +141,20 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   spotLight: {fileID: 2138148948190515600}
   lightON: 1
+  onSound:
+    Guid:
+      Data1: 930523789
+      Data2: 1164182760
+      Data3: -505375316
+      Data4: -1210094484
+    Path: event:/SFX/Flashlight/Turn On Flashlight (3D)
+  offSound:
+    Guid:
+      Data1: -280116022
+      Data2: 1297440953
+      Data3: 1241325952
+      Data4: -730342194
+    Path: event:/SFX/Flashlight/Turn Off Flashlight (3D)
 --- !u!1 &2138148948190515600
 GameObject:
   m_ObjectHideFlags: 0
