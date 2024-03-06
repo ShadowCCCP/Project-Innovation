@@ -984,6 +984,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1447802172509488818, guid: bd0d814619ff68d49bba2a77e3656cb3,
         type: 3}
+      propertyPath: monsterID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447802172509488818, guid: bd0d814619ff68d49bba2a77e3656cb3,
+        type: 3}
       propertyPath: navPoints.Array.size
       value: 8
       objectReference: {fileID: 0}
@@ -1081,6 +1086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hallway Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610657390369040006, guid: bd0d814619ff68d49bba2a77e3656cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1950,6 +1960,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1911618524}
     m_Modifications:
+    - target: {fileID: 1447802172509488818, guid: bd0d814619ff68d49bba2a77e3656cb3,
+        type: 3}
+      propertyPath: monsterID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447802172509488818, guid: bd0d814619ff68d49bba2a77e3656cb3,
+        type: 3}
+      propertyPath: startMovementOnStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1447802172509488818, guid: bd0d814619ff68d49bba2a77e3656cb3,
         type: 3}
       propertyPath: navPoints.Array.data[0]

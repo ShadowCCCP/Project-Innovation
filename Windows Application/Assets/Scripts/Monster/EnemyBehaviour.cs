@@ -31,6 +31,9 @@ public class EnemyBehaviour : MonoBehaviour
     int currentParamValue;
     int i;
 
+    [SerializeField]
+    bool startMovementOnStart = false;
+
     Animator anim;
     void Awake()
     {
@@ -47,9 +50,13 @@ public class EnemyBehaviour : MonoBehaviour
         transform.position = navPoints[i].position;
         anim = GetComponent<Animator>();
         transform.LookAt(navPoints[i].position);
-        anim.SetFloat("Speed", currentSpeed);
-        currentSpeed = speed;
 
+        if (startMovementOnStart) 
+        { 
+
+            currentSpeed = speed;
+        }
+        anim.SetFloat("Speed", currentSpeed);
         // Get or create soundSystem component and set soundReference inside...
         soundSystem = GetComponent<SoundSystem>();
         if (soundSystem == null)
