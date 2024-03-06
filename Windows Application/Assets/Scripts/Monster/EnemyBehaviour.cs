@@ -48,7 +48,7 @@ public class EnemyBehaviour : MonoBehaviour
     void Start()
     {
         transform.position = navPoints[i].position;
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         transform.LookAt(navPoints[i].position);
 
         if (startMovementOnStart) 
@@ -64,7 +64,7 @@ public class EnemyBehaviour : MonoBehaviour
             soundSystem = gameObject.AddComponent<SoundSystem>();
         }
         soundSystem.SetSoundValues(soundReference, false);
-        soundSystem.PlaySound();
+        soundSystem.PlaySound(); 
     }
 
     void Update()
@@ -81,7 +81,10 @@ public class EnemyBehaviour : MonoBehaviour
         {
             moveBackwards();
         }
-        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            OnSpotted();
+        }
     }
 
     void moveForward()
@@ -103,7 +106,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (Vector3.Distance(transform.position, navPoints[i].position) < 1f)
             {
                 currentSpeed = 0;
-                anim.SetFloat("Speed", currentSpeed);
+                //anim.SetFloat("Speed", currentSpeed);
             }
         }
     }
@@ -141,10 +144,15 @@ public class EnemyBehaviour : MonoBehaviour
 
     IEnumerator killingCoroutine()
     {
-        anim.SetTrigger("AttackAnimation");
+        //anim.SetTrigger("AttackAnimation");
+       // Debug.Log("de");
+
         currentSpeed = killingSpeed; 
         anim.SetFloat("Speed", currentSpeed);
+        yield return new WaitForSeconds(0.5f);
+        anim.SetTrigger("AttackAnimation");
         yield return new WaitForSeconds(5);
+
         EventBus<GameOverEvent>.Publish(new GameOverEvent(GameManager.GameOverType.DeadthByMonster));
     }
 }
