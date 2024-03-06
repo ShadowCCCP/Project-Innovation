@@ -74,9 +74,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{8d7ff5af-25da-4261-aa30-b2d2851603e4}">
-		<property name="volume">
-			<value>-12</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{24360209-c022-4d6c-af3e-419e421bab3c}</destination>
 		</relationship>
@@ -231,9 +228,6 @@
 	<object class="RandomizerModulator" id="{4a120b75-a708-428f-9bf3-cebe96fec604}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>stereoPan</value>
-		</property>
-		<property name="amount">
-			<value>70.5</value>
 		</property>
 	</object>
 	<object class="LFOModulator" id="{69cca39a-cac9-4e04-8a1e-eda7ab37d93c}">

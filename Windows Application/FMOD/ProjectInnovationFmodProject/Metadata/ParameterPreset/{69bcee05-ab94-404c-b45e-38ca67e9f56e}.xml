@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{69bcee05-ab94-404c-b45e-38ca67e9f56e}">
+		<property name="name">
+			<value>WhispersDisable</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6405901c-f9ff-4e8c-b394-60855a7032b5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{2f63936f-6757-4212-abdb-2fc7228c32d4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{2f63936f-6757-4212-abdb-2fc7228c32d4}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
