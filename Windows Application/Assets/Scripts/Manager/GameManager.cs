@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,13 +11,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] ContactInfo[] contactInfo;
+    [SerializeField] EventReference ambientSound;
 
     Animator anim;
 
     UIManager uIManager;
     StickyNoteManager stickyNoteManager;
 
-    public bool residentDead;
+    bool residentDead;
 
     void Awake()
     {
@@ -71,6 +73,16 @@ public class GameManager : MonoBehaviour
     {
         uIManager.ToggleMainMenu();
         anim.SetTrigger("FadeIn");
+    }
+
+    public bool GetResidentDead()
+    {
+        return residentDead;
+    }
+
+    public void SetResidentDead(bool state)
+    {
+        residentDead = state;
     }
 
     public StickyNoteManager GetNoteManager()
