@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{34c94df4-2222-4010-93ab-70cc9282c700}">
+		<property name="assetPath">
+			<value>Vent - Gear Sqeak - OneShot 01.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2530625</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3e7e87ce-95d6-4d09-8d0e-a4dbd4076ca6}</destination>
+		</relationship>
+	</object>
+</objects>

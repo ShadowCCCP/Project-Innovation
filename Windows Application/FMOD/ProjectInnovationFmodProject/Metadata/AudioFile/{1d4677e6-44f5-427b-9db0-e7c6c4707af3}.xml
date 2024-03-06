@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1d4677e6-44f5-427b-9db0-e7c6c4707af3}">
+		<property name="assetPath">
+			<value>Music/Ambient Music Stage 1.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>62.857145833333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3e7e87ce-95d6-4d09-8d0e-a4dbd4076ca6}</destination>
+		</relationship>
+	</object>
+</objects>

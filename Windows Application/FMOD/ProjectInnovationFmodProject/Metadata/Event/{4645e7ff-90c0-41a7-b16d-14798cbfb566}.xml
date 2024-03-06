@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{87aca2a8-5819-48a5-b409-fa47d5d5e77b}</destination>
+			<destination>{acec1b25-200f-412e-bc73-7743b4bfb74b}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{35e40c86-e1cc-4ae2-b86a-c03955f62dc2}</destination>
@@ -139,7 +139,7 @@
 	<object class="MixerBusFader" id="{e0dcde83-966a-4d84-aa2d-c6a54a940d1a}" />
 	<object class="SingleSound" id="{42ee1bc4-1233-4ca1-994b-3c7ec98e95b4}">
 		<relationship name="audioFile">
-			<destination>{34431743-d78c-4c7d-bd75-bdbc297c14e9}</destination>
+			<destination>{bf14949c-fd1e-461e-a59e-ef4cdb289b37}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{dd440aaa-f7f3-4ce5-af2a-e865ce420c19}">

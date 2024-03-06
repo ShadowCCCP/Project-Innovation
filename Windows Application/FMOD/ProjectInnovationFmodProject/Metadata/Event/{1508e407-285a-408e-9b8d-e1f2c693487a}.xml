@@ -162,17 +162,17 @@
 	</object>
 	<object class="SingleSound" id="{db711ad3-353e-4776-b796-b56a40845424}">
 		<relationship name="audioFile">
-			<destination>{c9795690-8211-4819-93be-cfb5c18a7a50}</destination>
+			<destination>{e073be94-7a42-46de-b432-5676c7182b1b}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{6f1ed775-c5b7-4cfd-be0d-4b1222f9f570}">
 		<relationship name="audioFile">
-			<destination>{9e33838d-399a-472b-b297-77ee9791a9e0}</destination>
+			<destination>{bfc6ce8d-3f3a-4631-8ef1-0d93d2d01bc4}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{9fac5352-7ffd-4569-9e48-9ab8706ad2f2}">
 		<relationship name="audioFile">
-			<destination>{69bc3315-cc46-44ea-ab07-db5deef0a5d7}</destination>
+			<destination>{e57e46b6-0963-4dd8-ad8c-e29c2a7e860d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{07276f34-3946-4093-bd9a-64cc3619a696}">
