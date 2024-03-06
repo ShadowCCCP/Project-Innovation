@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{ef4dc4ca-60b9-4d55-8021-fd49cedc77d4}">
 		<property name="name">
-			<value>Turn Off Flashlight</value>
+			<value>Turn Off Flashlight (3D)</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
