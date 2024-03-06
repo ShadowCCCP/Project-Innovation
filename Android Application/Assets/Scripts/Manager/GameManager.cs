@@ -126,6 +126,14 @@ public class GameManager : MonoBehaviour
 
     private void GameWon(GameWonEvent gameWonEvent)
     {
-        UDPSender.SendBroadcast("Game Won");
+        if (AllResidentsAlive())
+        {
+            EventBus<GameOverEvent>.Publish(new GameOverEvent());
+        }
+        else 
+        { 
+            UDPSender.SendBroadcast("Game Won"); 
+        }
+
     }
 }
