@@ -2,6 +2,7 @@ using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class SoundManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] EventReference bossCall;
     SoundSystem bossSystem;
+
+    [SerializeField] PlayableDirector[] lightTimeLines = new PlayableDirector[3];
 
     int lightStage;
 
@@ -24,11 +27,15 @@ public class SoundManager : MonoBehaviour
         bossSystem.SetSoundValues(bossCall);
 
         EventBus<GameStartEvent>.OnEvent += StartSound;
+        EventBus<LightFlickerEvent>.OnEvent += LightFlickerVersion;
+        lightTimeLines[1].stopped += SetAmbientParameter;
     }
 
     void OnDestroy()
     {
-        EventBus<GameStartEvent>.OnEvent -= StartSound; 
+        EventBus<GameStartEvent>.OnEvent -= StartSound;
+        EventBus<LightFlickerEvent>.OnEvent -= LightFlickerVersion;
+        lightTimeLines[1].stopped -= SetAmbientParameter;
     }
 
     void StartSound(GameStartEvent gameStartEvent)
@@ -36,17 +43,15 @@ public class SoundManager : MonoBehaviour
         bossSystem.PlaySound();
     }
 
-    void LightFlickerVersion()
+    void LightFlickerVersion(LightFlickerEvent lightFlickerEvent)
     {
-        switch (lightStage)
-        {
-            case 0:
+        if (lightStage > 2) lightStage = 0;
 
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-        }
+        lightTimeLines[lightStage].Play();
+    }
+
+    void SetAmbientParameter(PlayableDirector director)
+    {
+        ambientSystem.SetParameterLocal("Amb Progression", 2);
     }
 }
