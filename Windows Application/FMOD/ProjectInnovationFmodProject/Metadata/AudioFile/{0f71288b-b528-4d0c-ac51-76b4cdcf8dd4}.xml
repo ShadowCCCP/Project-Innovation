@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0f71288b-b528-4d0c-ac51-76b4cdcf8dd4}">
+		<property name="assetPath">
+			<value>Thematic Horror Music V6.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>69.009604166666662</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3e7e87ce-95d6-4d09-8d0e-a4dbd4076ca6}</destination>
+		</relationship>
+	</object>
+</objects>

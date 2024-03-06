@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{205b0222-7f8d-4778-86c3-353d2cb1739e}">
+		<property name="assetPath">
+			<value>Voice-Over/Shivering woman answer 1.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.9168124999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3e7e87ce-95d6-4d09-8d0e-a4dbd4076ca6}</destination>
+		</relationship>
+	</object>
+</objects>

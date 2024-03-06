@@ -96,7 +96,7 @@
 			<destination>{1f1ede63-68db-4619-9d00-b4f6d26058c7}</destination>
 		</relationship>
 		<relationship name="audioFile">
-			<destination>{c77cebc6-234e-48bc-810e-d6fe4d97e790}</destination>
+			<destination>{4c04a25f-2c59-485c-94a6-7dc0eec22ff5}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{7804b7a5-0c65-48fc-9bd6-ac57df8bfad8}">

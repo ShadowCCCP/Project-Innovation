@@ -585,12 +585,18 @@
 	</object>
 	<object class="TransitionSourceSound" id="{b1bf1f8f-bbc6-4622-a0b6-cb84727f8e53}">
 		<property name="length">
-			<value>0</value>
+			<value>2</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{812c362b-c0e0-430a-9ddb-e7bcffaf88eb}</destination>
+		</relationship>
 	</object>
 	<object class="TransitionDestinationSound" id="{76bb353b-ec25-4f0e-b6df-ce8a6213826b}">
-		<property name="length">
+		<property name="start">
 			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0</value>
 		</property>
 	</object>
 	<object class="TransitionSourceSound" id="{77cbeaaf-1fdb-453f-90a8-ae27aab927b9}">
@@ -1212,6 +1218,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f0e3554a-2022-4c29-8855-af83d34f54b2}" />
+	<object class="TransitionSourceFadeOutCurve" id="{812c362b-c0e0-430a-9ddb-e7bcffaf88eb}">
+		<relationship name="startPoint">
+			<destination>{bb4bf9fd-c989-4a68-a48c-12896aba163e}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{e7b4636e-f40c-4a37-93d8-c96a0b88a554}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{975c6c29-c9c3-497c-b027-9401e84684bc}">
 		<relationship name="effects">
 			<destination>{f93f2934-7dc2-4bf1-8ac8-c37d2f284ae6}</destination>
@@ -1654,6 +1668,25 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{93a60234-3d49-4b19-a844-abae1679b467}" />
+	<object class="AutomationPoint" id="{bb4bf9fd-c989-4a68-a48c-12896aba163e}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.479783922</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{e7b4636e-f40c-4a37-93d8-c96a0b88a554}">
+		<property name="position">
+			<value>2</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{f93f2934-7dc2-4bf1-8ac8-c37d2f284ae6}" />
 	<object class="AutomationPoint" id="{d59f6688-fb4c-48d3-87a6-c4769bbd0381}">
 		<property name="position">

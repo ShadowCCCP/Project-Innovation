@@ -210,10 +210,10 @@
 			<value>5.0234791666666663</value>
 		</property>
 		<property name="length">
-			<value>37.376893424036282</value>
+			<value>37.376895833333336</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{fd5b4968-f411-42a3-b6d1-9158e02201f7}</destination>
+			<destination>{6df028bb-5475-4db3-b39e-5ca28fff1046}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{75d98d77-6453-4a97-b156-1ba19a275dc1}">

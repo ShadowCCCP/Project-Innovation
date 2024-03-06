@@ -118,7 +118,7 @@
 			<value>65.175720438502509</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{38829335-3703-41e6-98c3-4fd7ea8f558f}</destination>
+			<destination>{0f71288b-b528-4d0c-ac51-76b4cdcf8dd4}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionSourceSound" id="{5e868e5c-b7c1-4465-ad04-5494f32178f6}">
