@@ -55,7 +55,7 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 2
   intensity:
     m_OverrideState: 1
     m_Value: 1
@@ -64,7 +64,7 @@ MonoBehaviour:
     m_Value: 1
   texture:
     m_OverrideState: 1
-    m_Value: {fileID: 2800000, guid: 5c906326f77059f4ab125deb3bfcc627, type: 3}
+    m_Value: {fileID: 2800000, guid: 2c4097922c8e7bf4b8e5043b1d23cd95, type: 3}
 --- !u!114 &-5661302314258544684
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -86,12 +86,12 @@ MonoBehaviour:
     m_Value: -38
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 2.2706027, g: 2.2706027, b: 2.2706027, a: 1}
+    m_Value: {r: 2.4629717, g: 2.6467597, b: 2.917039, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 0
   saturation:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: -100
 --- !u!114 &-4777636455570223221
 MonoBehaviour:
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d08ce26990eb1a4a9177b860541e702, type: 3}
   m_Name: Exposure
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 4
