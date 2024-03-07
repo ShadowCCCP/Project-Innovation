@@ -34,7 +34,7 @@ public class StickyNoteManager : MonoBehaviour
     {
         if (!activeNote)
         {
-            activePopUp = Instantiate(popUpPrefab, note.transform.position + new Vector3(0, 1, -1), Quaternion.Euler(-90, 0, 0));
+            activePopUp = Instantiate(popUpPrefab, note.transform.position + new Vector3(0, 1, -1), Quaternion.Euler(-90, -180, 0));
             activePopUp.GetComponentInChildren<TextMeshPro>().SetText(note.popUpText);
             activeNote = true;
             timertime = 0;

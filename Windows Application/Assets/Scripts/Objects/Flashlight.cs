@@ -40,7 +40,10 @@ public class Flashlight : MonoBehaviour
             soundSystem = gameObject.AddComponent<SoundSystem>();
         }
 
-        spotLight.SetActive(lightON);
+        if (spotLight != null)
+        {
+            spotLight.SetActive(lightON);
+        }
 
         noteManager = GameManager.Instance.GetNoteManager();
     }
