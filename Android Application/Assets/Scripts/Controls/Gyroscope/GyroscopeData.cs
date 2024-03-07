@@ -40,6 +40,7 @@ public class GyroscopeData : MonoBehaviour
 
     public void ResetOrientation()
     {
+        if (gyro != null)
         startRotation = Quaternion.Euler(90, 0, 0) * Quaternion.Inverse(gyro.attitude);
 
         // To check if phone is pointing up...
