@@ -185,7 +185,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="commandTarget">
-			<destination>{d5913c08-403a-4b33-a476-f9c4c82dbfe5}</destination>
+			<destination>{fd14454c-aaa1-4e01-9373-f155e91abcb0}</destination>
 		</relationship>
 	</object>
 	<object class="CommandSound" id="{ba19e158-7942-45d0-b9fd-06851da719b2}">
@@ -227,7 +227,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="commandTarget">
-			<destination>{d5913c08-403a-4b33-a476-f9c4c82dbfe5}</destination>
+			<destination>{fd14454c-aaa1-4e01-9373-f155e91abcb0}</destination>
 		</relationship>
 	</object>
 	<object class="CommandSound" id="{0a8a04e8-aa33-455e-bf47-08414b1547bb}">
