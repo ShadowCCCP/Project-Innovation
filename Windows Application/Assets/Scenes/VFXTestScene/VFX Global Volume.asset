@@ -21,7 +21,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 5.64
+    m_Value: 3.99
   multiplier:
     m_OverrideState: 1
     m_Value: 0
@@ -567,13 +567,13 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   directLightingStrength:
     m_OverrideState: 1
-    m_Value: 0.276
+    m_Value: 1
   radius:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 3.03
   spatialBilateralAggressiveness:
     m_OverrideState: 1
     m_Value: 0
@@ -753,13 +753,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: 4.9
+    m_Value: 0
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 13.37
+    m_Value: 8.14
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 73.5
+    m_Value: 11.23
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -924,7 +924,7 @@ MonoBehaviour:
     m_Value: 0.2
   limitMin:
     m_OverrideState: 1
-    m_Value: 4.0264654
+    m_Value: 3.4062068
   limitMax:
     m_OverrideState: 1
     m_Value: 5.8979225
