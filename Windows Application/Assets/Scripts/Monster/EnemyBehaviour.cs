@@ -130,8 +130,11 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void OnSpotted()
     {
-        currentSpeed = backwardsSpeed;
-        anim.SetFloat("Speed", currentSpeed);
+        if (!spotted)
+        {
+            currentSpeed = backwardsSpeed;
+            anim.SetFloat("Speed", currentSpeed);
+        }
     }
 
     void startMovement(MonsterEvent monsterEvent)
@@ -142,11 +145,12 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
+    bool spotted = false;
     IEnumerator killingCoroutine()
     {
         //anim.SetTrigger("AttackAnimation");
        // Debug.Log("de");
-
+       spotted = true;
         currentSpeed = killingSpeed; 
         anim.SetFloat("Speed", currentSpeed);
         yield return new WaitForSeconds(0.5f);

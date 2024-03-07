@@ -972,6 +972,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142489810}
   m_CullTransparentMesh: 1
+--- !u!114 &1164727616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7069934109599544304, guid: 52bbe49ee62a7a543984d6662cbff72d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451833410}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f34d48bd4c40724c93a9baacb8c7364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1209658739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,6 +1875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6170159749734685778, guid: 6024337928503f84c8813c09a8a65e9a,
         type: 3}
+      propertyPath: startTime.hours
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170159749734685778, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
       propertyPath: eventList.Array.size
       value: 8
       objectReference: {fileID: 0}
@@ -1881,6 +1898,11 @@ PrefabInstance:
       propertyPath: eventList.Array.data[7].time.minutes
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 8975805451418664886, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: uiCallManager
+      value: 
+      objectReference: {fileID: 1164727616}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
