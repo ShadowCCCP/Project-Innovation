@@ -763,82 +763,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105315097}
   m_CullTransparentMesh: 1
---- !u!1 &1110273970
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1110273973}
-  - component: {fileID: 1110273971}
-  - component: {fileID: 1110273974}
-  - component: {fileID: 1110273975}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1110273971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110273970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a17c55cc3669bec4bb5e57279f7267d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiCallManager: {fileID: 0}
-  contacts:
-  - {fileID: 11400000, guid: ab6270e425249d4469d13ef641c34a87, type: 2}
-  messages:
-  - Hey... uhm I m out of toilet paper in room 301.. can you uhh .... bring me some...
---- !u!4 &1110273973
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110273970}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 475.73224, y: 823.0376, z: 30.885132}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1540868642}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1110273974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110273970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f932ec0d63d5cd243a9cbf895eb54f55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1110273975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110273970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268aecd02e72c6d4fabcd975b935c6df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1139547561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,62 +1664,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52bbe49ee62a7a543984d6662cbff72d, type: 3}
---- !u!1 &1540868641
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1540868642}
-  - component: {fileID: 1540868643}
-  m_Layer: 0
-  m_Name: TimeManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1540868642
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540868641}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1110273973}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1540868643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540868641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4645eb85fdd36f408f8e3c4151e9c30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventList:
-  - time:
-      hours: 11
-      minutes: 30
-    gameEvent: 2
-  startTime:
-    hours: 10
-    minutes: 0
-  totalGameLengthInSeconds: 480
-  fifteenMinutesInSeconds: 0.5
-  analogousTimeFormat: 0
-  TimeStopped: 0
 --- !u!1 &1577899698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +1798,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577899698}
   m_CullTransparentMesh: 1
+--- !u!1001 &1622336377
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1510883120233468189, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 475.73224
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 823.0376
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30.885132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863548758942768928, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170159749734685778, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: eventList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170159749734685778, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: eventList.Array.data[7].gameEvent
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170159749734685778, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: eventList.Array.data[7].time.hours
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170159749734685778, guid: 6024337928503f84c8813c09a8a65e9a,
+        type: 3}
+      propertyPath: eventList.Array.data[7].time.minutes
+      value: 45
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6024337928503f84c8813c09a8a65e9a, type: 3}
 --- !u!114 &1778527834 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 375704705485781202, guid: 52bbe49ee62a7a543984d6662cbff72d,
@@ -2275,5 +2231,5 @@ SceneRoots:
   - {fileID: 499227263}
   - {fileID: 1430055053}
   - {fileID: 1451833410}
-  - {fileID: 1110273973}
+  - {fileID: 1622336377}
   - {fileID: 2002295494}
