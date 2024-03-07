@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] EventReference bossCall;
     SoundSystem bossSystem;
 
-    [SerializeField] PlayableDirector[] lightTimeLines = new PlayableDirector[3];
+    [SerializeField] PlayableDirector[] lightTimeLines = new PlayableDirector[4];
 
     int lightStage;
 
@@ -32,14 +32,14 @@ public class SoundManager : MonoBehaviour
 
         EventBus<GameStartEvent>.OnEvent += StartSound;
         EventBus<LightFlickerEvent>.OnEvent += LightFlickerVersion;
-        lightTimeLines[0].stopped += SetAmbientParameter;
+        lightTimeLines[1].stopped += SetAmbientParameter;
     }
 
     void OnDestroy()
     {
         EventBus<GameStartEvent>.OnEvent -= StartSound;
         EventBus<LightFlickerEvent>.OnEvent -= LightFlickerVersion;
-        lightTimeLines[0].stopped -= SetAmbientParameter;
+        lightTimeLines[1].stopped -= SetAmbientParameter;
     }
 
     void StartSound(GameStartEvent gameStartEvent)
@@ -52,7 +52,7 @@ public class SoundManager : MonoBehaviour
 
     void LightFlickerVersion(LightFlickerEvent lightFlickerEvent)
     {
-        if (lightStage > 2) lightStage = 0;
+        if (lightStage > 4) lightStage = 0;
 
         lightTimeLines[lightStage].Play();
     }
