@@ -21,6 +21,8 @@ public class TimeManager : MonoBehaviour
     int currentMinutes;
     public static string currentTime;
 
+    public bool TimeStopped = false;
+
     void Start()
     {
         EventBus<StartGameEvent>.OnEvent += StartGame;
@@ -45,9 +47,12 @@ public class TimeManager : MonoBehaviour
     public void StartGame(StartGameEvent startGameEvent)
     {
         InvokeRepeating("UpdateTime", fifteenMinutesInSeconds, fifteenMinutesInSeconds);
+
+        // Stop time for the boss call...
+        TimeStopped = true;
+        StartCoroutine(ContinueTimeAfterStart());
     }
 
-    public bool TimeStopped = false;
     void UpdateTime()
     {
         if (!TimeStopped)
@@ -71,6 +76,13 @@ public class TimeManager : MonoBehaviour
 
             UDPSender.SendBroadcast("Time: " + DigitalTimeFormat());
         }
+    }
+
+    IEnumerator ContinueTimeAfterStart()
+    {
+        yield return new WaitForSeconds(42);
+
+        TimeStopped = false;
     }
 
     void CheckTimings()

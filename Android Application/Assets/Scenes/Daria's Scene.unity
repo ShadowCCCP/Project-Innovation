@@ -869,7 +869,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiCallManager: {fileID: 1448889797}
   contacts:
+  - {fileID: 11400000, guid: 7cd9b3eaa119a0b4d8179a516d2fb9f0, type: 2}
   - {fileID: 11400000, guid: ab6270e425249d4469d13ef641c34a87, type: 2}
+  - {fileID: 11400000, guid: c56d74ee67700574cb21958826c6686f, type: 2}
   messages:
   - "Hey... uhm I m out of toilet paper in room\n 301.. can you uhh .... bring me
     some..."
@@ -885,12 +887,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4645eb85fdd36f408f8e3c4151e9c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventList: []
+  eventList:
+  - time:
+      hours: 20
+      minutes: 15
+    gameEvent: 3
+  - time:
+      hours: 20
+      minutes: 45
+    gameEvent: 2
+  - time:
+      hours: 21
+      minutes: 45
+    gameEvent: 3
+  - time:
+      hours: 23
+      minutes: 15
+    gameEvent: 2
+  - time:
+      hours: 0
+      minutes: 30
+    gameEvent: 3
+  - time:
+      hours: 1
+      minutes: 0
+    gameEvent: 2
+  - time:
+      hours: 1
+      minutes: 45
+    gameEvent: 0
   startTime:
-    hours: 0
+    hours: 18
     minutes: 0
-  totalGameLengthInSeconds: 480
-  fifteenMinutesInSeconds: 1
+  totalGameLengthInSeconds: 540
+  fifteenMinutesInSeconds: 8
   analogousTimeFormat: 0
   TimeStopped: 0
 --- !u!114 &619311662
