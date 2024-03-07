@@ -6,8 +6,9 @@ using UnityEngine.Playables;
 
 public class SoundManager : MonoBehaviour
 {
+    [SerializeField] EventReference mainMenuSound;
     [SerializeField] EventReference ambientSound;
-    SoundSystem ambientSystem;
+    SoundSystem backgroundSystem;
 
     [SerializeField] EventReference bossCall;
     SoundSystem bossSystem;
@@ -20,26 +21,30 @@ public class SoundManager : MonoBehaviour
     {
         lightStage = 0;
 
-        ambientSystem = gameObject.AddComponent<SoundSystem>();
-        ambientSystem.SetSoundValues(ambientSound);
+        backgroundSystem = gameObject.AddComponent<SoundSystem>();
+        backgroundSystem.SetSoundValues(mainMenuSound);
+        backgroundSystem.PlaySound();
 
         bossSystem = gameObject.AddComponent<SoundSystem>();
         bossSystem.SetSoundValues(bossCall);
 
         EventBus<GameStartEvent>.OnEvent += StartSound;
         EventBus<LightFlickerEvent>.OnEvent += LightFlickerVersion;
-        lightTimeLines[1].stopped += SetAmbientParameter;
+        lightTimeLines[0].stopped += SetAmbientParameter;
     }
 
     void OnDestroy()
     {
         EventBus<GameStartEvent>.OnEvent -= StartSound;
         EventBus<LightFlickerEvent>.OnEvent -= LightFlickerVersion;
-        lightTimeLines[1].stopped -= SetAmbientParameter;
+        lightTimeLines[0].stopped -= SetAmbientParameter;
     }
 
     void StartSound(GameStartEvent gameStartEvent)
     {
+        backgroundSystem.StopSound();
+        backgroundSystem.SetSoundValues(ambientSound);
+        backgroundSystem.PlaySound();
         bossSystem.PlaySound();
     }
 
@@ -52,6 +57,6 @@ public class SoundManager : MonoBehaviour
 
     void SetAmbientParameter(PlayableDirector director)
     {
-        ambientSystem.SetParameterLocal("Amb Progression", 2);
+        backgroundSystem.SetParameterLocal("Amb Progression", 2);
     }
 }
