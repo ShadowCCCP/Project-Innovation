@@ -56,7 +56,7 @@
 			<destination>{ed9ba03f-d8c7-4378-b754-d7b1af9ceb41}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{3d8fb146-b8e8-4d83-8714-5c6962e833b1}</destination>
+			<destination>{37c61870-2dea-420a-801d-cb7ac34d314e}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{d8e1f1ed-40a4-4a7c-b782-7a4aabf5a52a}" />
@@ -508,9 +508,9 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{b6212c89-6a9e-4eaf-8db7-b0e7018ac70e}">
 		<relationship name="effects">
-			<destination>{28f8b93a-b4a7-4be2-aded-5d796e775c8b}</destination>
 			<destination>{b0c479d0-51c3-4253-aa3b-cb669057748d}</destination>
 			<destination>{fdcb034e-4021-4207-86a0-5367a9614c8a}</destination>
+			<destination>{28f8b93a-b4a7-4be2-aded-5d796e775c8b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{9a6de08d-5a1b-4177-a5da-759665b4cdd1}" />
@@ -600,16 +600,16 @@
 			<destination>{5e1847cc-59c4-46f8-8ced-074facd56a40}</destination>
 		</relationship>
 	</object>
-	<object class="LimiterEffect" id="{28f8b93a-b4a7-4be2-aded-5d796e775c8b}">
-		<property name="ceiling">
-			<value>-0.699999988</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{b0c479d0-51c3-4253-aa3b-cb669057748d}" />
 	<object class="PluginEffect" id="{fdcb034e-4021-4207-86a0-5367a9614c8a}">
 		<relationship name="plugin">
 			<destination>{f27419ae-b4af-4992-b8e7-68e645aabb88}</destination>
 		</relationship>
+	</object>
+	<object class="LimiterEffect" id="{28f8b93a-b4a7-4be2-aded-5d796e775c8b}">
+		<property name="ceiling">
+			<value>-0.699999988</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{e88bb6e9-490c-440f-8cbc-099a86920282}" />
 	<object class="MixerBusFader" id="{50d93bb2-c320-4608-b32d-f8de801a963d}" />

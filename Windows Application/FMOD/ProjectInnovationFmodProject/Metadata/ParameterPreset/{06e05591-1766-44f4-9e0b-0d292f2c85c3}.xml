@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{06e05591-1766-44f4-9e0b-0d292f2c85c3}">
+		<property name="name">
+			<value>VidulusSpeed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6405901c-f9ff-4e8c-b394-60855a7032b5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{88191615-e0d9-4a8e-a135-f5a57070218f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{88191615-e0d9-4a8e-a135-f5a57070218f}">
+		<property name="minimum">
+			<value>-3</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>4.429999828338623</value>
+		</property>
+	</object>
+</objects>
