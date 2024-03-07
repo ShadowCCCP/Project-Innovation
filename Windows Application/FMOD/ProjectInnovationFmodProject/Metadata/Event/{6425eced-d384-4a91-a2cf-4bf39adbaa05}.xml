@@ -63,7 +63,7 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{2b909131-8c4e-4b00-a17b-ca12de0d8e3e}">
 		<property name="minimumDistance">
-			<value>1.80000007</value>
+			<value>2.4000001</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{c4bdbb54-eebc-4598-93bd-5fd89e93baae}" />
