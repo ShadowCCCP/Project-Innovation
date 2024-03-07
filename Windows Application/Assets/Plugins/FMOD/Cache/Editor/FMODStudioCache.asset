@@ -1,30 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9085846796341217536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Whispering One-Shots  (3D)/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1813553446
-    data2: 1992476535
-  Type: 1
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &-8901043737717494817
+--- !u!114 &-8850687984223537697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,65 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Boss Calling Sequence
+  m_Name: event:/SFX/Phone/Pickup Up Phone OneShot
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Boss Calling Sequence
-  Guid:
-    Data1: 1599495781
-    Data2: 1107220015
-    Data3: 901248132
-    Data4: 2116304494
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 5218879717922574039}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11425
---- !u!114 &-7225196892652038516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Fake & Scares/Whispering One-Shots  (3D)
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Fake & Scares/Whispering One-Shots  (3D)
-  Guid:
-    Data1: -1054007248
-    Data2: 1325012662
-    Data3: -1466061668
-    Data4: -74536110
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -9085846796341217536}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 7000
---- !u!114 &-6202526694566690889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Sequence Events/Pickup Up Phone OneShot
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Sequence Events/Pickup Up Phone OneShot
+  Path: event:/SFX/Phone/Pickup Up Phone OneShot
   Guid:
     Data1: 1702138991
     Data2: 1287968413
@@ -107,6 +27,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1023
+--- !u!114 &-8565293664698666602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Flashlight/Turn Off Flashlight (3D)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Flashlight/Turn Off Flashlight (3D)
+  Guid:
+    Data1: -280116022
+    Data2: 1297440953
+    Data3: 1241325952
+    Data4: -730342194
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 171
+--- !u!114 &-6899549738647304540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Attack Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Attack Music
+  Guid:
+    Data1: -562011163
+    Data2: 1156773820
+    Data3: 1222193286
+    Data4: -1276814348
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 57391
+--- !u!114 &-5925556670752212238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Putting Down Phone OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Putting Down Phone OneShot
+  Guid:
+    Data1: -1781615720
+    Data2: 1165156487
+    Data3: 343697590
+    Data4: -425853277
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 425
 --- !u!114 &-5906209006505719525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,10 +131,35 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 2066845225606535886}
   MinDistance: 1
   MaxDistance: 20
   Length: 16000
+--- !u!114 &-5866621718857128376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Amb Progression
+  m_EditorClassIdentifier: 
+  Name: Amb Progression
+  StudioPath: parameter:/Amb Progression
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1814320532
+    data2: 2843242005
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-5764429256080300777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,10 +175,10 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638451804449729245
+  lastModified: 638454167540417318
   FileSizes:
   - Name: Desktop
-    Value: 2228
+    Value: 2672
   Exists: 1
 --- !u!114 &-5280430854710753155
 MonoBehaviour:
@@ -176,11 +202,87 @@ MonoBehaviour:
   - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 3500
+--- !u!114 &-5218121361481472497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Manus Footsteps (3D)/ManusSpeed
+  m_EditorClassIdentifier: 
+  Name: ManusSpeed
+  StudioPath: 
+  Min: -3
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1062487413
+    data2: 1003851950
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4588992835445231071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Animation/Vidulus Footsteps (3D)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Animation/Vidulus Footsteps (3D)
+  Guid:
+    Data1: 1680207085
+    Data2: 1251070852
+    Data3: -213135454
+    Data4: 95083418
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1322792985476831987}
+  MinDistance: 1.8000001
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4438426391428333590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Caller 2 Sequence/Amb Progression
+  m_EditorClassIdentifier: 
+  Name: Amb Progression
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1814320532
+    data2: 2843242005
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-4106757081839446148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +310,60 @@ MonoBehaviour:
   MinDistance: 0.5
   MaxDistance: 20
   Length: 16000
+--- !u!114 &-4026585268530838220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Fake & Scares/Whispering One-Shots  (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fake & Scares/Whispering One-Shots  (2D)
+  Guid:
+    Data1: -1054007248
+    Data2: 1325012662
+    Data3: -1466061668
+    Data4: -74536110
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7000
+--- !u!114 &-3814242409273872228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/Ringtone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/Ringtone
+  Guid:
+    Data1: 1178986495
+    Data2: 1101500608
+    Data3: 2031381937
+    Data4: 1723187084
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-3723980971227900836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +391,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 11000
---- !u!114 &-3480337754631031379
+--- !u!114 &-3608389331958468870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Caller 3 Sequence/Amb Progression
+  m_EditorClassIdentifier: 
+  Name: Amb Progression
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1814320532
+    data2: 2843242005
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-3171731034483185851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Calling
+  m_EditorClassIdentifier: 
+  Name: Calling
+  StudioPath: parameter:/Calling
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1775324243
+    data2: 247497198
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Call Incoming
+  - Call Accepted (start)
+  - Answer 1
+  - Answer 2
+  - Answer 3
+  - Bad ending
+  Exists: 1
+--- !u!114 &-2843595348476882282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,14 +455,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Droning Ambience (2D) (Unused)
+  m_Name: event:/Music/Ambient Music Stage 2 (2D)
   m_EditorClassIdentifier: 
-  Path: event:/Music/Droning Ambience (2D) (Unused)
+  Path: event:/Music/Ambient Music Stage 2 (2D)
   Guid:
-    Data1: -1760486793
-    Data2: 1309774109
-    Data3: -433180543
-    Data4: 1472673027
+    Data1: 220603309
+    Data2: 1201429928
+    Data3: 305191568
+    Data4: 465318653
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 1
@@ -261,7 +471,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 20000
+  Length: 52749
 --- !u!114 &-2672751323166541553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,10 +487,10 @@ MonoBehaviour:
   Path: FMOD/ProjectInnovationFmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638451804449719241
+  lastModified: 638454167540313642
   FileSizes:
   - Name: Desktop
-    Value: 2852768
+    Value: 7161632
   Exists: 1
 --- !u!114 &-2671610663827257469
 MonoBehaviour:
@@ -309,7 +519,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1274
---- !u!114 &-1191587707577191796
+--- !u!114 &-1706748085963784733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,31 +528,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Caller 1 Sequence/x
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Flashlight/Turn On Flashlight (3D)
   m_EditorClassIdentifier: 
-  Name: x
-  StudioPath: 
-  Min: 0
-  Max: 9
-  Default: 0
-  ID:
-    data1: 1775324243
-    data2: 247497198
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Call Incoming
-  - Call Accepted (1.1)
-  - 1.2
-  - 1.3
-  - 1.4
-  - 1.5
-  - 1.6
-  - 1.7
-  - 1.8
-  - 1.9
-  Exists: 1
+  Path: event:/SFX/Flashlight/Turn On Flashlight (3D)
+  Guid:
+    Data1: 930523789
+    Data2: 1164182760
+    Data3: -505375316
+    Data4: -1210094484
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 291
+--- !u!114 &-841652597962706753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Droning Ambience (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Droning Ambience (2D)
+  Guid:
+    Data1: -1760486793
+    Data2: 1309774109
+    Data3: -433180543
+    Data4: 1472673027
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20000
 --- !u!114 &-755234112262545540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +599,67 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4672
+  Length: 2430
+--- !u!114 &-361048188477968267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Caller 1 Sequence/Calling
+  m_EditorClassIdentifier: 
+  Name: Calling
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1775324243
+    data2: 247497198
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Call Incoming
+  - Call Accepted (start)
+  - Answer 1
+  - Answer 2
+  - Answer 3
+  - Bad ending
+  Exists: 1
+--- !u!114 &-267378263243648336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Caller 2 Sequence/Calling
+  m_EditorClassIdentifier: 
+  Name: Calling
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1775324243
+    data2: 247497198
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Call Incoming
+  - Call Accepted (start)
+  - Answer 1
+  - Answer 2
+  - Answer 3
+  - Bad ending
+  Exists: 1
 --- !u!114 &-254352544041953156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,33 +687,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4277
---- !u!114 &-146641213210709570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Sequence Events/Notification
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Sequence Events/Notification
-  Guid:
-    Data1: -1695634310
-    Data2: 1340411299
-    Data3: -897471322
-    Data4: 213449232
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1660
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,35 +704,43 @@ MonoBehaviour:
   - {fileID: -2672751323166541553}
   EditorEvents:
   - {fileID: -5280430854710753155}
-  - {fileID: -7225196892652038516}
-  - {fileID: 4070572267484364028}
-  - {fileID: -6202526694566690889}
-  - {fileID: -3480337754631031379}
-  - {fileID: -146641213210709570}
-  - {fileID: 7401436787007658259}
-  - {fileID: 7860602043480332689}
   - {fileID: -2671610663827257469}
-  - {fileID: 3767874318253754049}
   - {fileID: -3723980971227900836}
   - {fileID: 1780728107731997138}
   - {fileID: -755234112262545540}
   - {fileID: -4106757081839446148}
-  - {fileID: 3210261829734506247}
-  - {fileID: -8901043737717494817}
-  - {fileID: 6098901704313070901}
   - {fileID: 2912448877713147054}
   - {fileID: -5906209006505719525}
   - {fileID: -254352544041953156}
   - {fileID: 2492324089517403591}
+  - {fileID: 6683763046849733709}
+  - {fileID: -4026585268530838220}
+  - {fileID: 6251727083636105438}
+  - {fileID: 7623403819569044478}
+  - {fileID: 7579493219996746940}
+  - {fileID: 1352501360579338757}
+  - {fileID: -8850687984223537697}
+  - {fileID: -841652597962706753}
+  - {fileID: 5339923098621804291}
+  - {fileID: 2225812549482297199}
+  - {fileID: -1706748085963784733}
+  - {fileID: -5925556670752212238}
+  - {fileID: -2843595348476882282}
+  - {fileID: -8565293664698666602}
+  - {fileID: 3300368986658225713}
+  - {fileID: -6899549738647304540}
+  - {fileID: -4588992835445231071}
+  - {fileID: -3814242409273872228}
   EditorParameters:
-  - {fileID: 274565366538701708}
+  - {fileID: -5866621718857128376}
+  - {fileID: -3171731034483185851}
   MasterBanks:
   - {fileID: -2672751323166541553}
   StringsBanks:
   - {fileID: -5764429256080300777}
-  cacheTime: 638451804449729245
+  cacheTime: 638454167540417318
   cacheVersion: 131609
---- !u!114 &274565366538701708
+--- !u!114 &1322792985476831987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -479,20 +750,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Intensity
+  m_Name: parameter:/Vidulus Footsteps (3D)/VidulusSpeed
   m_EditorClassIdentifier: 
-  Name: Intensity
-  StudioPath: parameter:/Intensity
-  Min: 0
-  Max: 1
+  Name: VidulusSpeed
+  StudioPath: 
+  Min: -3
+  Max: 4
   Default: 0
   ID:
-    data1: 1813553446
-    data2: 1992476535
-  Type: 1
-  IsGlobal: 1
+    data1: 877430949
+    data2: 2597753599
+  Type: 0
+  IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1352501360579338757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Ambient Music Stage 1 (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Ambient Music Stage 1 (2D)
+  Guid:
+    Data1: 581895782
+    Data2: 1273069823
+    Data3: -766762877
+    Data4: 423420504
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 57142
 --- !u!114 &1780728107731997138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +818,88 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6679
+--- !u!114 &2066845225606535886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Scary Wind  Loop (2D)/Amb Progression
+  m_EditorClassIdentifier: 
+  Name: Amb Progression
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1814320532
+    data2: 2843242005
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2225812549482297199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Animation/Manus Footsteps (3D)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Animation/Manus Footsteps (3D)
+  Guid:
+    Data1: -701928312
+    Data2: 1303151990
+    Data3: 1572422301
+    Data4: 1297671326
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5218121361481472497}
+  MinDistance: 1.8000001
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2270982858876561260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Caller 3 Sequence/Calling
+  m_EditorClassIdentifier: 
+  Name: Calling
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1775324243
+    data2: 247497198
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Call Incoming
+  - Call Accepted (start)
+  - Answer 1
+  - Answer 2
+  - Answer 3
+  - Bad ending
+  Exists: 1
 --- !u!114 &2492324089517403591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,13 +921,14 @@ MonoBehaviour:
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters:
   - {fileID: 2493041511172940307}
+  - {fileID: 5611696142909772098}
   MinDistance: 1
   MaxDistance: 20
-  Length: 10000
+  Length: 146000
 --- !u!114 &2493041511172940307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,13 +944,13 @@ MonoBehaviour:
   Name: Amb Progression
   StudioPath: 
   Min: 0
-  Max: 3
+  Max: 4
   Default: 0
   ID:
     data1: 1814320532
     data2: 2843242005
   Type: 0
-  IsGlobal: 0
+  IsGlobal: 1
   Labels: []
   Exists: 1
 --- !u!114 &2912448877713147054
@@ -599,7 +980,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2150
---- !u!114 &3210261829734506247
+--- !u!114 &3300368986658225713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -609,25 +990,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Caller 1 Sequence
+  m_Name: event:/SFX/Calls/Caller 3 Sequence
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Caller 1 Sequence
+  Path: event:/SFX/Calls/Caller 3 Sequence
   Guid:
-    Data1: 2036869953
-    Data2: 1074810975
-    Data3: 1003382157
-    Data4: -1268869251
+    Data1: -120683050
+    Data2: 1218493444
+    Data3: -364535127
+    Data4: -256013920
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -1191587707577191796}
+  - {fileID: 2270982858876561260}
+  - {fileID: -3608389331958468870}
   MinDistance: 1
   MaxDistance: 20
-  Length: 101000
---- !u!114 &3767874318253754049
+  Length: 106300
+--- !u!114 &5339923098621804291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -637,167 +1019,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Sequence Events/Ringtone
+  m_Name: event:/SFX/Phone/Notification
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Sequence Events/Ringtone
+  Path: event:/SFX/Phone/Notification
   Guid:
-    Data1: 1178986495
-    Data2: 1101500608
-    Data3: 2031381937
-    Data4: 1723187084
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3000
---- !u!114 &4070572267484364028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Ambient Music (2D)
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Ambient Music (2D)
-  Guid:
-    Data1: 581895782
-    Data2: 1273069823
-    Data3: -766762877
-    Data4: 423420504
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 57142
---- !u!114 &5218879717922574039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Boss Calling Sequence/x
-  m_EditorClassIdentifier: 
-  Name: x
-  StudioPath: 
-  Min: 0
-  Max: 9
-  Default: 0
-  ID:
-    data1: 1775324243
-    data2: 247497198
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Call Incoming
-  - Call Accepted (1.1)
-  - 1.2
-  - 1.3
-  - 1.4
-  - 1.5
-  - 1.6
-  - 1.7
-  - 1.8
-  - 1.9
-  Exists: 1
---- !u!114 &6098901704313070901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Animation/Manus Footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Animation/Manus Footsteps
-  Guid:
-    Data1: -701928312
-    Data2: 1303151990
-    Data3: 1572422301
-    Data4: 1297671326
+    Data1: -1695634310
+    Data2: 1340411299
+    Data3: -897471322
+    Data4: 213449232
   Banks:
   - {fileID: -2672751323166541553}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 9014583401930911176}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7401436787007658259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Sequence Events/Putting Down Phone OneShot
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Sequence Events/Putting Down Phone OneShot
-  Guid:
-    Data1: -1781615720
-    Data2: 1165156487
-    Data3: 343697590
-    Data4: -425853277
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 425
---- !u!114 &7860602043480332689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/Sequence Events/Talking (not final)
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/Sequence Events/Talking (not final)
-  Guid:
-    Data1: -1951320398
-    Data2: 1185240626
-    Data3: -49008705
-    Data4: -871230549
-  Banks:
-  - {fileID: -2672751323166541553}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 5.4
-  MaxDistance: 50
-  Length: 8555
---- !u!114 &9014583401930911176
+  Length: 1660
+--- !u!114 &5611696142909772098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -807,17 +1046,178 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Manus Footsteps/ManusSpeed
+  m_Name: parameter:/Ambience Sequence/WhispersDisable
   m_EditorClassIdentifier: 
-  Name: ManusSpeed
+  Name: WhispersDisable
   StudioPath: 
-  Min: -3
-  Max: 3
+  Min: 0
+  Max: 1
   Default: 0
   ID:
-    data1: 1062487413
-    data2: 1003851950
-  Type: 0
+    data1: 757312092
+    data2: 664391206
+  Type: 1
   IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6251727083636105438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Menu Music (2D)
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Menu Music (2D)
+  Guid:
+    Data1: -772378571
+    Data2: 1160399727
+    Data3: 1482795943
+    Data4: 706378417
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 65175
+--- !u!114 &6683763046849733709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Calls/Caller 1 Sequence
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Calls/Caller 1 Sequence
+  Guid:
+    Data1: -711902200
+    Data2: 1261649978
+    Data3: -990284124
+    Data4: -440455736
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8432711307610440671}
+  - {fileID: -361048188477968267}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 72225
+--- !u!114 &7579493219996746940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Calls/Boss Calling Sequence
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Calls/Boss Calling Sequence
+  Guid:
+    Data1: 1599495781
+    Data2: 1107220015
+    Data3: 901248132
+    Data4: 2116304494
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8249316527562543142}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42849
+--- !u!114 &7623403819569044478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Calls/Caller 2 Sequence
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Calls/Caller 2 Sequence
+  Guid:
+    Data1: -49003188
+    Data2: 1308732065
+    Data3: 1441887123
+    Data4: -1329849623
+  Banks:
+  - {fileID: -2672751323166541553}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4438426391428333590}
+  - {fileID: -267378263243648336}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 97000
+--- !u!114 &8249316527562543142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boss Calling Sequence/Amb Progression
+  m_EditorClassIdentifier: 
+  Name: Amb Progression
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1814320532
+    data2: 2843242005
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8432711307610440671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Caller 1 Sequence/Amb Progression
+  m_EditorClassIdentifier: 
+  Name: Amb Progression
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1814320532
+    data2: 2843242005
+  Type: 0
+  IsGlobal: 1
   Labels: []
   Exists: 1
