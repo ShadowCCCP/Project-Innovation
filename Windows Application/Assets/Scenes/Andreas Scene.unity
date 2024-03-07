@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 5.2317433, g: 5.5698857, b: 8.137803, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -901,7 +901,7 @@ MonoBehaviour:
       Data2: 1303151990
       Data3: 1572422301
       Data4: 1297671326
-    Path: event:/SFX/Animation/Manus Footsteps
+    Path: event:/SFX/Animation/Manus Footsteps (3D)
   threeDimensional: 0
 --- !u!4 &485248447
 Transform:
@@ -1241,7 +1241,7 @@ PrefabInstance:
     - target: {fileID: 1447802172509488818, guid: bd0d814619ff68d49bba2a77e3656cb3,
         type: 3}
       propertyPath: soundReference.Path
-      value: event:/SFX/Animation/Manus Footsteps
+      value: event:/SFX/Animation/Manus Footsteps (3D)
       objectReference: {fileID: 0}
     - target: {fileID: 1447802172509488818, guid: bd0d814619ff68d49bba2a77e3656cb3,
         type: 3}
