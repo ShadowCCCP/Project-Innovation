@@ -22,7 +22,10 @@
 			<value>0</value>
 		</property>
 		<property name="seekSpeed">
-			<value>4.4333332777023315</value>
+			<value>4.429999828338623</value>
+		</property>
+		<property name="seekSpeedDescending">
+			<value>2.1500000953674316</value>
 		</property>
 	</object>
 </objects>

@@ -308,6 +308,9 @@
 		<relationship name="fadeInCurve">
 			<destination>{4fa6a7b6-9c00-4c17-851d-8d352f90dfb5}</destination>
 		</relationship>
+		<relationship name="fadeOutCurve">
+			<destination>{ab2d2939-2184-421a-a507-06a78adfd06f}</destination>
+		</relationship>
 		<relationship name="sound">
 			<destination>{0f353abc-7f2b-475b-bad4-500301e6738d}</destination>
 		</relationship>
@@ -460,6 +463,14 @@
 			<destination>{75a20fe3-f2e1-4db4-9abb-98a02488a6a6}</destination>
 		</relationship>
 	</object>
+	<object class="FadeCurve" id="{ab2d2939-2184-421a-a507-06a78adfd06f}">
+		<relationship name="startPoint">
+			<destination>{c1863beb-c6f1-4684-abe0-6129afb8967a}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{a9a82a9d-a33a-4230-83b9-915955e4edeb}</destination>
+		</relationship>
+	</object>
 	<object class="MultiSound" id="{0f353abc-7f2b-475b-bad4-500301e6738d}">
 		<relationship name="sounds">
 			<destination>{f845cee1-16af-4350-a5fb-49d632a5f7c7}</destination>
@@ -570,6 +581,25 @@
 		</property>
 		<property name="value">
 			<value>1</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{c1863beb-c6f1-4684-abe0-6129afb8967a}">
+		<property name="position">
+			<value>2.9000000000000004</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.290677458</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a9a82a9d-a33a-4230-83b9-915955e4edeb}">
+		<property name="position">
+			<value>3</value>
+		</property>
+		<property name="value">
+			<value>0</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{f845cee1-16af-4350-a5fb-49d632a5f7c7}">
@@ -683,10 +713,10 @@
 	</object>
 	<object class="AutomationPoint" id="{8546b12d-ff66-40d8-95cf-366997d125cb}">
 		<property name="position">
-			<value>3.0248756218905477</value>
+			<value>3</value>
 		</property>
 		<property name="value">
-			<value>90</value>
+			<value>100</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{81bfeb36-3694-4dc4-b206-b0ea37746ec1}">
