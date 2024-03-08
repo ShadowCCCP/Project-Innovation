@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8977451, g: 1.1436206, b: 1.593179, a: 1}
+  m_IndirectSpecularColor: {r: 0.90028584, g: 1.1469289, b: 1.5978148, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1127,6 +1127,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3165919820648423853, guid: b3aaf4331ba4a734792417466cccd0dd,
+        type: 3}
+      propertyPath: popUpText
+      value: Good Luck!
+      objectReference: {fileID: 0}
     - target: {fileID: 3820726267697415546, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
       propertyPath: m_Name
@@ -1647,94 +1652,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &123090614
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 901951932}
-    m_Modifications:
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.4889998
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.171
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.4940002
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.97365165
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.22804059
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -26.363
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820726267697415546, guid: b3aaf4331ba4a734792417466cccd0dd,
-        type: 3}
-      propertyPath: m_Name
-      value: Sticky note
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b3aaf4331ba4a734792417466cccd0dd, type: 3}
 --- !u!1001 &138389884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4504,7 +4421,7 @@ PrefabInstance:
     - target: {fileID: 3165919820648423853, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
       propertyPath: popUpText
-      value: PRAY
+      value: 'Demon: -vent noises -whisper -- Solution: Pray'
       objectReference: {fileID: 0}
     - target: {fileID: 3820726267697415546, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
@@ -5065,7 +4982,8 @@ PrefabInstance:
     - target: {fileID: 3165919820648423853, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
       propertyPath: popUpText
-      value: Screwdriver is the solution when the lights flicker
+      value: 'Manus: -vent noises -lights flicker -cold  Solution: screwdriver on
+        vents  '
       objectReference: {fileID: 0}
     - target: {fileID: 3820726267697415546, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
@@ -7637,7 +7555,6 @@ Transform:
   - {fileID: 779602751}
   - {fileID: 924981817}
   - {fileID: 504038326}
-  - {fileID: 1357275441}
   - {fileID: 831742239}
   - {fileID: 684945584}
   - {fileID: 891149383}
@@ -9323,7 +9240,7 @@ PrefabInstance:
     - target: {fileID: -5869173479196488354, guid: 8855ef4ac1afa7a45b3144d36c5501bb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.065
+      value: -1.307
       objectReference: {fileID: 0}
     - target: {fileID: -5869173479196488354, guid: 8855ef4ac1afa7a45b3144d36c5501bb,
         type: 3}
@@ -9333,7 +9250,7 @@ PrefabInstance:
     - target: {fileID: -5869173479196488354, guid: 8855ef4ac1afa7a45b3144d36c5501bb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.318
+      value: 0.987
       objectReference: {fileID: 0}
     - target: {fileID: -5869173479196488354, guid: 8855ef4ac1afa7a45b3144d36c5501bb,
         type: 3}
@@ -10207,7 +10124,8 @@ PrefabInstance:
     - target: {fileID: 3165919820648423853, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
       propertyPath: popUpText
-      value: Lights should be on
+      value: 'Suitcase:  -electricity -whisper -moving objects -- Solution: Turn
+        all lights on in the room'
       objectReference: {fileID: 0}
     - target: {fileID: 3820726267697415546, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
@@ -12475,12 +12393,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6833557691168429692, guid: 0e87bc8d55af96044a7e2696b16e02d8,
     type: 3}
   m_PrefabInstance: {fileID: 807382470}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1357275441 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 393392778899347681, guid: b3aaf4331ba4a734792417466cccd0dd,
-    type: 3}
-  m_PrefabInstance: {fileID: 123090614}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1364636137 stripped
 Transform:
@@ -15333,7 +15245,8 @@ PrefabInstance:
     - target: {fileID: 3165919820648423853, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
       propertyPath: popUpText
-      value: Straighten cross
+      value: 'Twins: -vent noises -cold -whisper -- Solution : Fix the cross in the
+        room'
       objectReference: {fileID: 0}
     - target: {fileID: 3820726267697415546, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
@@ -15599,7 +15512,8 @@ PrefabInstance:
     - target: {fileID: 3165919820648423853, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
       propertyPath: popUpText
-      value: SALT
+      value: 'Ghost: -Moving objects -Freezing -Whisper -- Solution: Salt at the
+        entrance'
       objectReference: {fileID: 0}
     - target: {fileID: 3820726267697415546, guid: b3aaf4331ba4a734792417466cccd0dd,
         type: 3}
