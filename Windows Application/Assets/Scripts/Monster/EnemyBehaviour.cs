@@ -142,15 +142,14 @@ public class EnemyBehaviour : MonoBehaviour
         if (monsterEvent.monsterID == monsterID && currentSpeed ==0)
         {
             currentSpeed = speed;
+            anim.SetFloat("Speed", currentSpeed);
         }
     }
 
     bool spotted = false;
     IEnumerator killingCoroutine()
     {
-        //anim.SetTrigger("AttackAnimation");
-       // Debug.Log("de");
-       spotted = true;
+        spotted = true;
         currentSpeed = killingSpeed; 
         anim.SetFloat("Speed", currentSpeed);
         yield return new WaitForSeconds(0.5f);

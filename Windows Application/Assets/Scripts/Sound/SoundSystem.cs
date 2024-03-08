@@ -40,6 +40,11 @@ public class SoundSystem : MonoBehaviour
         soundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
     }
 
+    private void Update()
+    {
+        soundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+    }
+
     public void SetParameterLocal(string parameterName, int value)
     {
         soundInstance.setParameterByName(parameterName, value);

@@ -1,11 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using static ContactInfo;
 
 public class MessageHandler : MonoBehaviour
 {
@@ -96,10 +89,15 @@ public class MessageHandler : MonoBehaviour
         EventBus<GameStartEvent>.Publish(new GameStartEvent());
     }
 
+    int monsterID;
     void SpawnMonster()
     {
-        int monster = FindObjectsOfType<EnemyBehaviour>().Length;
-        EventBus<MonsterEvent>.Publish(new MonsterEvent(monster));
+        int monsterAmount = FindObjectsOfType<EnemyBehaviour>().Length;
+        while(monsterID != 0)
+        {
+            monsterID = Random.Range(0, monsterAmount);
+        }
+        EventBus<MonsterEvent>.Publish(new MonsterEvent(monsterID));
     }
 
     void ResidentsStateData(string message)

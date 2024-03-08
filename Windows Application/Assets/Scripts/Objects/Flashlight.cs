@@ -63,12 +63,10 @@ public class Flashlight : MonoBehaviour
         {
             if (hit.collider.CompareTag(targetTag))
             {
-                Debug.Log("Monster detected!!! AAAA");
                 hit.collider.gameObject.GetComponent<EnemyBehaviour>().OnSpotted();
             }
             if (hit.collider.CompareTag(infoTag))
             {
-                Debug.Log("sticky note");
                 noteManager.OnFlashLightHover(hit.collider.gameObject.GetComponent<StickyNote>());
             }
         }

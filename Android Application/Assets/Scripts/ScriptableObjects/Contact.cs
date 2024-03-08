@@ -51,7 +51,6 @@ public class Contact : ScriptableObject
         if (isDead) currentStage++;
         UDPSender.SendBroadcast("Contact: " + contactName + ", " + currentStage);
         EventBus<CallStageEvent>.Publish(new CallStageEvent(currentStage));
-        Debug.Log(currentStage);
     }
 
     public bool IsDead()

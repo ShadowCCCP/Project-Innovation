@@ -60,7 +60,8 @@ public class GameManager : MonoBehaviour
     IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(1);
-        anim.SetTrigger("FadeOut");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //anim.SetTrigger("FadeOut");
     }
 
     void GameOver(GameOverEvent gameOverEvent)
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     void StartGame(GameStartEvent gameStartEvent)
     {
-        uIManager.ToggleMainMenu();
+        //uIManager.ToggleMainMenu();
         anim.SetTrigger("FadeIn");
     }
 

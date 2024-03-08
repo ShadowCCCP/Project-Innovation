@@ -55,10 +55,11 @@ public class SoundManager : MonoBehaviour
         if (lightStage > 4) lightStage = 0;
 
         lightTimeLines[lightStage].Play();
+        lightStage++;
     }
 
     void SetAmbientParameter(PlayableDirector director)
     {
-        backgroundSystem.SetParameterLocal("Amb Progression", 2);
+        backgroundSystem.SetParameterGlobal("Amb Progression", 2);
     }
 }

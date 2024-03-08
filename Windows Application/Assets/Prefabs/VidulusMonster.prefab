@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.52, y: 1, z: 6.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.769, y: 1.769, z: 1.769}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3962903261169325718}
@@ -128,15 +128,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   soundReference:
     Guid:
-      Data1: -701928312
-      Data2: 1303151990
-      Data3: 1572422301
-      Data4: 1297671326
-    Path: event:/SFX/Animation/Manus Footsteps (3D)
-  parameterName: 
-  startMovementOnStart: 1
+      Data1: 1680207085
+      Data2: 1251070852
+      Data3: -213135454
+      Data4: 95083418
+    Path: event:/SFX/Animation/Vidulus Footsteps (3D)
+  parameterName: VidulusSpeed
+  startMovementOnStart: 0
 --- !u!1001 &3563955858406732157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,7 +157,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b9b28211bb170814baba1ffaf9a0de05,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.531
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b9b28211bb170814baba1ffaf9a0de05,
         type: 3}
@@ -195,15 +199,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2481467947442468010, guid: b9b28211bb170814baba1ffaf9a0de05,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5022b52dd8fd98343a95b2adff7bb884, type: 2}
+    - target: {fileID: -140445553855151585, guid: b9b28211bb170814baba1ffaf9a0de05,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5022b52dd8fd98343a95b2adff7bb884, type: 2}
     - target: {fileID: 919132149155446097, guid: b9b28211bb170814baba1ffaf9a0de05,
         type: 3}
       propertyPath: m_Name
       value: VIDULUS
       objectReference: {fileID: 0}
+    - target: {fileID: 6357230065820635957, guid: b9b28211bb170814baba1ffaf9a0de05,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5022b52dd8fd98343a95b2adff7bb884, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b9b28211bb170814baba1ffaf9a0de05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 572843774170559480}
   m_SourcePrefab: {fileID: 100100000, guid: b9b28211bb170814baba1ffaf9a0de05, type: 3}
 --- !u!4 &3962903261169325718 stripped
 Transform:
@@ -211,3 +234,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3563955858406732157}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4446424101783620652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b9b28211bb170814baba1ffaf9a0de05,
+    type: 3}
+  m_PrefabInstance: {fileID: 3563955858406732157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &572843774170559480
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446424101783620652}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3f0ee26c076c0345ab1c5a9abe5c95a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

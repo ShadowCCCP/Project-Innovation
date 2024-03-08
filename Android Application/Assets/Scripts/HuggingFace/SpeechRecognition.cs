@@ -52,7 +52,7 @@ public class SpeechRecognitionTest : MonoBehaviour
     private void StartRecording()
     {
         text.color = Color.black;
-        text.text = "Speak...";
+        //text.text = "Speak...";
         clip = Microphone.Start(null, false, 10, 44100);
         recording = true;
     }
@@ -71,7 +71,7 @@ public class SpeechRecognitionTest : MonoBehaviour
     private void SendRecording()
     {
         text.color = Color.black;
-        text.text = "Wait...";
+        //text.text = "Wait...";
         //stopButton.interactable = false;
         HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response => {
             CheckForWords(response);
@@ -136,6 +136,6 @@ public class SpeechRecognitionTest : MonoBehaviour
             UDPSender.SendBroadcast("Answer: Unclear");
         }
 
-        this.text.text = "Push to talk";
+        //this.text.text = "Push to talk";
     }
 }
