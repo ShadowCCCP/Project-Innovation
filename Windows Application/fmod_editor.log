@@ -7,13 +7,14 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002945EE2D4D8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001F5CE412278 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
@@ -47,64 +48,4 @@
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 7122688
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 98752
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000BFE907EF68
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF88F483F70
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF88F483F30
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF88F484050
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF88F484110
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000290ED61EEB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Lights Flickering One-Shot', format=5, channels=2, frequency=48000, lengthbytes=59872, lengthpcm=205330, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.986908.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 7122688
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 98752
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000BFE907EF68
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF88F483F70
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF88F483F30
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF88F484050
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF88F484110
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000290ED61EEB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Whispering Sound One-Shot Normal', format=5, channels=2, frequency=48000, lengthbytes=78176, lengthpcm=305424, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.402527.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 7122688
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 98752
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000BFE907EF68
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF88F483F70
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF88F483F30
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF88F484050
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF88F484110
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000290ED61EEB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Whispering Sound One-Shot Intense', format=5, channels=2, frequency=48000, lengthbytes=66912, lengthpcm=259760, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.849792.
-[LOG] SoundI::release                          :  (00000292C207D1F8)
-[LOG] SoundI::release                          :     Lights Flickering One-Shot (00000293CC367E18)
-[LOG] SoundI::release                          :  (00000292C207CF18)
-[LOG] SoundI::release                          :     Whispering Sound One-Shot Normal (00000293CC366A98)
-[LOG] SoundI::release                          :  (00000292C207D088)
-[LOG] SoundI::release                          :     Whispering Sound One-Shot Intense (00000293CC365D98)
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::close                           : Closed.
+[ERR] assert                                   : assertion: 'gSystemInitCount == 0' failed
