@@ -30,9 +30,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9213952938866536258}
-  - {fileID: 1932764894078831574}
   - {fileID: 5919831461999633847}
   - {fileID: 4820715380113213722}
+  - {fileID: 1932764894078831574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3442602807127892321
@@ -147,6 +147,8 @@ PlayableDirector:
   - key: {fileID: -6348801553759256869, guid: 3e8df005b6130fa43b74c58eeaff3bf3, type: 2}
     value: {fileID: 0}
   - key: {fileID: 393883404740178881, guid: 3e8df005b6130fa43b74c58eeaff3bf3, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8724409707706722793, guid: 3e8df005b6130fa43b74c58eeaff3bf3, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -482,6 +484,10 @@ PlayableDirector:
   - key: {fileID: -6289594800338611822, guid: 4dbc316802447e04c989b3f07fd51f4f, type: 2}
     value: {fileID: 0}
   - key: {fileID: 507550857247371753, guid: 4dbc316802447e04c989b3f07fd51f4f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1345370325088237409, guid: 4dbc316802447e04c989b3f07fd51f4f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7559585179394689097, guid: 4dbc316802447e04c989b3f07fd51f4f, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []

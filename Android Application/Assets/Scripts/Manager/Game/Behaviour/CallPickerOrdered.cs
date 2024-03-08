@@ -49,8 +49,7 @@ public class CallPickerOrdered : MonoBehaviour, ICallManager
     void IncreaseCallIndex()
     {
         currentCall++;
-
-        if(currentCall >= contacts.Length)
+        if (currentCall >= contacts.Length)
         {
             currentCall = 0;
         }

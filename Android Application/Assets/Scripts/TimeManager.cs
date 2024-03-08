@@ -74,7 +74,7 @@ public class TimeManager : MonoBehaviour
             DigitalOrAnalogous();
             currentTime = GetCurrentTimeString();
 
-            UDPSender.SendBroadcast("Time: " + DigitalTimeFormat());
+            //UDPSender.SendBroadcast("Time: " + DigitalTimeFormat());
         }
     }
 

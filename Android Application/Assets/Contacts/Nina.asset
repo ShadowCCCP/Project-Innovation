@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ecb223633995941a38672a4d9a3b8c, type: 3}
   m_Name: Nina
   m_EditorClassIdentifier: 
-  contactName: Elena
+  contactName: Nina
   details: Room 301
   icon: {fileID: 21300000, guid: f9e0eae28c87dba4e9ac413d6a5ec905, type: 3}
   rightAnswers: 010000000100000000000000
